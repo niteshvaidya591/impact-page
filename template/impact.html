@@ -244,28 +244,28 @@
                                     <div class="carousel-item__container">
                                         <h2 class="carousel-item__subtitle font-weight-bold mar-t-30">project</h2>
                                         <h1 class="carousel-item__title"><span class="text-navy">Castañero,</span> <span class="text-green">Peru</span></h1>
-                                        <p class="carousel-item__description mar-t-10 mar-b-25">Protecting</p>
-                                        <form class="mar-l-20 mar-t-n20">
-                                            <div class="text-small mar-b-5 form-group">
-                                                <input type="checkbox" id="land" />
-                                                <label for="land">300,000 Hectares of forest land</label>
-                                            </div>
-                                            <div class="text-small mar-b-5 form-group">
-                                                <input type="checkbox" id="species" />
-                                                <label for="species">49 endangered species</label>
-                                            </div>
-                                            <div class="text-small mar-b-5 form-group">
-                                                <input type="checkbox" id="plant" />
-                                                <label for="plant">Endemic Plant species</label>
-                                            </div>
-                                            <div class="text-small mar-b-5 form-group">
-                                                <input type="checkbox" id="families" />
-                                                <label for="families">405 families through sustainable farming Practices</label>
-                                            </div>
-                                        </form>
+                                     <div class="nv-row">
+                                        <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                            <p class="text-small carousel-item__description mar-v-10">Supports</p>
+                                            <ul class="mar-0 pad-0 mar-b-15 pad-l-20 text-smallest">
+                                                <li> 300,000 Hectares of forest land</li>
+                                                <li> 49 endangered species</li>
+                                                <li> Endemic Plant species</li>
+                                                <li> 405 families </li>
+                                            </ul>
+                                         </div>
+                                         <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                            <p class="text-small carousel-item__description mar-v-10">With 10 Euros,You can</p>
+                                            <ul class="mar-0 pad-0 mar-b-15 pad-l-20 text-smallest">
+                                                <li> Support Castañero & all its beneficiaries</li>
+                                                <li> Receive a shareable certificate valid globally</li>
+                                                <li> Win a chance to be Reflora’s sustain-enabler of the year </li>
+                                            </ul>
+                                         </div>
+                                     </div>
 
-                                        <p class="text-small"><span class="carousel-item__description mar-v-10">Price :</span> 10 Euros</p>
-                                        <button class="carousel-item__btn mobile:nv-col-12 tablet:nv-col-6 tablet:mar-h-auto desktop:nv-col-12 next">Continue</button>
+                                       
+                                        <button class="carousel-item__btn mobile:nv-col-12 tablet:nv-col-6 tablet:mar-h-auto desktop:nv-col-12 next">Buy now</button>
 
                                         <div class="indicator-nav">
                                             <span class="indicator-item"></span>
@@ -363,20 +363,6 @@
                 <!-- 6 page starts -->
             </div>
         </main>
-        <script src="./../build/script.js"></script>
-        <!-- <script src="./js/slider.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
-        <script>
-            $(document).ready(function () {
-                // slider(".slides");
-                new Splide(".splide", {
-                    direction: "ttb",
-                    height: "100vh",
-                    width: "100vw",
-                    arrows: "false",
-                }).mount();
-            });
-        </script>
+        <script src="./../build/script.js"></script>      
     </body>
 </html>

@@ -76,7 +76,7 @@
         }
 
         .multisteps-form__progress-btn.js-active {
-            color: #000;
+            color: #100644;
         }
 
         .multisteps-form__progress-btn.js-active:before {
@@ -236,12 +236,12 @@
                                             <div class="form-group mar-b-30 floating-label">
                                                 <input type="text" id="event-attend" placeholder=" "
                                                     class="full-width form-control small-rounded" />
-                                                <label for="event-attend">Number of people attending the event?</label>
+                                                <label for="event-attend">No. of people at the event</label>
                                             </div>
                                         </div>
                                         <div class="nv-col-12 tablet:nv-col-6">
                                             <div class="form-group mar-b-30 floating-label">
-                                                <input type="text" id="event-last" placeholder="No of days"
+                                                <input type="text" id="event-last" placeholder="(No of Days)"
                                                     class="full-width form-control small-rounded" />
                                                 <label for="event-last">My event will last</label>
                                             </div>
@@ -285,8 +285,12 @@
                                                     <div
                                                         class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
                                                         <div class="form-group floating-label">
-                                                            <input type="text" id="event-location" placeholder=""
-                                                                class="full-width form-control small-rounded">
+                                                            <select class="form-control nv-custom-select small-rounded" id="event-country">
+                                                    <option value="">Select Country</option>
+                                                    <option>India</option>
+                                                    <option>France</option>
+                                                    <option>USA</option>
+                                                </select>
                                                             <label for="event-location">Location</label>
                                                         </div>
                                                     </div>
@@ -310,7 +314,7 @@
                                             </div>
                                             <div
                                                 class="nv-d-flex nv-justify-content-end nv-col-12 desktop:nv-col-9 mar-t-20">
-                                                <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                     type="button">
                                                     <i class="bi bi-plus nv-pe-none"></i> <span
                                                         class="nv-d-none tablet:nv-d-block nv-pe-none">Add</span>
@@ -672,7 +676,7 @@
                                                     </div>
 
                                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             type="button">
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -941,12 +945,12 @@
 
 
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
                                                             type="button">
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1025,7 +1029,7 @@
                                                                     </div>
                                                                     <div
                                                                         class="nv-d-flex nv-justify-content-end nv-col-12 desktop:nv-col-9">
-                                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                                             type="button">
                                                                             <i class="bi bi-plus nv-pe-none"></i> <span
                                                                                 class="nv-d-none tablet:nv-d-block nv-pe-none">Add</span>
@@ -1037,13 +1041,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
                                                         <a data-open-accordion="#recommendedAccordion"
-                                                            class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                            class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                             type="button">
                                                             <span class="nv-d-none nv-pe-none"> Goto Recommended </span>
                                                             <i class="bi bi-arrow-right nv-pe-none"></i>
@@ -1282,7 +1286,7 @@
                                                     </div>
 
                                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             type="button">
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1297,12 +1301,12 @@
                                                 <div class="fluid-wrapper">
                                                     <h4>Participant Travel</h4>
                                                     <div class="nv-d-flex nv-justify-content-between mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
                                                             type="button">
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1317,12 +1321,12 @@
                                                 <div class="fluid-wrapper">
                                                     <h4>Hotel stay</h4>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                             type="button">
                                                             <span class="nv-d-none tablet:nv-d-block nv-pe-none"> Goto
                                                                 Recommended </span> <i
@@ -1421,7 +1425,7 @@
                                                     </div>
 
                                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             type="button">
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1436,12 +1440,12 @@
                                                 <div class="fluid-wrapper">
                                                     <h4>Participant Travel</h4>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
                                                             type="button">
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1456,12 +1460,12 @@
                                                 <div class="fluid-wrapper">
                                                     <h4>Hotel stay</h4>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                             type="button">
                                                             <span class="nv-d-none tablet:nv-d-block nv-pe-none"> Goto
                                                                 Recommended </span> <i

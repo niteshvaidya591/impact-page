@@ -18,9 +18,14 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
+.nv-boat:before{content:'\0041';}
+.nv-butane:before{content:'\0042';}
 .nv-paper:before{content:'\0044';}
+.nv-coal:before{content:'\0046';}
+.nv-oil:before{content:'\0047';}
 .nv-hotel:before{content:'\0048';}
 .nv-one:before{content:'\0049';}
+.nv-cargoship:before{content:'\004a';}
 .nv-cycle:before{content:'\004b';}
 .nv-aeroplane:before{content:'\004c';}
 .nv-two:before{content:'\004d';}
@@ -30,8 +35,22 @@
 .nv-lunch:before{content:'\0051';}
 .nv-dinner:before{content:'\0052';}
 .nv-drinks:before{content:'\0053';}
+.nv-fuel:before{content:'\0054';}
+.nv-electricity:before{content:'\0055';}
 .nv-snacks:before{content:'\0056';}
 .nv-car:before{content:'\0057';}
 .nv-subway:before{content:'\0058';}
 .nv-motorbike:before{content:'\0059';}
 .nv-bus:before{content:'\005a';}
+.nv-glass:before{content:'\0061';}
+.nv-laundry:before{content:'\0062';}
+.nv-gasoline:before{content:'\0063';}
+.nv-fridge:before{content:'\0065';}
+.nv-LPG:before{content:'\0067';}
+.nv-Metal:before{content:'\0068';}
+.nv-gas:before{content:'\0069';}
+.nv-organic:before{content:'\006a';}
+.nv-van:before{content:'\006b';}
+.nv-rail:before{content:'\006c';}
+.nv-propane:before{content:'\006d';}
+.nv-plastic:before{content:'\006e';}

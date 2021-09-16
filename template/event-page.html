@@ -1168,7 +1168,219 @@
                                                     <h4>Materials</h4>
                                                     <p>Flyers, Posters, Billboards? Let's find out their emissions</p>
 
+                                                    <div class="nv-row nv-justify-content-between">
+                                                        <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                            <lottie-player class="bg-lottie mb-5"
+                                                                src="./animation/food.json" background="transparent"
+                                                                speed="1" loop autoplay></lottie-player>
+                                                        </div>
+                                                        <div class="nv-col-12 desktop:nv-col-8">
+                                                            <div class="nv-row text-center">
 
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="paper">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="paper-container"
+                                                                        for="paper">
+                                                                        <span
+                                                                            class="nv-paper heading-1 nv-d-block text-purple"></span>
+                                                                        Paper
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="plastic">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="plastic-container"
+                                                                        for="plastic">
+                                                                        <span
+                                                                            class="nv-plastic heading-1 nv-d-block text-purple"></span>
+                                                                            plastic
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="glass">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="glass-container"
+                                                                        for="glass">
+                                                                        <span
+                                                                            class="nv-glass heading-1 nv-d-block text-purple"></span>
+                                                                            glass
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="metal">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="metal-container"
+                                                                        for="metal">
+                                                                        <span
+                                                                            class="nv-Metal heading-1 nv-d-block text-purple"></span>
+                                                                            metal
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fabric">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fabric-container"
+                                                                        for="fabric">
+                                                                        <span
+                                                                            class="nv-glass heading-1 nv-d-block text-purple"></span>
+                                                                            fabric
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="large-vehicle">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="large-vehicle-container"
+                                                                        for="large-vehicle">
+                                                                        <span
+                                                                            class="nv-van heading-1 nv-d-block text-purple"></span>
+                                                                        Large Vehicle
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class=" mar-t-30">
+                                                                <div id="car-local-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">car
+                                                                    </h5>
+                                                                    <div class="nv-row mar-0">
+
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="car-count"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="car-count">No of
+                                                                                    cars</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="car-local-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="car-local-distance">distance
+                                                                                    in
+                                                                                    KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+                                                                <div id="motorbike-local-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
+                                                                        motorbike</h5>
+                                                                    <div class="nv-row mar-0">
+                                                                       
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="motorbike-count"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label
+                                                                                    for="motorbike-count">No of motorbike</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="motorbike-local-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="motorbike-local-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div id="train-local-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">train
+                                                                        / tran / subway</h5>
+                                                                    <div class="nv-row mar-0">
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="train-local-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="train-local-distance">distance in
+                                                                                    KM</label>
+                                                                            </div>
+                                                                        </div>                                                                      
+                                                                    </div>
+                                                                </div>
+                                                                <div id="bus-local-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">bus
+                                                                    </h5>
+                                                                    <div class="nv-row mar-0">
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="bus-local-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="bus-local-distance">distance in
+                                                                                    KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                       
+                                                                    </div>
+                                                                </div>
+                                                                <div id="boat-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
+                                                                       Boat</h5>
+                                                                    <div class="nv-row mar-0">
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="boat-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="boat-distance">distance in
+                                                                                    KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="large-vehicle-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
+                                                                       Large Vehicle</h5>
+                                                                    <div class="nv-row mar-0">
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="large-vehicle-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <label for="large-vehicle-distance">distance in
+                                                                                    KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
                                                     <div class="nv-d-flex nv-justify-content-between mar-t-30">
                                                         <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"

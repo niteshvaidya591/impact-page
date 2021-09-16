@@ -159,7 +159,7 @@
                 <a class="heading-5" href="#"><em class="bi bi-chevron-left font-weight-bold"></em>Back To Scope</a>
                 <div class="pad-v-30">
                     <ul id="progressbar" class="text-center">
-                        <li class="active nv-zero" id="basic"><strong class="nv-d-none tablet:nv-d-block">Basic</strong></li>
+                        <li class="active bi bi-calendar-check" id="basic"><strong class="nv-d-none tablet:nv-d-block">Basic</strong></li>
                         <li class="nv-one" id="mandatory"><strong class="nv-d-none tablet:nv-d-block">Mandatory</strong></li>
                         <li class="nv-two" id="recommended"><strong class="nv-d-none tablet:nv-d-block">Recommended</strong></li>
                         <li class="nv-three" id="others"><strong class="nv-d-none tablet:nv-d-block">Others</strong></li>
@@ -186,21 +186,21 @@
                                 <p class="text-center">
                                     Tell us more about your event
                                 </p>
-                                <div class="text-center">
+                                <!-- <div class="text-center">
                                     <img src="./images/event.png" alt="Event illustration" width="150" class="mar-h-0" />
-                                </div>
+                                </div> -->
                                 <form action="">
                                     <div class="mar-v-30 nv-col-12 desktop:nv-col-10 mar-h-auto">
                                         <div class="nv-row">
                                             <div class="nv-col-12 tablet:nv-col-6">
                                                 <div class="form-group mar-b-30 floating-label">
-                                                    <input type="text" id="event-name" placeholder=" " class="full-width form-control" />
+                                                    <input type="text" id="event-name" placeholder=" " class="full-width form-control small-rounded" />
                                                     <label for="event-name">My Event is called </label>
                                                 </div>
                                             </div>
                                             <div class="nv-col-12 tablet:nv-col-6">
                                                 <div class="form-group mar-b-30 floating-label">
-                                                    <select class="form-control nv-custom-select" id="event-area">
+                                                    <select class="form-control nv-custom-select small-rounded" id="event-area">
                                                         <option value="">Select Country</option>
                                                         <option>India</option>
                                                         <option>France</option>
@@ -214,13 +214,13 @@
                                         <div class="nv-row">
                                             <div class="nv-col-12 tablet:nv-col-6">
                                                 <div class="form-group mar-b-30 floating-label">
-                                                    <input type="text" id="event-attend" placeholder=" " class="full-width form-control" />
+                                                    <input type="text" id="event-attend" placeholder=" " class="full-width form-control small-rounded" />
                                                     <label for="event-attend">People will be attending the event</label>
                                                 </div>
                                             </div>
                                             <div class="nv-col-12 tablet:nv-col-6">
                                                 <div class="form-group mar-b-30 floating-label">
-                                                    <input type="text" id="event-last" placeholder="No of days" class="full-width form-control" />
+                                                    <input type="text" id="event-last" placeholder="No of days" class="full-width form-control small-rounded" />
                                                     <label for="event-last">My event will last</label>
                                                 </div>
                                             </div>
@@ -231,12 +231,44 @@
                                             <div class=" nv-row">
                                                 <div class="nv-col-12 tablet:nv-col-6">
                                                     <div class="pad-0 btn-group btn-group-toggle nv-col" data-toggle="buttons">
-                                                        <label for="option1" class="btn text-capitalize nv-col-4 border-2 rounded-left"> <input type="radio" name="options" id="option1" value="online" checked="" /> online </label>
-                                                        <label for="option2" class="btn text-capitalize nv-col-4 border-2"> <input type="radio" name="options" id="option2" value="offline" /> offline </label>
-                                                        <label for="option3" class="btn text-capitalize nv-col-4 border-2 rounded-right"> <input type="radio" name="options" id="option3" value="hybrid" /> hybrid </label>
+                                                        <label for="option1" data-show-container="event-container" class="btn text-capitalize nv-col-4 border-2 rounded-left"> <input type="radio" name="options" id="option1" value="online" checked="" /> online </label>
+                                                        <label for="option2" data-hide-container="event-container" class="btn text-capitalize nv-col-4 border-2"> <input type="radio" name="options" id="option2" value="offline" /> offline </label>
+                                                        <label for="option3" data-show-container="event-container" class="btn text-capitalize nv-col-4 border-2 rounded-right"> <input type="radio" name="options" id="option3" value="hybrid" /> hybrid </label>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div id="event-container" class="mar-t-30 nv-d-none">
+                                                <p class="mar-b-30">Tell us everything about XYZ (in case of only online) / Tell us about XYZ's online participants</p>
+                                                  <div>
+                                                   <div class="nv-row">        
+                                                       <div class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
+                                                          <div class="form-group floating-label">
+                                                              <input type="text" id="event-location" placeholder="" class="full-width form-control small-rounded">
+                                                              <label for="event-location">Location</label>
+                                                          </div>
+                                                       </div>   
+                                                       <div class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
+                                                          <div class="form-group floating-label">
+                                                              <input type="number" id="event-participants" placeholder="" min="0" class="full-width form-control small-rounded">
+                                                              <label for="event-participants">Participants</label>
+                                                          </div>
+                                                       </div>   
+                                                         <div class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
+                                                          <div class="form-group floating-label">
+                                                              <input type="number" id="event-hours" placeholder="" min="0" class="full-width form-control small-rounded">
+                                                              <label for="event-hours">No of Hours</label>
+                                                          </div>
+                                                       </div>                                                                                                                                   
+                                                   </div>
+                                                  </div>
+                                                 <div class="nv-d-flex nv-justify-content-end nv-col-12 desktop:nv-col-9 mar-t-20">
+                                                   <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
+                                                       <i class="bi bi-plus nv-pe-none"></i>  <span class="nv-d-none tablet:nv-d-block nv-pe-none">Add</span> 
+                                                     </a>
+                                                 </div>
+
+                                               </div>
                                         </div>
                                     </div>
                                 </form>
@@ -284,39 +316,39 @@
                                                             <lottie-player class="bg-lottie mb-5" src="./animation/food.json"  background="transparent"  speed="1"    loop autoplay></lottie-player>
                                                           </div>
                                                           <div class="nv-col-12 desktop:nv-col-8">
-                                                            <div class="nv-row">
-                                                              <div class="custom-control custom-checkbox mar-b-20">
+                                                            <div class="nv-row text-center">
+                                                              <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="breakfast">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="breakfast-container" for="breakfast">
-                                                                  <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="breakfast-container" for="breakfast">
+                                                                  <span class="nv-breakfast heading-1 nv-d-block text-purple"></span>
                                                                   Breakfast
                                                                 </label>
                                                               </div>
-                                                              <div class="custom-control custom-checkbox mar-b-20">
+                                                              <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="lunch">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="lunch-container" for="lunch">
-                                                                  <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="lunch-container" for="lunch">
+                                                                  <span class="nv-lunch heading-1 nv-d-block text-purple"></span>
                                                                   lunch
                                                                 </label>
                                                               </div>
-                                                              <div class="custom-control custom-checkbox mar-b-20">
+                                                              <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="dinner">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="dinner-container" for="dinner">
-                                                                  <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="dinner-container" for="dinner">
+                                                                  <span class="nv-dinner heading-1 nv-d-block text-purple"></span>
                                                                   dinner
                                                                 </label>
                                                               </div>
-                                                              <div class="custom-control custom-checkbox mar-b-20">
+                                                              <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="drinks">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="drinks-container" for="drinks">
-                                                                  <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="drinks-container" for="drinks">
+                                                                  <span class="nv-drinks heading-1 nv-d-block text-purple"></span>
                                                                   drinks
                                                                 </label>
                                                               </div>
-                                                              <div class="custom-control custom-checkbox mar-b-20">
+                                                              <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="snacks">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="snacks-container" for="snacks">
-                                                                  <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="snacks-container" for="snacks">
+                                                                  <span class="nv-snacks heading-1 nv-d-block text-purple"></span>
                                                                   snacks
                                                                 </label>
                                                               </div>
@@ -327,7 +359,7 @@
                                                                  <div class="nv-d-flex">        
                                                                      <div class="nv-col-12 tablet:nv-col-3">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="breakfast-meals" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="breakfast-meals" placeholder="0" min="0" class="full-width form-control small-rounded" />
                                                                             <label for="breakfast-meals">No of Meals</label>
                                                                         </div>
                                                                      </div>                                                                                                                                   
@@ -399,58 +431,86 @@
                                                                   <div class="nv-row mar-0">        
                                                                       <div class="nv-col-12 tablet:nv-col-4">
                                                                          <div class="form-group floating-label">
-                                                                             <input type="text" id="drinks-water" placeholder=" " class="full-width form-control small-rounded" />
+                                                                             <input type="number" id="drinks-water" placeholder="0" min="0" class="full-width form-control small-rounded" />
                                                                              <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
                                                                                  <option value="">Ltr</option>
-                                                                                 <option value="">330ML</option>
+                                                                                 <option value="">333ML</option>
                                                                              </select>
                                                                              <label for="drinks-water">Water</label>
                                                                          </div>
                                                                       </div> 
                                                                       <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-water" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-water" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">150ML</option>
+                                                                            </select>
                                                                             <label for="drinks-water">Wine</label>
                                                                         </div>
                                                                      </div> 
                                                                      <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-juice" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-juice" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">250ML</option>
+                                                                            </select>
                                                                             <label for="drinks-juice">Juice</label>
                                                                         </div>
                                                                      </div> 
                                                                      
                                                                      <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-beer" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-beer" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">330ML</option>
+                                                                            </select>
                                                                             <label for="drinks-beer">Beer</label>
                                                                         </div>
                                                                      </div> 
 
                                                                      <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-coffee" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-coffee" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">30ML</option>
+                                                                            </select>
                                                                             <label for="drinks-coffee">Coffee</label>
                                                                         </div>
                                                                      </div> 
 
                                                                      <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-soft-drinks" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-soft-drinks" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">333ML</option>
+                                                                            </select>
                                                                             <label for="drinks-soft-drinks">Soft Drinks</label>
                                                                         </div>
                                                                      </div> 
 
                                                                      <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-tea" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-tea" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">250ML</option>
+                                                                            </select>
                                                                             <label for="drinks-tea">Tea</label>
                                                                         </div>
                                                                      </div> 
 
                                                                      <div class="nv-col-12 tablet:nv-col-4">
                                                                         <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-spirit" placeholder=" " class="full-width form-control small-rounded" />
+                                                                            <input type="number" id="drinks-spirit" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                            <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Ltr</option>
+                                                                                <option value="">50ML</option>
+                                                                            </select>
                                                                             <label for="drinks-spirit">Spirit Drink</label>
                                                                         </div>
                                                                      </div> 
@@ -464,8 +524,8 @@
                                                                   <div class="nv-row mar-0">        
                                                                       <div class="nv-col-12 tablet:nv-col-3">
                                                                          <div class="form-group floating-label">
-                                                                             <input type="text" id="snacks-meals" placeholder=" " class="full-width form-control small-rounded" />
-                                                                             <label for="snacks-meals">No of Meals</label>
+                                                                             <input type="number" id="snacks-meals" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                             <label for="snacks-meals">No of People</label>
                                                                          </div>
                                                                       </div>                                                                                                                                   
                                                                   </div>
@@ -475,9 +535,9 @@
                                                           </div>
                                                         </div>
 
-                                                        <div class="nv-d-flex nv-justify-content-end">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                        <div class="nv-d-flex nv-justify-content-end  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end" type="button">
+                                                                <span class="nv-d-none  nv-pe-none">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -487,13 +547,180 @@
                                             <div class="multisteps-form__panel" data-animation="scaleOut">
                                                 <div class="multisteps-form__content">
                                                     <div class="fluid-wrapper">
-                                                        <h4>Participant Travel</h4>
-                                                        <div class="nv-d-flex nv-justify-content-between">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
-                                                                <i class="bi bi-arrow-left nv-pe-none"></i><span class="nv-d-none tablet:nv-d-block">Previous</span> 
+                                                        <h4>Travel of Participants</h4>
+                                                        <p>Guests flying in from everywhere? We got this!</p>
+                                                      
+                                                            <div class="nv-row nv-justify-content-between">
+                                                              <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                                <lottie-player class="bg-lottie mb-5" src="./animation/food.json"  background="transparent"  speed="1"    loop autoplay></lottie-player>
+                                                              </div>
+                                                              <div class="nv-col-12 desktop:nv-col-8">
+                                                                <div class="nv-row text-center">
+                                                                  <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input" id="flight">
+                                                                    <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="flight-container" for="flight">
+                                                                      <span class="nv-aeroplane heading-1 nv-d-block text-purple"></span>
+                                                                      flight
+                                                                    </label>
+                                                                  </div>
+                                                                  <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input" id="car">
+                                                                    <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="car-container" for="car">
+                                                                      <span class="nv-car heading-1 nv-d-block text-purple"></span>
+                                                                      car
+                                                                    </label>
+                                                                  </div>
+                                                                  <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input" id="motorbike">
+                                                                    <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="motorbike-container" for="motorbike">
+                                                                      <span class="nv-motorbike heading-1 nv-d-block text-purple"></span>
+                                                                      motorbike
+                                                                    </label>
+                                                                  </div>
+                                                                  <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input" id="train">
+                                                                    <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="train-container" for="train">
+                                                                      <span class="nv-subway heading-1 nv-d-block text-purple"></span>
+                                                                      train / subway / tran
+                                                                    </label>
+                                                                  </div>
+                                                                  <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input" id="bus">
+                                                                    <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="bus-container" for="bus">
+                                                                      <span class="nv-bus heading-1 nv-d-block text-purple"></span>
+                                                                      bus
+                                                                    </label>
+                                                                  </div>
+                                                                  <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input" id="walk">
+                                                                    <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="walk-container" for="walk">
+                                                                      <span class="nv-cycle heading-1 nv-d-block text-purple"></span>
+                                                                      walking / Bicycle
+                                                                    </label>
+                                                                  </div>
+
+                                                                </div>
+                                                                <div class=" mar-t-30">
+                                                                  <div id="flight-container" class="nv-d-none">
+                                                                   <h5 class="pad-h-15 mar-b-20 text-capitalize">Flight</h5>
+                                                                     <div class="nv-d-flex">        
+                                                                         <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="text" id="flight-short" placeholder="&lt; 3h" class="full-width form-control small-rounded" />
+                                                                                <label for="flight-short">No of people</label>
+                                                                            </div>
+                                                                         </div>   
+                                                                         <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="text" id="flight-medium" placeholder="&gt; 3h & &lt; 6h" class="full-width form-control small-rounded" />
+                                                                                <label for="flight-medium">No of people</label>
+                                                                            </div>
+                                                                         </div>   
+                                                                           <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="text" id="flight-long" placeholder="&gt; 6h" class="full-width form-control small-rounded" />
+                                                                                <label for="flight-long">No of people</label>
+                                                                            </div>
+                                                                         </div>                                                                                                                                   
+                                                                     </div>
+                                                                  </div>                                                              
+    
+                                                                   <div id="car-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">car</h5>
+                                                                      <div class="nv-row mar-0">        
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                             <div class="form-group floating-label">
+                                                                                 <input type="number" id="car-distance" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                 <label for="car-distance">distance in KM</label>
+                                                                             </div>
+                                                                          </div>  
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="car-participant" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                <label for="car-participant">participants</label>
+                                                                            </div>
+                                                                         </div>                                                                                                                                                                                                            
+                                                                      </div>
+                                                                   </div>
+                                                                   <div id="motorbike-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">motorbike</h5>
+                                                                      <div class="nv-row mar-0">        
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                             <div class="form-group floating-label">
+                                                                                 <input type="number" id="motorbike-distance" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                 <label for="motorbike-distance">distance in KM</label>
+                                                                             </div>
+                                                                          </div>  
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="motorbike-participant" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                <label for="motorbike-participant">participants</label>
+                                                                            </div>
+                                                                         </div>                                                                                                                                                                                                            
+                                                                      </div>
+                                                                   </div>
+                                                                   <div id="train-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">train / tran / subway</h5>
+                                                                      <div class="nv-row mar-0">        
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                             <div class="form-group floating-label">
+                                                                                 <input type="number" id="train-distance" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                 <label for="train-distance">distance in KM</label>
+                                                                             </div>
+                                                                          </div>  
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="train-participant" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                <label for="train-participant">participants</label>
+                                                                            </div>
+                                                                         </div>                                                                                                                                                                                                            
+                                                                      </div>
+                                                                   </div>
+                                                                   <div id="bus-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">bus</h5>
+                                                                      <div class="nv-row mar-0">        
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                             <div class="form-group floating-label">
+                                                                                 <input type="number" id="bus-distance" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                 <label for="bus-distance">distance in KM</label>
+                                                                             </div>
+                                                                          </div>  
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="bus-participant" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                <label for="bus-participant">participants</label>
+                                                                            </div>
+                                                                         </div>                                                                                                                                                                                                            
+                                                                      </div>
+                                                                   </div>
+                                                                   <div id="walk-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">walking / bicycle</h5>
+                                                                      <div class="nv-row mar-0">        
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                             <div class="form-group floating-label">
+                                                                                 <input type="number" id="walk-distance" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                 <label for="walk-distance">distance in KM</label>
+                                                                             </div>
+                                                                          </div>  
+                                                                          <div class="nv-col-12 tablet:nv-col-3">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="walk-participant" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                                <label for="walk-participant">participants</label>
+                                                                            </div>
+                                                                         </div>                                                                                                                                                                                                            
+                                                                      </div>
+                                                                   </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                         
+                                                      
+                                                        <div class="nv-d-flex nv-justify-content-between  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
+                                                                <i class="bi bi-arrow-left nv-pe-none"></i><span class="nv-d-none  nv-pe-none">Previous</span> 
                                                             </a>
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next" type="button">
+                                                                <span class="nv-d-none  nv-pe-none">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -504,12 +731,63 @@
                                                 <div class="multisteps-form__content">
                                                     <div class="fluid-wrapper">
                                                        <h4>Hotel stay</h4>
-                                                       <div class="nv-d-flex nv-justify-content-between">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
-                                                              <i class="bi bi-arrow-left nv-pe-none"></i>  <span class="nv-d-none tablet:nv-d-block">Previous</span> 
+                                                       <div class="nv-row nv-justify-content-between">
+                                                        <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                          <lottie-player class="bg-lottie mb-5" src="./animation/food.json"  background="transparent"  speed="1"    loop autoplay></lottie-player>
+                                                        </div>
+                                                        <div class="nv-col-12 desktop:nv-col-8">
+                                                          <div class="nv-row text-center">
+
+                                                            <div class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                              <input type="checkbox" class="custom-control-input" id="hotel">
+                                                              <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="hotel-container" for="hotel">
+                                                                <span class="nv-hotel heading-1 nv-d-block text-purple"></span>
+                                                                Hotel
+                                                              </label>
+                                                            </div>                                                            
+
+                                                          </div>
+                                                          <div class=" mar-t-30">
+                                                            <div id="hotel-container" class="nv-d-none">
+                                                             <h5 class="pad-h-15 mar-b-20 text-capitalize">hotel</h5>
+                                                               <div>
+                                                                <div class="nv-d-flex" data-duplicate="hotel">        
+                                                                    <div class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed">
+                                                                       <div class="form-group floating-label">
+                                                                           <input type="text" id="hotel-location" placeholder="" class="full-width form-control small-rounded" />
+                                                                           <label for="hotel-location">Location</label>
+                                                                       </div>
+                                                                    </div>   
+                                                                    <div class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed">
+                                                                       <div class="form-group floating-label">
+                                                                           <input type="number" id="hotel-night" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                           <label for="hotel-night">Nights</label>
+                                                                       </div>
+                                                                    </div>   
+                                                                      <div class="nv-col-12 tablet:nv-col-3 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed">
+                                                                       <div class="form-group floating-label">
+                                                                           <input type="number" id="hotel-room" placeholder="0" min="0" class="full-width form-control small-rounded" />
+                                                                           <label for="hotel-room">Room</label>
+                                                                       </div>
+                                                                    </div>                                                                                                                                   
+                                                                </div>
+                                                               </div>
+                                                              <div class="nv-d-flex nv-justify-content-end nv-col-12 desktop:nv-col-9">
+                                                                <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
+                                                                    <i class="bi bi-plus nv-pe-none"></i>  <span class="nv-d-none tablet:nv-d-block nv-pe-none">Add</span> 
+                                                                  </a>
+                                                              </div>
+
+                                                            </div>                                                              
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                       <div class="nv-d-flex nv-justify-content-between  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
+                                                              <i class="bi bi-arrow-left nv-pe-none"></i>  <span class="nv-d-none  nv-pe-none">Previous</span> 
                                                             </a>
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block"> Goto Recommended </span>   <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <a data-open-accordion="#recommendedAccordion" class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
+                                                                <span class="nv-d-none nv-pe-none"> Goto Recommended </span>   <i class="bi bi-arrow-right nv-pe-none"></i>
                                                           </a>
                                                         </div>
                                                     
@@ -567,35 +845,35 @@
                                                             <div class="nv-row">
                                                               <div class="custom-control custom-checkbox mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="breakfast">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="breakfast-container" for="breakfast">
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="breakfast-container" for="breakfast">
                                                                   <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
                                                                   Breakfast
                                                                 </label>
                                                               </div>
                                                               <div class="custom-control custom-checkbox mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="lunch">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="lunch-container" for="lunch">
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="lunch-container" for="lunch">
                                                                   <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
                                                                   lunch
                                                                 </label>
                                                               </div>
                                                               <div class="custom-control custom-checkbox mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="dinner">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="dinner-container" for="dinner">
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="dinner-container" for="dinner">
                                                                   <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
                                                                   dinner
                                                                 </label>
                                                               </div>
                                                               <div class="custom-control custom-checkbox mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="drinks">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="drinks-container" for="drinks">
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="drinks-container" for="drinks">
                                                                   <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
                                                                   drinks
                                                                 </label>
                                                               </div>
                                                               <div class="custom-control custom-checkbox mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="snacks">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="snacks-container" for="snacks">
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="snacks-container" for="snacks">
                                                                   <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
                                                                   snacks
                                                                 </label>
@@ -674,70 +952,7 @@
                                                                   </div>
                                                                </div>
 
-                                                               <div id="drinks-container" class="nv-d-none">
-                                                                <h5 class="pad-h-15 mar-b-20 text-capitalize">drinks</h5>
-                                                                  <div class="nv-row mar-0">        
-                                                                      <div class="nv-col-12 tablet:nv-col-4">
-                                                                         <div class="form-group floating-label">
-                                                                             <input type="text" id="drinks-water" placeholder=" " class="full-width form-control small-rounded" />
-                                                                             <select name="" id="" class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
-                                                                                 <option value="">Ltr</option>
-                                                                                 <option value="">330ML</option>
-                                                                             </select>
-                                                                             <label for="drinks-water">Water</label>
-                                                                         </div>
-                                                                      </div> 
-                                                                      <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-water" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-water">Wine</label>
-                                                                        </div>
-                                                                     </div> 
-                                                                     <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-juice" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-juice">Juice</label>
-                                                                        </div>
-                                                                     </div> 
-                                                                     
-                                                                     <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-beer" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-beer">Beer</label>
-                                                                        </div>
-                                                                     </div> 
-
-                                                                     <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-coffee" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-coffee">Coffee</label>
-                                                                        </div>
-                                                                     </div> 
-
-                                                                     <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-soft-drinks" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-soft-drinks">Soft Drinks</label>
-                                                                        </div>
-                                                                     </div> 
-
-                                                                     <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-tea" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-tea">Tea</label>
-                                                                        </div>
-                                                                     </div> 
-
-                                                                     <div class="nv-col-12 tablet:nv-col-4">
-                                                                        <div class="form-group floating-label">
-                                                                            <input type="text" id="drinks-spirit" placeholder=" " class="full-width form-control small-rounded" />
-                                                                            <label for="drinks-spirit">Spirit Drink</label>
-                                                                        </div>
-                                                                     </div> 
-
-
-                                                                  </div>
-                                                               </div>
+                                                          
 
                                                                <div id="snacks-container" class="nv-d-none">
                                                                 <h5 class="pad-h-15 mar-b-20 text-capitalize">snacks</h5>
@@ -755,9 +970,9 @@
                                                           </div>
                                                         </div>
 
-                                                        <div class="nv-d-flex nv-justify-content-end">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                        <div class="nv-d-flex nv-justify-content-end  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end" type="button">
+                                                                <span class="nv-d-none  nv-pe-none">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -768,12 +983,12 @@
                                                 <div class="multisteps-form__content">
                                                     <div class="fluid-wrapper">
                                                         <h4>Participant Travel</h4>
-                                                        <div class="nv-d-flex nv-justify-content-between">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
-                                                                <i class="bi bi-arrow-left nv-pe-none"></i><span class="nv-d-none tablet:nv-d-block">Previous</span> 
+                                                        <div class="nv-d-flex nv-justify-content-between mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
+                                                                <i class="bi bi-arrow-left nv-pe-none"></i><span class="nv-d-none  nv-pe-none">Previous</span> 
                                                             </a>
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next" type="button">
+                                                                <span class="nv-d-none  nv-pe-none">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -784,12 +999,12 @@
                                                 <div class="multisteps-form__content">
                                                     <div class="fluid-wrapper">
                                                        <h4>Hotel stay</h4>
-                                                       <div class="nv-d-flex nv-justify-content-between">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
-                                                              <i class="bi bi-arrow-left nv-pe-none"></i>  <span class="nv-d-none tablet:nv-d-block">Previous</span> 
+                                                       <div class="nv-d-flex nv-justify-content-between  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
+                                                              <i class="bi bi-arrow-left nv-pe-none"></i>  <span class="nv-d-none  nv-pe-none">Previous</span> 
                                                             </a>
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block"> Goto Recommended </span>   <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
+                                                                <span class="nv-d-none tablet:nv-d-block nv-pe-none"> Goto Recommended </span>   <i class="bi bi-arrow-right nv-pe-none"></i>
                                                           </a>
                                                         </div>
                                                     
@@ -849,7 +1064,7 @@
 
                                                               <div class="custom-control custom-checkbox mar-b-20">
                                                                 <input type="checkbox" class="custom-control-input" id="electricity">
-                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-show="electricity-container" for="electricity">
+                                                                <label class="custom-control-label text-center text-capitalize text-purple pad-h-10" data-toggle-container="electricity-container" for="electricity">
                                                                   <span class="bi bi-alarm heading-1 nv-d-block text-purple"></span>
                                                                   electricity
                                                                 </label>
@@ -876,9 +1091,9 @@
                                                           </div>
                                                         </div>
 
-                                                        <div class="nv-d-flex nv-justify-content-end">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                        <div class="nv-d-flex nv-justify-content-end  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end" type="button">
+                                                                <span class="nv-d-none  nv-pe-none">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -889,12 +1104,12 @@
                                                 <div class="multisteps-form__content">
                                                     <div class="fluid-wrapper">
                                                         <h4>Participant Travel</h4>
-                                                        <div class="nv-d-flex nv-justify-content-between">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
-                                                                <i class="bi bi-arrow-left nv-pe-none"></i><span class="nv-d-none tablet:nv-d-block">Previous</span> 
+                                                        <div class="nv-d-flex nv-justify-content-between  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
+                                                                <i class="bi bi-arrow-left nv-pe-none"></i><span class="nv-d-none  nv-pe-none">Previous</span> 
                                                             </a>
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next" type="button">
+                                                                <span class="nv-d-none  nv-pe-none">Next</span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -905,12 +1120,12 @@
                                                 <div class="multisteps-form__content">
                                                     <div class="fluid-wrapper">
                                                        <h4>Hotel stay</h4>
-                                                       <div class="nv-d-flex nv-justify-content-between">
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
-                                                              <i class="bi bi-arrow-left nv-pe-none"></i>  <span class="nv-d-none tablet:nv-d-block">Previous</span> 
+                                                       <div class="nv-d-flex nv-justify-content-between  mar-t-30">
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev" type="button">
+                                                              <i class="bi bi-arrow-left nv-pe-none"></i>  <span class="nv-d-none  nv-pe-none">Previous</span> 
                                                             </a>
-                                                            <a class="badge text-decoration-none rounded-pill bg-dark text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
-                                                                <span class="nv-d-none tablet:nv-d-block"> Goto Recommended </span>   <i class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <a class="badge text-decoration-none rounded-pill bg-green text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto" type="button">
+                                                                <span class="nv-d-none tablet:nv-d-block nv-pe-none"> Goto Recommended </span>   <i class="bi bi-arrow-right nv-pe-none"></i>
                                                           </a>
                                                         </div>
                                                     
@@ -1068,7 +1283,7 @@
 
             //SETTING PROPER FORM HEIGHT ONRESIZE
             window.addEventListener("resize", setFormHeight, false);
-            window.addEventListener("click", setFormHeight, false);
+            window.addEventListener("click", setFormHeight, true);
             window.addEventListener("focusin", setFormHeight, false);
 
             //changing animation via animation select !!!YOU DON'T NEED THIS CODE (if you want to change animation type, just change form panels data-attr)

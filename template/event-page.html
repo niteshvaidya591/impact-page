@@ -17,7 +17,7 @@
             <h1 class="mar-b-0">Events Calculator</h1>
             <p>Please fill the area that your event will cover</p>
             <a class="heading-5" href="#"><em class="bi bi-chevron-left font-weight-bold"></em>Back To Scope</a>
-            <div class="pad-v-30">
+            <div class="pad-v-30 widescreen:mar-h-n50">
                 <ul id="progressbar" class="text-center pad-l-0">
                     <li class="active bi bi-calendar-check" id="basic"><strong
                             class="nv-d-none tablet:nv-d-block">Basic</strong></li>
@@ -29,7 +29,7 @@
                 </ul>
             </div>
         </div>
-        <section class="fluid-wrapper widescreen:nv-col-9">
+        <section class="fluid-wrapper widescreen:nv-col-10">
             <ul class="list-unstyled nv-accordion-border" id="eventAccordion">
                 <li class="nv-accordion-item mar-b-30">
                     <a class="nv-accordion-item-label border-brown text-brown pad-20 nv-d-flex nv-justify-content-between nv-align-items-center collapsed"
@@ -164,6 +164,15 @@
                                             </div>
 
                                         </div>
+                                    </div>
+
+                                    <div class="nv-d-flex nv-justify-content-end  mar-t-30">                              
+                                        <a data-open-accordion="#mandatoryAccordion"
+                                            class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                            type="button">
+                                            <span class="nv-d-none nv-pe-none"> Goto Recommended </span>
+                                            <i class="bi bi-arrow-right nv-pe-none"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
@@ -537,7 +546,7 @@
                                                     <div class="nv-row nv-justify-content-between">
                                                         <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
                                                             <lottie-player class="bg-lottie mb-5"
-                                                                src="./animation/food.json" background="transparent"
+                                                                src="./animation/travel-participant.json" background="transparent"
                                                                 speed="1" loop autoplay></lottie-player>
                                                         </div>
                                                         <div class="nv-col-12 desktop:nv-col-8">
@@ -809,7 +818,7 @@
                                                     <div class="nv-row nv-justify-content-between">
                                                         <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
                                                             <lottie-player class="bg-lottie mb-5"
-                                                                src="./animation/food.json" background="transparent"
+                                                                src="./animation/hotel.json" background="transparent"
                                                                 speed="1" loop autoplay></lottie-player>
                                                         </div>
                                                         <div class="nv-col-12 desktop:nv-col-8">
@@ -940,7 +949,7 @@
                                                     <div class="nv-row nv-justify-content-between">
                                                         <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
                                                             <lottie-player class="bg-lottie mb-5"
-                                                                src="./animation/food.json" background="transparent"
+                                                                src="./animation/transport.json" background="transparent"
                                                                 speed="1" loop autoplay></lottie-player>
                                                         </div>
                                                         <div class="nv-col-12 desktop:nv-col-8">
@@ -1052,22 +1061,22 @@
                                                                                     KM</label>
                                                                             </div>
                                                                         </div>
-                                                                    
+
                                                                     </div>
                                                                 </div>
                                                                 <div id="motorbike-local-container" class="nv-d-none">
                                                                     <h5 class="pad-h-15 mar-b-20 text-capitalize">
                                                                         motorbike</h5>
                                                                     <div class="nv-row mar-0">
-                                                                       
+
                                                                         <div class="nv-col-12 tablet:nv-col-4">
                                                                             <div class="form-group floating-label">
                                                                                 <input type="number"
-                                                                                    id="motorbike-count"
-                                                                                    placeholder="0" min="0"
+                                                                                    id="motorbike-count" placeholder="0"
+                                                                                    min="0"
                                                                                     class="full-width form-control small-rounded" />
-                                                                                <label
-                                                                                    for="motorbike-count">No of motorbike</label>
+                                                                                <label for="motorbike-count">No of
+                                                                                    motorbike</label>
                                                                             </div>
                                                                         </div>
                                                                         <div class="nv-col-12 tablet:nv-col-4">
@@ -1076,7 +1085,8 @@
                                                                                     id="motorbike-local-distance"
                                                                                     placeholder="0" min="0"
                                                                                     class="full-width form-control small-rounded" />
-                                                                                <label for="motorbike-local-distance">distance
+                                                                                <label
+                                                                                    for="motorbike-local-distance">distance
                                                                                     in KM</label>
                                                                             </div>
                                                                         </div>
@@ -1089,13 +1099,16 @@
                                                                     <div class="nv-row mar-0">
                                                                         <div class="nv-col-12 tablet:nv-col-4">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number" id="train-local-distance"
+                                                                                <input type="number"
+                                                                                    id="train-local-distance"
                                                                                     placeholder="0" min="0"
                                                                                     class="full-width form-control small-rounded" />
-                                                                                <label for="train-local-distance">distance in
+                                                                                <label
+                                                                                    for="train-local-distance">distance
+                                                                                    in
                                                                                     KM</label>
                                                                             </div>
-                                                                        </div>                                                                      
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                                 <div id="bus-local-container" class="nv-d-none">
@@ -1104,19 +1117,21 @@
                                                                     <div class="nv-row mar-0">
                                                                         <div class="nv-col-12 tablet:nv-col-4">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number" id="bus-local-distance"
+                                                                                <input type="number"
+                                                                                    id="bus-local-distance"
                                                                                     placeholder="0" min="0"
                                                                                     class="full-width form-control small-rounded" />
-                                                                                <label for="bus-local-distance">distance in
+                                                                                <label for="bus-local-distance">distance
+                                                                                    in
                                                                                     KM</label>
                                                                             </div>
                                                                         </div>
-                                                                       
+
                                                                     </div>
                                                                 </div>
                                                                 <div id="boat-container" class="nv-d-none">
                                                                     <h5 class="pad-h-15 mar-b-20 text-capitalize">
-                                                                       Boat</h5>
+                                                                        Boat</h5>
                                                                     <div class="nv-row mar-0">
                                                                         <div class="nv-col-12 tablet:nv-col-4">
                                                                             <div class="form-group floating-label">
@@ -1127,24 +1142,27 @@
                                                                                     KM</label>
                                                                             </div>
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
 
                                                                 <div id="large-vehicle-container" class="nv-d-none">
                                                                     <h5 class="pad-h-15 mar-b-20 text-capitalize">
-                                                                       Large Vehicle</h5>
+                                                                        Large Vehicle</h5>
                                                                     <div class="nv-row mar-0">
                                                                         <div class="nv-col-12 tablet:nv-col-4">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number" id="large-vehicle-distance"
+                                                                                <input type="number"
+                                                                                    id="large-vehicle-distance"
                                                                                     placeholder="0" min="0"
                                                                                     class="full-width form-control small-rounded" />
-                                                                                <label for="large-vehicle-distance">distance in
+                                                                                <label
+                                                                                    for="large-vehicle-distance">distance
+                                                                                    in
                                                                                     KM</label>
                                                                             </div>
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1171,7 +1189,7 @@
                                                     <div class="nv-row nv-justify-content-between">
                                                         <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
                                                             <lottie-player class="bg-lottie mb-5"
-                                                                src="./animation/food.json" background="transparent"
+                                                                src="./animation/materials.json" background="transparent"
                                                                 speed="1" loop autoplay></lottie-player>
                                                         </div>
                                                         <div class="nv-col-12 desktop:nv-col-8">
@@ -1200,7 +1218,7 @@
                                                                         for="plastic">
                                                                         <span
                                                                             class="nv-plastic heading-1 nv-d-block text-purple"></span>
-                                                                            plastic
+                                                                        plastic
                                                                     </label>
                                                                 </div>
                                                                 <div
@@ -1213,7 +1231,7 @@
                                                                         for="glass">
                                                                         <span
                                                                             class="nv-glass heading-1 nv-d-block text-purple"></span>
-                                                                            glass
+                                                                        glass
                                                                     </label>
                                                                 </div>
                                                                 <div
@@ -1226,7 +1244,7 @@
                                                                         for="metal">
                                                                         <span
                                                                             class="nv-Metal heading-1 nv-d-block text-purple"></span>
-                                                                            metal
+                                                                        metal
                                                                     </label>
                                                                 </div>
                                                                 <div
@@ -1239,145 +1257,195 @@
                                                                         for="fabric">
                                                                         <span
                                                                             class="nv-glass heading-1 nv-d-block text-purple"></span>
-                                                                            fabric
+                                                                        fabric
                                                                     </label>
                                                                 </div>
-                                                                <div
-                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
-                                                                    <input type="checkbox" class="custom-control-input"
-                                                                        id="large-vehicle">
-                                                                    <label
-                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
-                                                                        data-toggle-container="large-vehicle-container"
-                                                                        for="large-vehicle">
-                                                                        <span
-                                                                            class="nv-van heading-1 nv-d-block text-purple"></span>
-                                                                        Large Vehicle
-                                                                    </label>
-                                                                </div>
+
 
                                                             </div>
-                                                            <div class=" mar-t-30">
-                                                                <div id="car-local-container" class="nv-d-none">
-                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">car
+                                                            <div class="nv-row mar-t-30 mar-h-0">
+                                                                <div id="paper-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">Paper
                                                                     </h5>
-                                                                    <div class="nv-row mar-0">
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="paper-weight"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">KG</option>
+                                                                                    <option value="">Tonnes</option>
+                                                                                </select>
+                                                                                <label for="paper-weight">Weight</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="paper-room"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">Primary</option>
+                                                                                    <option value="">Recycled</option>
+                                                                                </select>
+                                                                                <label for="paper-room">room</label>
+                                                                            </div>
+                                                                        </div>
 
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
-                                                                            <div class="form-group floating-label">
-                                                                                <input type="number" id="car-count"
-                                                                                    placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="car-count">No of
-                                                                                    cars</label>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
-                                                                            <div class="form-group floating-label">
-                                                                                <input type="number"
-                                                                                    id="car-local-distance"
-                                                                                    placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="car-local-distance">distance
-                                                                                    in
-                                                                                    KM</label>
-                                                                            </div>
-                                                                        </div>
-                                                                    
+
                                                                     </div>
                                                                 </div>
-                                                                <div id="motorbike-local-container" class="nv-d-none">
-                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
-                                                                        motorbike</h5>
-                                                                    <div class="nv-row mar-0">
-                                                                       
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
+
+                                                                <div id="plastic-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">
+                                                                        plastic
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number"
-                                                                                    id="motorbike-count"
+                                                                                <input type="number" id="plastic-weight"
                                                                                     placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">KG</option>
+                                                                                    <option value="">Tonnes</option>
+                                                                                </select>
                                                                                 <label
-                                                                                    for="motorbike-count">No of motorbike</label>
+                                                                                    for="plastic-weight">Weight</label>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                        <div class="nv-col-12">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number"
-                                                                                    id="motorbike-local-distance"
+                                                                                <input type="number" id="plastic-room"
                                                                                     placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="motorbike-local-distance">distance
-                                                                                    in KM</label>
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">Primary</option>
+                                                                                    <option value="">Recycled</option>
+                                                                                </select>
+                                                                                <label for="plastic-room">room</label>
                                                                             </div>
                                                                         </div>
+                                                                    </div>
+                                                                </div>
 
-                                                                    </div>
-                                                                </div>
-                                                                <div id="train-local-container" class="nv-d-none">
-                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">train
-                                                                        / tran / subway</h5>
-                                                                    <div class="nv-row mar-0">
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
-                                                                            <div class="form-group floating-label">
-                                                                                <input type="number" id="train-local-distance"
-                                                                                    placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="train-local-distance">distance in
-                                                                                    KM</label>
-                                                                            </div>
-                                                                        </div>                                                                      
-                                                                    </div>
-                                                                </div>
-                                                                <div id="bus-local-container" class="nv-d-none">
-                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">bus
+                                                                <div id="glass-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">glass
                                                                     </h5>
-                                                                    <div class="nv-row mar-0">
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number" id="bus-local-distance"
+                                                                                <input type="number" id="glass-weight"
                                                                                     placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="bus-local-distance">distance in
-                                                                                    KM</label>
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">KG</option>
+                                                                                    <option value="">Tonnes</option>
+                                                                                </select>
+                                                                                <label for="glass-weight">Weight</label>
                                                                             </div>
                                                                         </div>
-                                                                       
-                                                                    </div>
-                                                                </div>
-                                                                <div id="boat-container" class="nv-d-none">
-                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
-                                                                       Boat</h5>
-                                                                    <div class="nv-row mar-0">
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                        <div class="nv-col-12">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number" id="boat-distance"
+                                                                                <input type="number" id="glass-room"
                                                                                     placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="boat-distance">distance in
-                                                                                    KM</label>
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">Primary</option>
+                                                                                    <option value="">Recycled</option>
+                                                                                </select>
+                                                                                <label for="glass-room">room</label>
                                                                             </div>
                                                                         </div>
-                                                                        
                                                                     </div>
                                                                 </div>
 
-                                                                <div id="large-vehicle-container" class="nv-d-none">
-                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
-                                                                       Large Vehicle</h5>
-                                                                    <div class="nv-row mar-0">
-                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                <div id="metal-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">metal
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
                                                                             <div class="form-group floating-label">
-                                                                                <input type="number" id="large-vehicle-distance"
+                                                                                <input type="number" id="metal-weight"
                                                                                     placeholder="0" min="0"
-                                                                                    class="full-width form-control small-rounded" />
-                                                                                <label for="large-vehicle-distance">distance in
-                                                                                    KM</label>
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">KG</option>
+                                                                                    <option value="">Tonnes</option>
+                                                                                </select>
+                                                                                <label for="metal-weight">Weight</label>
                                                                             </div>
                                                                         </div>
-                                                                        
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="metal-room"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">Primary</option>
+                                                                                    <option value="">Recycled</option>
+                                                                                </select>
+                                                                                <label for="metal-room">room</label>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
+
+                                                                <div id="fabric-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">fabric
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="fabric-weight"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">KG</option>
+                                                                                    <option value="">Tonnes</option>
+                                                                                </select>
+                                                                                <label
+                                                                                    for="fabric-weight">Weight</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="fabric-room"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">Primary</option>
+                                                                                    <option value="">Recycled</option>
+                                                                                </select>
+                                                                                <label for="fabric-room">room</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1401,18 +1469,394 @@
                                         <div class="recommended-form__panel" data-animation="scaleOut">
                                             <div class="recommended-form__content">
                                                 <div class="fluid-wrapper">
-                                                    <h4>Hotel stay</h4>
+                                                    <h4>Logistics</h4>
+                                                    <p>How is XYZ receiving all the material ?</p>
+                                                    <div class="nv-row nv-justify-content-between">
+                                                        <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                            <lottie-player class="bg-lottie mb-5"
+                                                                src="./animation/logistics.json" background="transparent"
+                                                                speed="1" loop autoplay></lottie-player>
+                                                        </div>
+                                                        <div class="nv-col-12 desktop:nv-col-8">
+                                                            <div class="nv-row text-center">
+
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="van">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="log-van-container"
+                                                                        for="van">
+                                                                        <span
+                                                                            class="nv-van heading-1 nv-d-block text-purple"></span>
+                                                                        van
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="log-vehicle">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="log-vehicle-container"
+                                                                        for="log-vehicle">
+                                                                        <span
+                                                                            class="nv-van heading-1 nv-d-block text-purple"></span>
+                                                                        Large Vehicle
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="rail">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="rail-container"
+                                                                        for="rail">
+                                                                        <span
+                                                                            class="nv-rail heading-1 nv-d-block text-purple"></span>
+                                                                        rail
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="log-car">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="log-car-container"
+                                                                        for="log-car">
+                                                                        <span
+                                                                            class="nv-car heading-1 nv-d-block text-purple"></span>
+                                                                        car
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cargoship">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="cargoship-container"
+                                                                        for="cargoship">
+                                                                        <span
+                                                                            class="nv-cargoship heading-1 nv-d-block text-purple"></span>
+                                                                        cargoship
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="log-motorbike">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="log-motorbike-container"
+                                                                        for="log-motorbike">
+                                                                        <span
+                                                                            class="nv-motorbike heading-1 nv-d-block text-purple"></span>
+                                                                        motorbike
+                                                                    </label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="refridge">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="refridge-container"
+                                                                        for="refridge">
+                                                                        <span
+                                                                            class="nv-fridge heading-1 nv-d-block text-purple"></span>
+                                                                        Large Vehicle(Refridgerated)
+                                                                    </label>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="nv-row mar-t-30 mar-h-0">
+
+                                                                <div id="log-van-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">Van
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="van-tonnes"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="van-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-van-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="log-van-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="van-loads"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="van-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="log-vehicle-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">large vehicle
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="vehicle-tonnes"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="vehicle-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-vehicle-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-vehicle-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="vehicle-loads"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="vehicle-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="rail-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">rail
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="rail-tonnes"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="rail-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-rail-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="log-rail-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="rail-loads"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="rail-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="log-car-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">car
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="log-car-tonnes"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-car-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-log-car-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-log-car-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="log-car-loads"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label for="log-car-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="cargoship-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">cargoship
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="cargoship-tonnes"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="cargoship-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-cargoship-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-cargoship-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="cargoship-loads" placeholder="0"
+                                                                                    min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="cargoship-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="log-motorbike-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">motorbike
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-motorbike-tonnes"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-motorbike-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-log-motorbike-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-log-motorbike-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-motorbike-loads"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-motorbike-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="refridge-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">Large Vehicle
+                                                                        (Refridgerated)
+                                                                    </h5>
+                                                                    <div
+                                                                        class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="refridge-tonnes" placeholder="0"
+                                                                                    min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="refridge-tonnes">tonnes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number"
+                                                                                    id="log-refridge-distance"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="log-refridge-distance">distance
+                                                                                    in KM</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="refridge-loads"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <label
+                                                                                    for="refridge-loads">loads</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
                                                         <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                        <a data-open-accordion="#othersAccordion" class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                             type="button">
-                                                            <span class="nv-d-none tablet:nv-d-block nv-pe-none"> Goto
-                                                                Recommended </span> <i
-                                                                class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <span class="nv-d-none  nv-pe-none"> Goto Others
+                                                            </span> <i class="bi bi-arrow-right nv-pe-none"></i>
                                                         </a>
                                                     </div>
 
@@ -1443,6 +1887,7 @@
                                         <button class="others-form__progress-btn js-active" type="button"></button>
                                         <button class="others-form__progress-btn" type="button"></button>
                                         <button class="others-form__progress-btn" type="button"></button>
+                                        <button class="others-form__progress-btn" type="button"></button>
                                     </div>
                                 </div>
                             </div>
@@ -1461,7 +1906,7 @@
                                                     <div class="nv-row nv-justify-content-between">
                                                         <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
                                                             <lottie-player class="bg-lottie mb-5"
-                                                                src="./animation/food.json" background="transparent"
+                                                                src="./animation/electricity.json" background="transparent"
                                                                 speed="1" loop autoplay></lottie-player>
                                                         </div>
                                                         <div class="nv-col-12 desktop:nv-col-8">
@@ -1486,7 +1931,7 @@
                                                                     <h5 class="pad-h-15 mar-b-20 text-capitalize">
                                                                         electricity</h5>
                                                                     <div class="nv-d-flex">
-                                                                        <div class="nv-col-12 tablet:nv-col-3">
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
                                                                             <div class="form-group floating-label">
                                                                                 <input type="text" id="electrivity-bill"
                                                                                     placeholder=" "
@@ -1494,10 +1939,9 @@
                                                                                 <select name="" id=""
                                                                                     class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
                                                                                     <option value="">Kwh</option>
-                                                                                    <option value="">330ML</option>
                                                                                 </select>
-                                                                                <label
-                                                                                    for="electrivity-bill">Water</label>
+                                                                                <label for="electrivity-bill">Total
+                                                                                    consumption</label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1516,11 +1960,404 @@
                                                 </div>
                                             </div>
                                         </div>
+                                           <!--single form panel-->
+                                           <div class="others-form__panel" data-animation="scaleOut">
+                                            <div class="others-form__content">
+                                                <div class="fluid-wrapper">
+                                                    <h4>Laundry</h4>
+                                                    <p>Let's consider the waste generate during XYZ event</p>
+
+                                                    <div class="nv-row nv-justify-content-between">
+                                                        <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                            <lottie-player class="bg-lottie mb-5"
+                                                                src="./animation/laundry.json" background="transparent"
+                                                                speed="1" loop autoplay></lottie-player>
+                                                        </div>
+                                                        <div class="nv-col-12 desktop:nv-col-8">
+                                                            <div class="nv-row">
+
+                                                                <div class="custom-control custom-checkbox mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="laundry">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="laundry-container"
+                                                                        for="laundry">
+                                                                        <span
+                                                                            class="nv-laundry heading-1 nv-d-block text-purple"></span>
+                                                                        laundry
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class=" mar-t-30">
+                                                                <div id="laundry-container" class="nv-d-none">
+                                                                    <h5 class="pad-h-15 mar-b-20 text-capitalize">
+                                                                        Laundry</h5>
+                                                                    <div class="nv-d-flex">
+                                                                        <div class="nv-col-12 tablet:nv-col-4">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="text" id="laundry-clothes"
+                                                                                    placeholder=" "
+                                                                                    class="full-width form-control small-rounded" />
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">Tonnes</option>
+                                                                                    <option value="">Kg</option>
+                                                                                </select>
+                                                                                <label for="laundry-clothes">No of Clothes</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="nv-d-flex nv-justify-content-between  mar-t-30">
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        type="button">
+                                                        <i class="bi bi-arrow-left nv-pe-none"></i><span
+                                                            class="nv-d-none  nv-pe-none">Previous</span>
+                                                    </a>
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                            type="button">
+                                                            <span class="nv-d-none  nv-pe-none">Next</span> <i
+                                                                class="bi bi-arrow-right nv-pe-none"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!--single form panel-->
                                         <div class="others-form__panel" data-animation="scaleOut">
                                             <div class="others-form__content">
                                                 <div class="fluid-wrapper">
-                                                    <h4>Participant Travel</h4>
+                                                    <h4>Fuel</h4>
+                                                    <p>Fuels purchased/burned by the company</p>
+                                                    <div class="nv-row nv-justify-content-between">
+                                                        <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                            <lottie-player class="bg-lottie mb-5"
+                                                                src="./animation/fuel.json" background="transparent"
+                                                                speed="1" loop autoplay></lottie-player>
+                                                        </div>
+                                                        <div class="nv-col-12 desktop:nv-col-8">
+                                                            <div class="nv-row text-center">
+
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-gas">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-gas-container"
+                                                                        for="fuel-gas">
+                                                                        <span
+                                                                            class="nv-gas heading-1 nv-d-block text-purple"></span>
+                                                                        Natural Gas
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-propane">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-propane-container"
+                                                                        for="fuel-propane">
+                                                                        <span
+                                                                            class="nv-propane heading-1 nv-d-block text-purple"></span>
+                                                                        propane
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-butane">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-butane-container"
+                                                                        for="fuel-butane">
+                                                                        <span
+                                                                            class="nv-butane heading-1 nv-d-block text-purple"></span>
+                                                                        butane
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-lpg">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-lpg-container"
+                                                                        for="fuel-lpg">
+                                                                        <span
+                                                                            class="nv-LPG heading-1 nv-d-block text-purple"></span>
+                                                                        LPG
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-burn-oil">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-burn-oil-container"
+                                                                        for="fuel-burn-oil">
+                                                                        <span
+                                                                            class="nv-oil heading-1 nv-d-block text-purple"></span>
+                                                                        Burning oil
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="fuel-oil">
+                                                                <label
+                                                                    class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                    data-toggle-container="fuel-oil-container"
+                                                                    for="fuel-oil">
+                                                                    <span
+                                                                        class="nv-oil heading-1 nv-d-block text-purple"></span>
+                                                                    Fuel oil
+                                                                </label>
+                                                            </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-gasoline">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-gasoline-container"
+                                                                        for="fuel-gasoline">
+                                                                        <span
+                                                                            class="nv-gasoline heading-1 nv-d-block text-purple"></span>
+                                                                        gasoline
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-diesel">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-diesel-container"
+                                                                        for="fuel-diesel">
+                                                                        <span
+                                                                            class="nv-diesel heading-1 nv-d-block text-purple"></span>
+                                                                        diesel
+                                                                    </label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="fuel-coal">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="fuel-coal-container"
+                                                                        for="fuel-coal">
+                                                                        <span
+                                                                            class="nv-coal heading-1 nv-d-block text-purple"></span>
+                                                                        coal
+                                                                    </label>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="nv-row mar-t-30 mar-h-0">
+                                                                <div id="fuel-gas-container"
+                                                                    class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                    <h5 class="mar-b-20 text-capitalize">Natural Gas</h5>
+                                                                    <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                        <div class="nv-col-12">
+                                                                            <div class="form-group floating-label">
+                                                                                <input type="number" id="fuel-gas-quantity"
+                                                                                    placeholder="0" min="0"
+                                                                                    class="full-width form-control small-rounded">
+                                                                                <select name="" id=""
+                                                                                    class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                    <option value="">M&sup3;</option>
+                                                                                    <option value="">Tonnes</option>
+                                                                                    <option value="">KG</option>
+                                                                                    <option value="">Kwh</option>
+                                                                                </select>
+                                                                                <label for="fuel-gas-quantity">Quantity</label>
+                                                                            </div>
+                                                                        </div>                                                                       
+                                                                    </div>
+                                                                </div>
+
+                                                            <div id="fuel-propane-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> propane</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-propane-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-propane-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="fuel-butane-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> butane</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-butane-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-butane-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+                                                            <div id="fuel-lpg-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> LPG</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-lpg-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-lpg-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+                                                            <div id="fuel-burn-oil-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> burning oil</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-burn-oil-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-burn-oil-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="fuel-oil-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize">fuel oil</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-oil-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-oil-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="fuel-gasoline-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> gasoline</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-gasoline-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-gasoline-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="fuel-diesel-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> diesel</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-diesel-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Litres</option>
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-diesel-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="fuel-coal-container" class="nv-d-none nv-col-12 tablet:nv-col-4">
+                                                                <h5 class="mar-b-20 text-capitalize"> coal</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="fuel-coal-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-5 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">                                                                          
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">KG</option>
+                                                                                <option value="">Kwh</option>
+                                                                            </select>
+                                                                            <label for="fuel-coal-quantity">Quantity</label>
+                                                                        </div>
+                                                                    </div>                                                                       
+                                                                </div>
+                                                            </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
                                                         <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
@@ -1540,7 +2377,319 @@
                                         <div class="others-form__panel" data-animation="scaleOut">
                                             <div class="others-form__content">
                                                 <div class="fluid-wrapper">
-                                                    <h4>Hotel stay</h4>
+                                                    <h4>Waste</h4>
+
+                                                    <div class="nv-row nv-justify-content-between">
+                                                        <div class="nv-d-none desktop:nv-d-block desktop:nv-col-4">
+                                                            <lottie-player class="bg-lottie mb-5"
+                                                                src="./animation/waste.json" background="transparent"
+                                                                speed="1" loop autoplay></lottie-player>
+                                                        </div>
+                                                        <div class="nv-col-12 desktop:nv-col-8">
+                                                            <div class="nv-row text-center">
+
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="waste-organic">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="waste-organic-container"
+                                                                        for="waste-organic">
+                                                                        <span
+                                                                            class="nv-organic heading-1 nv-d-block text-purple"></span>
+                                                                        Organic
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="waste-paper">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="waste-paper-container"
+                                                                        for="waste-paper">
+                                                                        <span
+                                                                            class="nv-paper heading-1 nv-d-block text-purple"></span>
+                                                                        Paper
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="waste-glass">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="waste-glass-container"
+                                                                        for="waste-glass">
+                                                                        <span
+                                                                            class="nv-glass heading-1 nv-d-block text-purple"></span>
+                                                                        glass
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="waste-metal">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="waste-metal-container"
+                                                                        for="waste-metal">
+                                                                        <span
+                                                                            class="nv-LPG heading-1 nv-d-block text-purple"></span>
+                                                                        metal
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="waste-plastic">
+                                                                    <label
+                                                                        class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                        data-toggle-container="waste-plastic-container"
+                                                                        for="waste-plastic">
+                                                                        <span
+                                                                            class="nv-plastic heading-1 nv-d-block text-purple"></span>
+                                                                       plastic
+                                                                    </label>
+                                                                </div>
+                                                                <div
+                                                                class="custom-control custom-checkbox nv-col-6 tablet:nv-col-4 desktop:nv-col-3 mar-b-20">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="waste-commercial">
+                                                                <label
+                                                                    class="custom-control-label text-center text-capitalize text-purple pad-h-10"
+                                                                    data-toggle-container="waste-commercial-container"
+                                                                    for="waste-commercial">
+                                                                    <span
+                                                                        class="nv-hotel heading-1 nv-d-block text-purple"></span>
+                                                                   Commercial & Industrial
+                                                                </label>
+                                                            </div>
+                                                               
+
+                                                            </div>
+                                                            <div class="nv-row mar-t-30 mar-h-0">
+                                                              
+                                                             
+                                                            <div id="waste-organic-container" class="nv-d-none nv-col-12 tablet:nv-col-6">
+                                                                <h5 class="mar-b-20 text-capitalize">Organic</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-organic-type"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Landfill</option>
+                                                                                <option value="">Combustion</option>
+                                                                                <option value="">Recycled</option>
+                                                                                <option value="">We don't know</option>
+                                                                                <option value="">Anaerobic Digestion</option>
+                                                                            </select>
+                                                                            <label for="waste-organic-type">Type</label>
+                                                                        </div>                                                                        
+                                                                    </div>      
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-organic-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">Kg</option>                                                                   
+                                                                            </select>
+                                                                            <label for="waste-organic-quantity">quantity</label>
+                                                                        </div>
+                                                                    </div>                                                             
+                                                                </div>
+                                                            </div>
+
+                                                     
+
+                                                            <div id="waste-paper-container" class="nv-d-none nv-col-12 tablet:nv-col-6">
+                                                                <h5 class="mar-b-20 text-capitalize">paper</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-paper-type"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Landfill</option>
+                                                                                <option value="">Combustion</option>
+                                                                                <option value="">Recycled</option>
+                                                                                <option value="">We don't know</option>
+                                                                                <option value="">Anaerobic Digestion</option>
+                                                                            </select>
+                                                                            <label for="waste-paper-type">Type</label>
+                                                                        </div>                                                                        
+                                                                    </div>      
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-paper-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">Kg</option>                                                                   
+                                                                            </select>
+                                                                            <label for="waste-paper-quantity">quantity</label>
+                                                                        </div>
+                                                                    </div>                                                             
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="waste-glass-container" class="nv-d-none nv-col-12 tablet:nv-col-6">
+                                                                <h5 class="mar-b-20 text-capitalize">glass</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-glass-type"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Landfill</option>
+                                                                                <option value="">Combustion</option>
+                                                                                <option value="">Recycled</option>
+                                                                                <option value="">We don't know</option>
+                                                                                <option value="">Anaerobic Digestion</option>
+                                                                            </select>
+                                                                            <label for="waste-glass-type">Type</label>
+                                                                        </div>                                                                        
+                                                                    </div>      
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-glass-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">Kg</option>                                                                   
+                                                                            </select>
+                                                                            <label for="waste-glass-quantity">quantity</label>
+                                                                        </div>
+                                                                    </div>                                                             
+                                                                </div>
+                                                            </div>
+                                                            <div id="waste-plastic-container" class="nv-d-none nv-col-12 tablet:nv-col-6">
+                                                                <h5 class="mar-b-20 text-capitalize">plastic</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-plastic-type"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Landfill</option>
+                                                                                <option value="">Combustion</option>
+                                                                                <option value="">Recycled</option>
+                                                                                <option value="">We don't know</option>
+                                                                                <option value="">Anaerobic Digestion</option>
+                                                                            </select>
+                                                                            <label for="waste-plastic-type">Type</label>
+                                                                        </div>                                                                        
+                                                                    </div>      
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-plastic-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">Kg</option>                                                                   
+                                                                            </select>
+                                                                            <label for="waste-plastic-quantity">quantity</label>
+                                                                        </div>
+                                                                    </div>                                                             
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="waste-metal-container" class="nv-d-none nv-col-12 tablet:nv-col-6">
+                                                                <h5 class="mar-b-20 text-capitalize">metal</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-metal-type"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Landfill</option>
+                                                                                <option value="">Combustion</option>
+                                                                                <option value="">Recycled</option>
+                                                                                <option value="">We don't know</option>
+                                                                                <option value="">Anaerobic Digestion</option>
+                                                                            </select>
+                                                                            <label for="waste-metal-type">Type</label>
+                                                                        </div>                                                                        
+                                                                    </div>      
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-metal-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">Kg</option>                                                                   
+                                                                            </select>
+                                                                            <label for="waste-metal-quantity">quantity</label>
+                                                                        </div>
+                                                                    </div>                                                             
+                                                                </div>
+                                                            </div>
+
+                                                     
+                                                            <div id="waste-commercial-container" class="nv-d-none nv-col-12 tablet:nv-col-6">
+                                                                <h5 class="mar-b-20 text-capitalize">commercial & industrial</h5>
+                                                                <div class="nv-d-flex nv-flex-column mar-0 nv-no-gutters">
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-commercial-type"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Landfill</option>
+                                                                                <option value="">Combustion</option>
+                                                                                <option value="">Recycled</option>
+                                                                                <option value="">We don't know</option>
+                                                                                <option value="">Anaerobic Digestion</option>
+                                                                            </select>
+                                                                            <label for="waste-commercial-type">Type</label>
+                                                                        </div>                                                                        
+                                                                    </div>      
+                                                                    <div class="nv-col-12">
+                                                                        <div class="form-group floating-label">
+                                                                            <input type="number" id="waste-commercial-quantity"
+                                                                                placeholder="0" min="0"
+                                                                                class="full-width form-control small-rounded">
+                                                                            <select name="" id=""
+                                                                                class="form-control border-0 mar-t-n35 nv-col-6 float-right-0 form-control-sm mar-r-10 text-right pad-0 focus-0 shadow-none border-left-1">
+                                                                                <option value="">Tonnes</option>
+                                                                                <option value="">Kg</option>                                                                   
+                                                                            </select>
+                                                                            <label for="waste-commercial-quantity">quantity</label>
+                                                                        </div>
+                                                                    </div>                                                             
+                                                                </div>
+                                                            </div>
+
+                                                     
+                                                     
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
                                                         <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             type="button">
@@ -1549,9 +2698,8 @@
                                                         </a>
                                                         <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
                                                             type="button">
-                                                            <span class="nv-d-none tablet:nv-d-block nv-pe-none"> Goto
-                                                                Recommended </span> <i
-                                                                class="bi bi-arrow-right nv-pe-none"></i>
+                                                            <span class=" nv-pe-none"> Submit </span>
+                                                            <i class="bi bi-arrow-right nv-pe-none"></i>
                                                         </a>
                                                     </div>
 

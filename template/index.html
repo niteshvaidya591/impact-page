@@ -1,189 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Reflora</title>
-        <link rel="stylesheet" href="./../build/style.css" />
-        <link rel="stylesheet" href="./css/reflora.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />              
-    </head>
-    <body>
-        <main>
-            <div class="fluid-wrapper">
-                <h1 class="mar-b-0">Events Calculator</h1>
-                <p>Please select the area that your event will cover</p>
-                <section>
-                    <div class="nv-row">
-                        <p class="nv-offset-8 desktop:nv-offset-9 text-center full-width font-weight-bold nv-d-none tablet:nv-d-block scope-title">Your custom Calculator 
-                            <button tabindex="0" data-trigger="focus" type="button" class="pad-0 mar-0 bg-transparent border-0" data-toggle="popover" data-placement="top"
-                             data-content="And here's some amazing content. It's very engaging. Right?">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./css/reflora.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <main>
+        <div class="fluid-wrapper">
+            <h1 class="mar-b-0">Events Calculator</h1>
+            <p>Please select the area that your event will cover</p>
+            <section>
+                <div class="nv-row">
+                    <p
+                        class="nv-offset-8 desktop:nv-offset-9 text-center full-width font-weight-bold nv-d-none tablet:nv-d-block scope-title">
+                        Your custom Calculator
+                        <button tabindex="0" data-trigger="focus" type="button"
+                            class="pad-0 mar-0 bg-transparent border-0" data-toggle="popover" data-placement="top"
+                            data-content="And here's some amazing content. It's very engaging. Right?">
                             <i class="bi bi-info-circle-fill"></i>
                         </button>
-                            
-                        </p>
-                        <div class="nv-col-12">
-                            <!-- scope 1 starts -->
-                            <div class="nv-row scope-row scope-row__blue">
-                                <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-1 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                    <p class="scope-circle scope-circle__blue scope-no scope-no__1">
-                                       <span class="nv-one heading-1 text-white pad-t-10"></span>
-                                    </p>
+
+                    </p>
+                    <div class="nv-col-12">
+                        <!-- scope 1 starts -->
+                        <div class="nv-row scope-row scope-row__blue">
+                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-1 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                <p class="scope-circle scope-circle__blue scope-no scope-no__1">
+                                    <span class="nv-one heading-1 text-white pad-t-10"></span>
+                                </p>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-7 desktop:nv-col-8 scope-checkbox__check">
+                                <div>
+                                    <h2 class="mar-b-0">Mandatory</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores.
+                                        Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
                                 </div>
-                                <div class="nv-col-12 tablet:nv-col-7 desktop:nv-col-8 scope-checkbox__check">
-                                    <div>
-                                        <h2 class="mar-b-0">Mandatory</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores. Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
-                                    </div>
-                                    <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                        <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
                                         title="Add to custom calculator">
-                                            <input type="checkbox" name="" id="energy" />
-                                            <label for="energy"><i class="bi bi-plus-circle-fill"></i> Participant Travel </label>
+                                        <input type="checkbox" name="" id="energy" />
+                                        <label for="energy"><i class="bi bi-plus-circle-fill"></i> Participant Travel
+                                        </label>
                                     </a>
                                     <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                    title="Add to custom calculator">
-                                            <input type="checkbox" name="" id="drink" />
-                                            <label for="drink"><i class="bi bi-plus-circle-fill"></i> Food & Drink</label>
-                                </a>
-                                <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                title="Add to custom calculator">
-                                            <input type="checkbox" name="" id="hotel" />
-                                            <label for="hotel"><i class="bi bi-plus-circle-fill"></i> Hotel stay</label>
-                            </a>
-                                    </div>
-                                    <div class="nv-row nv-justify-content-end full-width scope-controls">
-                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-50">
-                                            <button class="scope-button nv-c-not-allowed"><span class="scope-checked">1</span><span>/</span><span class="scope-out-of">1</span></button>
-                                            <p class="mar-v-10">Selected</p>
-                                        </div>
-                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                            <button class="scope-button scope-reset" data-toggle="tooltip" data-placement="top"
-                                            title="Reset mandatory scope"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                            <p class="mar-v-10">Reset</p>
-                                        </div>
-                                    </div>
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="drink" />
+                                        <label for="drink"><i class="bi bi-plus-circle-fill"></i> Food & Drink</label>
+                                    </a>
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="hotel" />
+                                        <label for="hotel"><i class="bi bi-plus-circle-fill"></i> Hotel stay</label>
+                                    </a>
                                 </div>
-                                <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
-                                    <label class="nv-d-none" for="energy"><i class="bi bi-x-circle-fill"></i> Participant Travel</label>
-                                    <label class="nv-d-none" for="drink"><i class="bi bi-x-circle-fill"></i> Food & Drink</label>
-                                    <label class="nv-d-none" for="hotel"><i class="bi bi-x-circle-fill"></i> Hotel stay</label>
+                                <div class="nv-row nv-justify-content-end full-width scope-controls">
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-50">
+                                        <button class="scope-button nv-c-not-allowed"><span
+                                                class="scope-checked">1</span><span>/</span><span
+                                                class="scope-out-of">1</span></button>
+                                        <p class="mar-v-10">Selected</p>
+                                    </div>
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                        <button class="scope-button scope-reset" data-toggle="tooltip"
+                                            data-placement="top" title="Reset mandatory scope"><span
+                                                class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Reset</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
+                                <label class="nv-d-none" for="energy"><i class="bi bi-x-circle-fill"></i> Participant
+                                    Travel</label>
+                                <label class="nv-d-none" for="drink"><i class="bi bi-x-circle-fill"></i> Food &
+                                    Drink</label>
+                                <label class="nv-d-none" for="hotel"><i class="bi bi-x-circle-fill"></i> Hotel
+                                    stay</label>
+                            </div>
+                        </div>
 
-                            <!-- scope 1 ends -->
-                                <!-- scope 2 starts -->
-                                <div class="nv-row scope-row  scope-row__green">
-                                    <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-1 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                        <p class="scope-circle scope-circle__green scope-no scope-no__2">
-                                            <span class="nv-two heading-1 text-white pad-t-10"></span>
-                                        </p>
+                        <!-- scope 1 ends -->
+                        <!-- scope 2 starts -->
+                        <div class="nv-row scope-row  scope-row__green">
+                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-1 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                <p class="scope-circle scope-circle__green scope-no scope-no__2">
+                                    <span class="nv-two heading-1 text-white pad-t-10"></span>
+                                </p>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-7 desktop:nv-col-8 scope-checkbox__check">
+                                <div>
+                                    <h2 class="mar-b-0">Recommended</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores.
+                                        Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
+                                </div>
+                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="transport" />
+                                        <label for="transport"><i class="bi bi-plus-circle-fill"></i> Participant Local
+                                            Transport</label>
+                                    </a>
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="materials" />
+                                        <label for="materials"><i class="bi bi-plus-circle-fill"></i>Materials</label>
+                                    </a>
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="logistics" />
+                                        <label for="logistics"><i class="bi bi-plus-circle-fill"></i> logistics</label>
+                                    </a>
+                                </div>
+                                <div class="nv-row nv-justify-content-end full-width scope-controls">
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-50">
+                                        <button class="scope-button nv-c-not-allowed"><span
+                                                class="scope-checked">1</span><span>/</span><span
+                                                class="scope-out-of">1</span></button>
+                                        <p class="mar-v-10">Selected</p>
                                     </div>
-                                    <div class="nv-col-12 tablet:nv-col-7 desktop:nv-col-8 scope-checkbox__check">
-                                        <div>
-                                            <h2 class="mar-b-0">Recommended</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores. Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
-                                        </div>
-                                        <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                            <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="transport" />
-                                                <label for="transport"><i class="bi bi-plus-circle-fill"></i> Participant Local Transport</label>
-                                        </a>
-                                            <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="materials" />
-                                                <label for="materials"><i class="bi bi-plus-circle-fill"></i>Materials</label>
-                                        </a>
-                                            <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="logistics" />
-                                                <label for="logistics"><i class="bi bi-plus-circle-fill"></i> logistics</label>
-                                        </a>
-                                        </div>
-                                        <div class="nv-row nv-justify-content-end full-width scope-controls">
-                                            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-50">
-                                                <button class="scope-button nv-c-not-allowed"><span class="scope-checked">1</span><span>/</span><span class="scope-out-of">1</span></button>
-                                                <p class="mar-v-10">Selected</p>
-                                            </div>
-                                            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                                <button class="scope-button scope-reset" data-toggle="tooltip" data-placement="top"
-                                                title="Reset recommended scope"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                                <p class="mar-v-10">Reset</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
-                                        <label class="nv-d-none" for="transport"><i class="bi bi-x-circle-fill"></i> Participant Local Transport</label>
-                                        <label class="nv-d-none" for="materials"><i class="bi bi-x-circle-fill"></i> Materials</label>
-                                        <label class="nv-d-none" for="logistics"><i class="bi bi-x-circle-fill"></i> Logistics</label>
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                        <button class="scope-button scope-reset" data-toggle="tooltip"
+                                            data-placement="top" title="Reset recommended scope"><span
+                                                class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Reset</p>
                                     </div>
                                 </div>
-                            <!-- scope 2 ends -->
-                            <!-- scope 3 starts -->
-                                <div class="nv-row scope-row scope-row__yellow">
-                                    <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-1 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                        <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
-                                            <span class="nv-three heading-1 text-white pad-t-5"></span>
-                                        </p>
+                            </div>
+                            <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
+                                <label class="nv-d-none" for="transport"><i class="bi bi-x-circle-fill"></i> Participant
+                                    Local Transport</label>
+                                <label class="nv-d-none" for="materials"><i class="bi bi-x-circle-fill"></i>
+                                    Materials</label>
+                                <label class="nv-d-none" for="logistics"><i class="bi bi-x-circle-fill"></i>
+                                    Logistics</label>
+                            </div>
+                        </div>
+                        <!-- scope 2 ends -->
+                        <!-- scope 3 starts -->
+                        <div class="nv-row scope-row scope-row__yellow">
+                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-1 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
+                                    <span class="nv-three heading-1 text-white pad-t-5"></span>
+                                </p>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-7 desktop:nv-col-8 scope-checkbox__check">
+                                <div>
+                                    <h2 class="mar-b-0">Others</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores.
+                                        Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
+                                </div>
+                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="food" />
+                                        <label for="food"><i class="bi bi-plus-circle-fill"></i>Electricity</label>
+                                    </a>
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="waste" />
+                                        <label for="waste"><i class="bi bi-plus-circle-fill"></i>Waste</label>
+                                    </a>
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="fuel" />
+                                        <label for="fuel"><i class="bi bi-plus-circle-fill"></i> Fossil Fuel</label>
+                                    </a>
+                                    <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
+                                        title="Add to custom calculator">
+                                        <input type="checkbox" name="" id="laundry" />
+                                        <label for="laundry"><i class="bi bi-plus-circle-fill"></i> Laundry</label>
+                                    </a>
+
+                                </div>
+                                <div class="nv-row nv-justify-content-end full-width scope-controls">
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-50">
+                                        <button class="scope-button nv-c-not-allowed"><span
+                                                class="scope-checked">1</span><span>/</span><span
+                                                class="scope-out-of">1</span></button>
+                                        <p class="mar-v-10">Selected</p>
                                     </div>
-                                    <div class="nv-col-12 tablet:nv-col-7 desktop:nv-col-8 scope-checkbox__check">
-                                        <div>
-                                            <h2 class="mar-b-0">Others</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores. Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
-                                        </div>
-                                        <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                            <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="food" />
-                                                <label for="food"><i class="bi bi-plus-circle-fill"></i>Electricity</label>
-                                        </a>                                      
-                                            <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="waste" />
-                                                <label for="waste"><i class="bi bi-plus-circle-fill"></i>Waste</label>
-                                        </a>
-                                            <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="fuel" />
-                                                <label for="fuel"><i class="bi bi-plus-circle-fill"></i> Fossil Fuel</label>
-                                        </a>
-                                        <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
-                                        title="Add to custom calculator">
-                                                <input type="checkbox" name="" id="laundry" />
-                                                <label for="laundry"><i class="bi bi-plus-circle-fill"></i> Laundry</label>
-                                        </a>
-                                        
-                                        </div>
-                                        <div class="nv-row nv-justify-content-end full-width scope-controls">
-                                            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-50">
-                                                <button class="scope-button nv-c-not-allowed"><span class="scope-checked">1</span><span>/</span><span class="scope-out-of">1</span></button>
-                                                <p class="mar-v-10">Selected</p>
-                                            </div>
-                                            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                                <button class="scope-button scope-reset" data-toggle="tooltip" data-placement="top"
-                                                title="Reset Others scope"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                                <p class="mar-v-10">Reset</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
-                                        <label class="nv-d-none" for="food"><i class="bi bi-x-circle-fill"></i> Electricity</label>
-                                        <label class="nv-d-none" for="waste"><i class="bi bi-x-circle-fill"></i> Waste</label>
-                                        <label class="nv-d-none" for="fuel"><i class="bi bi-x-circle-fill"></i> Fossil Fuel</label>  
-                                        <label class="nv-d-none" for="laundry"><i class="bi bi-x-circle-fill"></i> Laundry</label>                                   
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                        <button class="scope-button scope-reset" data-toggle="tooltip"
+                                            data-placement="top" title="Reset Others scope"><span
+                                                class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Reset</p>
                                     </div>
                                 </div>
-                            <!-- scope 3 ends -->
+                            </div>
+                            <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
+                                <label class="nv-d-none" for="food"><i class="bi bi-x-circle-fill"></i>
+                                    Electricity</label>
+                                <label class="nv-d-none" for="waste"><i class="bi bi-x-circle-fill"></i> Waste</label>
+                                <label class="nv-d-none" for="fuel"><i class="bi bi-x-circle-fill"></i> Fossil
+                                    Fuel</label>
+                                <label class="nv-d-none" for="laundry"><i class="bi bi-x-circle-fill"></i>
+                                    Laundry</label>
+                            </div>
                         </div>
-                        <div class="nv-row nv-justify-content-end full-width desktop:nv-offset-9 pad-v-30 bg-white zindex-4 nv-pos-relative ">
-                            <button class="rounded-pill bg-secondary text-white border-white btn text-primary font-weight-bold pad-v-5 pad-h-15 mar-h-auto bg-white border-1 border-primary">Calculate</button>
-                        </div>
+                        <!-- scope 3 ends -->
                     </div>
-                </section>
-            </div>
-        </main>
-        <script src="./../build/script.js"></script>
-    </body>
+                    <div
+                        class="nv-row nv-justify-content-end full-width desktop:nv-offset-9 pad-v-30 bg-white zindex-4 nv-pos-relative ">
+                        <button
+                            class="rounded-pill bg-secondary text-white border-white btn text-primary font-weight-bold pad-v-5 pad-h-15 mar-h-auto bg-white border-1 border-primary">Calculate</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./../build/script.js"></script>
+</body>
+
 </html>

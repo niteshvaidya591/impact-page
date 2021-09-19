@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reflora</title>
     <link rel="stylesheet" href="./../build/style.css" />
-    <link rel="stylesheet" href="./css/reflora.css" />
+    <link rel="stylesheet" href="./reflora/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 </head>
 
@@ -21,11 +21,11 @@
                 <ul id="progressbar" class="text-center pad-l-0">
                     <li class="active bi bi-calendar-check" id="basic"><strong
                             class="nv-d-none tablet:nv-d-block">Basic</strong></li>
-                    <li class="nv-one" id="mandatory"><strong class="nv-d-none tablet:nv-d-block">Mandatory</strong>
+                    <li class="nv-i-one" id="mandatory"><strong class="nv-d-none tablet:nv-d-block">Mandatory</strong>
                     </li>
-                    <li class="nv-two" id="recommended"><strong class="nv-d-none tablet:nv-d-block">Recommended</strong>
+                    <li class="nv-i-two" id="recommended"><strong class="nv-d-none tablet:nv-d-block">Recommended</strong>
                     </li>
-                    <li class="nv-three" id="others"><strong class="nv-d-none tablet:nv-d-block">Others</strong></li>
+                    <li class="nv-i-three" id="others"><strong class="nv-d-none tablet:nv-d-block">Others</strong></li>
                 </ul>
             </div>
         </div>
@@ -156,7 +156,7 @@
                                             </div>
                                             <div
                                                 class="nv-d-flex nv-justify-content-end nv-col-12 desktop:nv-col-9 mar-t-20">
-                                                <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                                     >
                                                     <i class="bi bi-plus nv-pe-none"></i> <span
                                                         class="nv-d-none tablet:nv-d-block nv-pe-none">Add</span>
@@ -168,7 +168,7 @@
 
                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">                              
                                         <a data-open-accordion="#mandatoryAccordion"
-                                            class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                            class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                             >
                                             <span class="nv-d-none nv-pe-none"> Goto Recommended </span>
                                             <i class="bi bi-arrow-right nv-pe-none"></i>
@@ -227,7 +227,7 @@
                                                                         data-toggle-container="breakfast-container"
                                                                         for="breakfast">
                                                                         <span
-                                                                            class="nv-breakfast heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-breakfast heading-1 nv-d-block text-purple"></span>
                                                                         Breakfast
                                                                     </label>
                                                                 </div>
@@ -240,7 +240,7 @@
                                                                         data-toggle-container="lunch-container"
                                                                         for="lunch">
                                                                         <span
-                                                                            class="nv-lunch heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-lunch heading-1 nv-d-block text-purple"></span>
                                                                         lunch
                                                                     </label>
                                                                 </div>
@@ -253,7 +253,7 @@
                                                                         data-toggle-container="dinner-container"
                                                                         for="dinner">
                                                                         <span
-                                                                            class="nv-dinner heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-dinner heading-1 nv-d-block text-purple"></span>
                                                                         dinner
                                                                     </label>
                                                                 </div>
@@ -266,7 +266,7 @@
                                                                         data-toggle-container="drinks-container"
                                                                         for="drinks">
                                                                         <span
-                                                                            class="nv-drinks heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-drinks heading-1 nv-d-block text-purple"></span>
                                                                         drinks
                                                                     </label>
                                                                 </div>
@@ -279,7 +279,7 @@
                                                                         data-toggle-container="snacks-container"
                                                                         for="snacks">
                                                                         <span
-                                                                            class="nv-snacks heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-snacks heading-1 nv-d-block text-purple"></span>
                                                                         snacks
                                                                     </label>
                                                                 </div>
@@ -527,7 +527,7 @@
                                                     </div>
 
                                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -560,7 +560,7 @@
                                                                         data-toggle-container="flight-container"
                                                                         for="flight">
                                                                         <span
-                                                                            class="nv-aeroplane heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-aeroplane heading-1 nv-d-block text-purple"></span>
                                                                         flight
                                                                     </label>
                                                                 </div>
@@ -572,7 +572,7 @@
                                                                         class="custom-control-label text-center text-capitalize text-purple pad-h-10"
                                                                         data-toggle-container="car-container" for="car">
                                                                         <span
-                                                                            class="nv-car heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-car heading-1 nv-d-block text-purple"></span>
                                                                         car
                                                                     </label>
                                                                 </div>
@@ -585,7 +585,7 @@
                                                                         data-toggle-container="motorbike-container"
                                                                         for="motorbike">
                                                                         <span
-                                                                            class="nv-motorbike heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-motorbike heading-1 nv-d-block text-purple"></span>
                                                                         motorbike
                                                                     </label>
                                                                 </div>
@@ -598,7 +598,7 @@
                                                                         data-toggle-container="train-container"
                                                                         for="train">
                                                                         <span
-                                                                            class="nv-train heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-train heading-1 nv-d-block text-purple"></span>
                                                                         train / subway / tran
                                                                     </label>
                                                                 </div>
@@ -610,7 +610,7 @@
                                                                         class="custom-control-label text-center text-capitalize text-purple pad-h-10"
                                                                         data-toggle-container="bus-container" for="bus">
                                                                         <span
-                                                                            class="nv-bus heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-bus heading-1 nv-d-block text-purple"></span>
                                                                         bus
                                                                     </label>
                                                                 </div>
@@ -623,7 +623,7 @@
                                                                         data-toggle-container="walk-container"
                                                                         for="walk">
                                                                         <span
-                                                                            class="nv-cycle heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-cycle heading-1 nv-d-block text-purple"></span>
                                                                         walking / Bicycle
                                                                     </label>
                                                                 </div>
@@ -796,12 +796,12 @@
 
 
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             >
                                                             <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -833,7 +833,7 @@
                                                                         data-toggle-container="hotel-container"
                                                                         for="hotel">
                                                                         <span
-                                                                            class="nv-hotel heading-1 nv-d-block text-purple"></span>
+                                                                            class="nv-i-hotel heading-1 nv-d-block text-purple"></span>
                                                                         Hotel
                                                                     </label>
                                                                 </div>
@@ -880,7 +880,7 @@
                                                                     </div>
                                                                     <div
                                                                         class="nv-d-flex nv-justify-content-end nv-col-12 desktop:nv-col-9">
-                                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                                                             >
                                                                             <i class="bi bi-plus nv-pe-none"></i> <span
                                                                                 class="nv-d-none tablet:nv-d-block nv-pe-none">Add</span>
@@ -892,13 +892,13 @@
                                                         </div>
                                                     </div>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             >
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
                                                         <a data-open-accordion="#recommendedAccordion"
-                                                            class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                            class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                                             >
                                                             <span class="nv-d-none nv-pe-none"> Goto Recommended </span>
                                                             <i class="bi bi-arrow-right nv-pe-none"></i>
@@ -964,7 +964,7 @@
                                                                         data-toggle-container="car-local-container"
                                                                         for="car-local">
                                                                         <span
-                                                                            class="nv-car heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-car heading-1 nv-d-block text-green"></span>
                                                                         car
                                                                     </label>
                                                                 </div>
@@ -977,7 +977,7 @@
                                                                         data-toggle-container="motorbike-local-container"
                                                                         for="motorbike-local">
                                                                         <span
-                                                                            class="nv-motorbike heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-motorbike heading-1 nv-d-block text-green"></span>
                                                                         motorbike
                                                                     </label>
                                                                 </div>
@@ -990,7 +990,7 @@
                                                                         data-toggle-container="train-local-container"
                                                                         for="train-local">
                                                                         <span
-                                                                            class="nv-train heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-train heading-1 nv-d-block text-green"></span>
                                                                         train / subway / tran
                                                                     </label>
                                                                 </div>
@@ -1003,7 +1003,7 @@
                                                                         data-toggle-container="bus-local-container"
                                                                         for="bus-local">
                                                                         <span
-                                                                            class="nv-bus heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-bus heading-1 nv-d-block text-green"></span>
                                                                         bus
                                                                     </label>
                                                                 </div>
@@ -1016,7 +1016,7 @@
                                                                         data-toggle-container="boat-container"
                                                                         for="boat">
                                                                         <span
-                                                                            class="nv-boat heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-boat heading-1 nv-d-block text-green"></span>
                                                                         Boat
                                                                     </label>
                                                                 </div>
@@ -1029,7 +1029,7 @@
                                                                         data-toggle-container="large-vehicle-container"
                                                                         for="large-vehicle">
                                                                         <span
-                                                                            class="nv-vehicle heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-vehicle heading-1 nv-d-block text-green"></span>
                                                                         Large Vehicle
                                                                     </label>
                                                                 </div>
@@ -1170,7 +1170,7 @@
                                                     </div>
                 
                                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1204,7 +1204,7 @@
                                                                         data-toggle-container="paper-container"
                                                                         for="paper">
                                                                         <span
-                                                                            class="nv-paper heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-paper heading-1 nv-d-block text-green"></span>
                                                                         Paper
                                                                     </label>
                                                                 </div>
@@ -1217,7 +1217,7 @@
                                                                         data-toggle-container="plastic-container"
                                                                         for="plastic">
                                                                         <span
-                                                                            class="nv-plastic heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-plastic heading-1 nv-d-block text-green"></span>
                                                                         plastic
                                                                     </label>
                                                                 </div>
@@ -1230,7 +1230,7 @@
                                                                         data-toggle-container="glass-container"
                                                                         for="glass">
                                                                         <span
-                                                                            class="nv-glass heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-glass heading-1 nv-d-block text-green"></span>
                                                                         glass
                                                                     </label>
                                                                 </div>
@@ -1243,7 +1243,7 @@
                                                                         data-toggle-container="metal-container"
                                                                         for="metal">
                                                                         <span
-                                                                            class="nv-metal heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-metal heading-1 nv-d-block text-green"></span>
                                                                         metal
                                                                     </label>
                                                                 </div>
@@ -1256,7 +1256,7 @@
                                                                         data-toggle-container="fabric-container"
                                                                         for="fabric">
                                                                         <span
-                                                                            class="nv-fabric heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-fabric heading-1 nv-d-block text-green"></span>
                                                                         fabric
                                                                     </label>
                                                                 </div>
@@ -1451,12 +1451,12 @@
                                                     </div>
                 
                                                     <div class="nv-d-flex nv-justify-content-between mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             >
                                                             <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1489,7 +1489,7 @@
                                                                         data-toggle-container="log-van-container"
                                                                         for="van">
                                                                         <span
-                                                                            class="nv-van heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-van heading-1 nv-d-block text-green"></span>
                                                                         van
                                                                     </label>
                                                                 </div>
@@ -1502,7 +1502,7 @@
                                                                         data-toggle-container="log-vehicle-container"
                                                                         for="log-vehicle">
                                                                         <span
-                                                                            class="nv-vehicle heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-vehicle heading-1 nv-d-block text-green"></span>
                                                                         Large Vehicle
                                                                     </label>
                                                                 </div>
@@ -1515,7 +1515,7 @@
                                                                         data-toggle-container="rail-container"
                                                                         for="rail">
                                                                         <span
-                                                                            class="nv-rail heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-rail heading-1 nv-d-block text-green"></span>
                                                                         rail
                                                                     </label>
                                                                 </div>
@@ -1528,7 +1528,7 @@
                                                                         data-toggle-container="log-car-container"
                                                                         for="log-car">
                                                                         <span
-                                                                            class="nv-car heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-car heading-1 nv-d-block text-green"></span>
                                                                         car
                                                                     </label>
                                                                 </div>
@@ -1541,7 +1541,7 @@
                                                                         data-toggle-container="cargoship-container"
                                                                         for="cargoship">
                                                                         <span
-                                                                            class="nv-cargoship heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-cargoship heading-1 nv-d-block text-green"></span>
                                                                         cargoship
                                                                     </label>
                                                                 </div>
@@ -1554,7 +1554,7 @@
                                                                         data-toggle-container="log-motorbike-container"
                                                                         for="log-motorbike">
                                                                         <span
-                                                                            class="nv-motorbike heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-motorbike heading-1 nv-d-block text-green"></span>
                                                                         motorbike
                                                                     </label>
                                                                 </div>
@@ -1568,7 +1568,7 @@
                                                                         data-toggle-container="refridge-container"
                                                                         for="refridge">
                                                                         <span
-                                                                            class="nv-fridge heading-1 nv-d-block text-green"></span>
+                                                                            class="nv-i-fridge heading-1 nv-d-block text-green"></span>
                                                                         Large Vehicle(Refridgerated)
                                                                     </label>
                                                                 </div>
@@ -1848,12 +1848,12 @@
                                                     </div>
                 
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             >
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a data-open-accordion="#othersAccordion" class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                        <a data-open-accordion="#othersAccordion" class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none"> Goto Others
                                                             </span> <i class="bi bi-arrow-right nv-pe-none"></i>
@@ -1951,7 +1951,7 @@
                                                     </div>
                 
                                                     <div class="nv-d-flex nv-justify-content-end  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -1984,7 +1984,7 @@
                                                                         data-toggle-container="laundry-container"
                                                                         for="laundry">
                                                                         <span
-                                                                            class="nv-laundry heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-laundry heading-1 nv-d-block text-yellow"></span>
                                                                         laundry
                                                                     </label>
                                                                 </div>
@@ -2015,12 +2015,12 @@
                                                     </div>
                 
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                         >
                                                         <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                             class="nv-d-none  nv-pe-none">Previous</span>
                                                     </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next nv-align-self-end"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -2053,7 +2053,7 @@
                                                                         data-toggle-container="fuel-gas-container"
                                                                         for="fuel-gas">
                                                                         <span
-                                                                            class="nv-gas heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-gas heading-1 nv-d-block text-yellow"></span>
                                                                         Natural Gas
                                                                     </label>
                                                                 </div>
@@ -2066,7 +2066,7 @@
                                                                         data-toggle-container="fuel-propane-container"
                                                                         for="fuel-propane">
                                                                         <span
-                                                                            class="nv-propane heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-propane heading-1 nv-d-block text-yellow"></span>
                                                                         propane
                                                                     </label>
                                                                 </div>
@@ -2079,7 +2079,7 @@
                                                                         data-toggle-container="fuel-butane-container"
                                                                         for="fuel-butane">
                                                                         <span
-                                                                            class="nv-butane heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-butane heading-1 nv-d-block text-yellow"></span>
                                                                         butane
                                                                     </label>
                                                                 </div>
@@ -2092,7 +2092,7 @@
                                                                         data-toggle-container="fuel-lpg-container"
                                                                         for="fuel-lpg">
                                                                         <span
-                                                                            class="nv-LPG heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-LPG heading-1 nv-d-block text-yellow"></span>
                                                                         LPG
                                                                     </label>
                                                                 </div>
@@ -2105,7 +2105,7 @@
                                                                         data-toggle-container="fuel-burn-oil-container"
                                                                         for="fuel-burn-oil">
                                                                         <span
-                                                                            class="nv-burn-oil heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-burn-oil heading-1 nv-d-block text-yellow"></span>
                                                                         Burning oil
                                                                     </label>
                                                                 </div>
@@ -2118,7 +2118,7 @@
                                                                     data-toggle-container="fuel-oil-container"
                                                                     for="fuel-oil">
                                                                     <span
-                                                                        class="nv-fuel-oil heading-1 nv-d-block text-yellow"></span>
+                                                                        class="nv-i-fuel-oil heading-1 nv-d-block text-yellow"></span>
                                                                     Fuel oil
                                                                 </label>
                                                             </div>
@@ -2131,7 +2131,7 @@
                                                                         data-toggle-container="fuel-gasoline-container"
                                                                         for="fuel-gasoline">
                                                                         <span
-                                                                            class="nv-gasoline heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-gasoline heading-1 nv-d-block text-yellow"></span>
                                                                         gasoline
                                                                     </label>
                                                                 </div>
@@ -2144,7 +2144,7 @@
                                                                         data-toggle-container="fuel-diesel-container"
                                                                         for="fuel-diesel">
                                                                         <span
-                                                                            class="nv-diesel heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-diesel heading-1 nv-d-block text-yellow"></span>
                                                                         diesel
                                                                     </label>
                                                                 </div>
@@ -2158,7 +2158,7 @@
                                                                         data-toggle-container="fuel-coal-container"
                                                                         for="fuel-coal">
                                                                         <span
-                                                                            class="nv-coal heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-coal heading-1 nv-d-block text-yellow"></span>
                                                                         coal
                                                                     </label>
                                                                 </div>
@@ -2359,12 +2359,12 @@
                                                     </div>
                 
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             >
                                                             <i class="bi bi-arrow-left nv-pe-none"></i><span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-next"
                                                             >
                                                             <span class="nv-d-none  nv-pe-none">Next</span> <i
                                                                 class="bi bi-arrow-right nv-pe-none"></i>
@@ -2397,7 +2397,7 @@
                                                                         data-toggle-container="waste-organic-container"
                                                                         for="waste-organic">
                                                                         <span
-                                                                            class="nv-organic heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-organic heading-1 nv-d-block text-yellow"></span>
                                                                         Organic
                                                                     </label>
                                                                 </div>
@@ -2410,7 +2410,7 @@
                                                                         data-toggle-container="waste-paper-container"
                                                                         for="waste-paper">
                                                                         <span
-                                                                            class="nv-paper heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-paper heading-1 nv-d-block text-yellow"></span>
                                                                         Paper
                                                                     </label>
                                                                 </div>
@@ -2423,7 +2423,7 @@
                                                                         data-toggle-container="waste-glass-container"
                                                                         for="waste-glass">
                                                                         <span
-                                                                            class="nv-glass heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-glass heading-1 nv-d-block text-yellow"></span>
                                                                         glass
                                                                     </label>
                                                                 </div>
@@ -2436,7 +2436,7 @@
                                                                         data-toggle-container="waste-metal-container"
                                                                         for="waste-metal">
                                                                         <span
-                                                                            class="nv-LPG heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-LPG heading-1 nv-d-block text-yellow"></span>
                                                                         metal
                                                                     </label>
                                                                 </div>
@@ -2449,7 +2449,7 @@
                                                                         data-toggle-container="waste-plastic-container"
                                                                         for="waste-plastic">
                                                                         <span
-                                                                            class="nv-plastic heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-plastic heading-1 nv-d-block text-yellow"></span>
                                                                        plastic
                                                                     </label>
                                                                 </div>
@@ -2462,7 +2462,7 @@
                                                                     data-toggle-container="waste-commercial-container"
                                                                     for="waste-commercial">
                                                                     <span
-                                                                        class="nv-industry heading-1 nv-d-block text-yellow"></span>
+                                                                        class="nv-i-industry heading-1 nv-d-block text-yellow"></span>
                                                                    Commercial & Industrial
                                                                 </label>
                                                             </div>
@@ -2691,14 +2691,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="nv-d-flex nv-justify-content-between  mar-t-30">
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto js-btn-prev"
                                                             >
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-3 pad-h-15 nv-d-flex nv-pe-auto"
+                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                                             >
-                                                            <span class=" nv-pe-none"> Submit </span>
+                                                            <span class=" nv-pe-none pad-r-5"> Submit </span>
                                                             <i class="bi bi-arrow-right nv-pe-none"></i>
                                                         </a>
                                                     </div>

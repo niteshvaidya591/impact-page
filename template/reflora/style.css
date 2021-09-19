@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'reflora';
+  src:  url('fonts/reflora.eot?oi8qen');
+  src:  url('fonts/reflora.eot?oi8qen#iefix') format('embedded-opentype'),
+    url('fonts/reflora.ttf?oi8qen') format('truetype'),
+    url('fonts/reflora.woff?oi8qen') format('woff'),
+    url('fonts/reflora.svg?oi8qen#reflora') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nv-i-"], [class*=" nv-i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'reflora' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nv-i-foot:before {
+  content: "\e91d";
+}
+.nv-i-aeroplane:before {
+  content: "\e900";
+}
+.nv-i-boat:before {
+  content: "\e901";
+}
+.nv-i-breakfast:before {
+  content: "\e902";
+}
+.nv-i-burn-oil:before {
+  content: "\e903";
+}
+.nv-i-bus:before {
+  content: "\e904";
+}
+.nv-i-butane:before {
+  content: "\e905";
+}
+.nv-i-car:before {
+  content: "\e906";
+}
+.nv-i-cargoship:before {
+  content: "\e907";
+}
+.nv-i-coal:before {
+  content: "\e908";
+}
+.nv-i-cycle:before {
+  content: "\e909";
+}
+.nv-i-diesel:before {
+  content: "\e90a";
+}
+.nv-i-dinner:before {
+  content: "\e90b";
+}
+.nv-i-drinks:before {
+  content: "\e90c";
+}
+.nv-i-electricity:before {
+  content: "\e90d";
+}
+.nv-i-fabric:before {
+  content: "\e90e";
+}
+.nv-i-fridge:before {
+  content: "\e90f";
+}
+.nv-i-fuel-oil:before {
+  content: "\e910";
+}
+.nv-i-gas:before {
+  content: "\e911";
+}
+.nv-i-gasoline:before {
+  content: "\e912";
+}
+.nv-i-glass:before {
+  content: "\e913";
+}
+.nv-i-hotel:before {
+  content: "\e914";
+}
+.nv-i-industry:before {
+  content: "\e915";
+}
+.nv-i-laundry:before {
+  content: "\e916";
+}
+.nv-i-LPG:before {
+  content: "\e917";
+}
+.nv-i-lunch:before {
+  content: "\e918";
+}
+.nv-i-metal:before {
+  content: "\e919";
+}
+.nv-i-motorbike:before {
+  content: "\e91a";
+}
+.nv-i-one:before {
+  content: "\e91b";
+}
+.nv-i-organic:before {
+  content: "\e91c";
+}
+.nv-i-paper:before {
+  content: "\e927";
+}
+.nv-i-plastic:before {
+  content: "\e91e";
+}
+.nv-i-propane:before {
+  content: "\e91f";
+}
+.nv-i-rail:before {
+  content: "\e920";
+}
+.nv-i-snacks:before {
+  content: "\e921";
+}
+.nv-i-three:before {
+  content: "\e922";
+}
+.nv-i-train:before {
+  content: "\e923";
+}
+.nv-i-two:before {
+  content: "\e924";
+}
+.nv-i-van:before {
+  content: "\e925";
+}
+.nv-i-vehicle:before {
+  content: "\e926";
+}

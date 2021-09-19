@@ -18,7 +18,7 @@
             <h1>XYZ Carbon Report</h1>
             <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20">
                 <div class="nv-col-12 tablet:nv-col-6 nv-align-self-center">
-                    <div class="hex-container widescreen:pad-l-60">
+                    <div class="hex-container widescreen:pad-l-60 pad-b-30">
                         <ol class="even mar-b-n40">
                             <li class='hex hex-purple'>
                                 <span class="nv-i-foot"></span>
@@ -39,7 +39,7 @@
                             </li>
 
                         </ol>
-                        <ol class="even mar-t-n40">
+                        <ol class="even mar-t-n40 nv-d-none" id="hidden-score">
                             <li class='hex'>
                                 <span class="nv-i-foot"></span>
                                 <span class="hex-score">10%</span>
@@ -52,6 +52,12 @@
                     <div class="nv-col-12  mar-t-30 scope-row__green">
 
                         <div class="nv-row nv-justify-content-end full-width scope-controls">
+                            <div
+                                class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
+                                <button class="scope-button scope-reset" data-toggle="modal"
+                                    data-target="#hiddenEmission"><span class="bi heading-2 bi-plus"></span></button>
+                                <p class="mar-v-10">Hidden Emmision</p>
+                            </div>
                             <div
                                 class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
                                 <button class="scope-button scope-reset"><span
@@ -95,54 +101,75 @@
                             <h3 class="mar-t-0">Choose your project</h3>
                             <div class="nv-row mar-b-20">
                                 <div class="nv-col-12 tablet:nv-col-4">
-                                    <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" >
+                                    <img src="./images/forest.jpg" alt="forest project image"
+                                        class="img-fluid img-obj-fit">
                                 </div>
                                 <div class="nv-col-12 tablet:nv-col-8">
                                     <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.
+                                    </p>
 
                                     <div class="nv-d-flex nv-justify-content-between">
                                         <div>
-                                            <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
-                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5" value="1">
+                                            <button
+                                                class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
+                                                10</button>
+                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5"
+                                                value="1">
                                         </div>
-                                        <button class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add To Cart</button>
+                                        <button
+                                            class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add
+                                            To Cart</button>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="nv-row mar-b-20">
                                 <div class="nv-col-12 tablet:nv-col-4">
-                                    <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" >
+                                    <img src="./images/forest.jpg" alt="forest project image"
+                                        class="img-fluid img-obj-fit">
                                 </div>
                                 <div class="nv-col-12 tablet:nv-col-8">
                                     <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.
+                                    </p>
 
                                     <div class="nv-d-flex nv-justify-content-between">
                                         <div>
-                                            <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
-                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5" value="1">
+                                            <button
+                                                class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
+                                                10</button>
+                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5"
+                                                value="1">
                                         </div>
-                                        <button class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add To Cart</button>
+                                        <button
+                                            class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add
+                                            To Cart</button>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="nv-row mar-b-20">
                                 <div class="nv-col-12 tablet:nv-col-4">
-                                    <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" >
+                                    <img src="./images/forest.jpg" alt="forest project image"
+                                        class="img-fluid img-obj-fit">
                                 </div>
                                 <div class="nv-col-12 tablet:nv-col-8">
                                     <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.
+                                    </p>
 
                                     <div class="nv-d-flex nv-justify-content-between">
                                         <div>
-                                            <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
-                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5" value="1">
+                                            <button
+                                                class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
+                                                10</button>
+                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5"
+                                                value="1">
                                         </div>
-                                        <button class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add To Cart</button>
+                                        <button
+                                            class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add
+                                            To Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -301,6 +328,36 @@
             </section>
         </div>
     </main>
+    <footer>
+
+        <!-- Modal -->
+        <div class="nv-modal fade" id="hiddenEmission" tabindex="-1" role="dialog" aria-labelledby="hiddenEmissionLabel"
+            aria-hidden="true">
+            <div class="nv-modal-dialog " role="document">
+                <div class="nv-modal-content">
+                    <div class="nv-modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="nv-modal-header_close">CLOSE <span aria-hidden="true"
+                                    class="nv-modal-header_x">×</span></span>
+                        </button>
+                    </div>
+                    <div class="nv-modal-body">
+                        <h4 class="text-center mar-v-60">We have found hidden emissions from your inputs do you want to
+                            add it to your summary?</h4>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center">
+                        <button type="button"
+                            class="pad-v-5 pad-h-20  small-rounded text-white border-green border-1 bg-secondary mar-r-20"
+                            data-dismiss="modal" data-show-container="hidden-score">I Agree</button>
+                        <button type="button"
+                            class="pad-v-5 pad-h-20  small-rounded text-green border-green border-1 bg-white"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                an
+            </div>
+        </div>
+    </footer>
     <script src="./../build/script.js"></script>
 </body>
 

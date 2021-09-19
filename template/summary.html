@@ -1,152 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Reflora</title>
-        <link rel="stylesheet" href="./../build/style.css" />
-            <link rel="stylesheet" href="./reflora/style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-        
-    </head>
-    <body>
-        <main>
-        <div class="fluid-wrapper">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./reflora/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+    <main>
+        <div class="desktop:pad-h-50">
             <h1>XYZ Carbon Report</h1>
-           </div>
-            <hr class="mar-h-40 mar-v-30 border-top-1 border-bottom-0 border-light nv-d-block">
-            <div class="fluid-wrapper">
-                <h1 class="mar-b-0">Scope Summary</h1>
-                <p>Summary of your custom calcualator</p>
-                <section>
-                    <div class="nv-row">
-                        <div class="nv-col-12">
-                            <!-- scope 1 starts -->
-                            <div class="nv-row scope-row scope-row__blue">
-                                <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                    <p class="scope-circle scope-circle__blue scope-no scope-no__1">
-                                       <span class="nv-i-one"></span>
-                                    </p>
+            <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20">
+                <div class="nv-col-12 tablet:nv-col-6 nv-align-self-center">
+                    <div class="hex-container widescreen:pad-l-60">
+                        <ol class="even mar-b-n40">
+                            <li class='hex hex-purple'>
+                                <span class="nv-i-foot"></span>
+                                <span class="hex-score">80%</span>
+                                <span class="hex-title">Mandatory</span>
+                            </li>
+                        </ol>
+                        <ol class="odd">
+                            <li class='hex hex-green'>
+                                <span class="nv-i-foot"></span>
+                                <span class="hex-score">60%</span>
+                                <span class="hex-title">Recommended</span>
+                            </li>
+                            <li class='hex hex-yellow'>
+                                <span class="nv-i-foot"></span>
+                                <span class="hex-score">40%</span>
+                                <span class="hex-title">Others</span>
+                            </li>
+
+                        </ol>
+                        <ol class="even mar-t-n40">
+                            <li class='hex'>
+                                <span class="nv-i-foot"></span>
+                                <span class="hex-score">10%</span>
+                                <span class="hex-title">Hidden</span>
+                            </li>
+
+                        </ol>
+                    </div>
+
+                    <div class="nv-col-12  mar-t-30 scope-row__green">
+
+                        <div class="nv-row nv-justify-content-end full-width scope-controls">
+                            <div
+                                class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
+                                <button class="scope-button scope-reset"><span
+                                        class="bi heading-3 bi-arrow-counterclockwise"></span></button>
+                                <p class="mar-v-10">Re-Calculate</p>
+                            </div>
+                            <div
+                                class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
+                                <button data-hide-container="emmision-report" data-show-container="project-container"
+                                    class="scope-button scope-reset"><span
+                                        class="bi heading-3 bi-cart4"></span></button>
+                                <p class="mar-v-10">Buy</p>
+                            </div>
+                            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                <button class="scope-button scope-reset"><span
+                                        class="bi heading-3 bi-download"></span></button>
+                                <p class="mar-v-10">Download</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-col-12 tablet:nv-col-6 scope-row__green">
+                    <div id="emmision-report">
+                        <h2>XYZ Carbon Footprint is</h2>
+                        <div class="nv-row nv-justify-content-center full-width scope-controls widescreen:nv-col-8">
+                            <div class="scope-score">
+                                <p class="nv-i-foot mar-l-20 mar-t-n50">
+                                </p>
+                                <h3 class="scope-score__percentage pad-t-0">6.4 </h3>
+                                <p class="scope-score__footprint "><span class="font-weight-bold">Ton of
+                                        CO<sub>2</sub></span></p>
+                                <p class="scope-score__footer">Total Emission</p>
+                            </div>
+                        </div>
+                        <h5>XYZ highest emission source is <a href="" class="text-purple">Energy</a></h5>
+                        <h5>XYZ highest emission area is <a href="#" class="text-green">Drinks</a></h5>
+                        <h5>XYZ emission per participant is <a href="#" class="text-brown">Transport</a></h5>
+                    </div>
+                    <div id="project-container" class="nv-d-none">
+                        <div class="pad-20 mar-b-20 shadow-small">
+                            <h3 class="mar-t-0">Choose your project</h3>
+                            <div class="nv-row mar-b-20">
+                                <div class="nv-col-12 tablet:nv-col-4">
+                                    <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" >
                                 </div>
-                                <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
-                                    <div>
-                                        <h2 class="mar-b-0 mar-t-60">Mandatory</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores. Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
-                                    </div>
-                                    <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Participant Travel</label>                                           
-                                        </div>                               
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Food & Drink</label>
-                                        </div> 
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Hotel Stay</label>
-                                        </div> 
-                                       
-                                       
-                                    </div>
-                                    <div class="nv-row nv-justify-content-between full-width scope-controls">
-                                        <div class="scope-score scope-score__sm">
-                                            <p class="nv-i-foot">
-                                            <h3 class="scope-score__percentage pad-t-0">15%</h3>
-                                            <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                            <p class="scope-score__footer">Mandatory Score</p>
+                                <div class="nv-col-12 tablet:nv-col-8">
+                                    <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+
+                                    <div class="nv-d-flex nv-justify-content-between">
+                                        <div>
+                                            <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
+                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5" value="1">
                                         </div>
-                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                            <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                            <p class="mar-v-10">Re-Calculate</p>
-                                        </div>
+                                        <button class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add To Cart</button>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- scope 1 ends -->
-                            <!-- scope 2 starts -->
-                            <div class="nv-row scope-row scope-row__green">
-                                <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                    <p class="scope-circle scope-circle__green scope-no scope-no__2">
-                                        <span class="nv-i-two"></span>
-                                    </p>
+                            <div class="nv-row mar-b-20">
+                                <div class="nv-col-12 tablet:nv-col-4">
+                                    <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" >
                                 </div>
-                                <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
-                                    <div>
-                                        <h2 class="mar-b-0 mar-t-60">Recommended</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores. Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
-                                    </div>
-                                    <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i> Participant Local Transport</label>
+                                <div class="nv-col-12 tablet:nv-col-8">
+                                    <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+
+                                    <div class="nv-d-flex nv-justify-content-between">
+                                        <div>
+                                            <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
+                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5" value="1">
                                         </div>
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Materials</label>
-                                        </div>
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Logistics</label>
-                                        </div>
-                                    </div>
-                                      <div class="nv-row nv-justify-content-between full-width scope-controls">
-                                        <div class="scope-score scope-score__sm">
-                                            <p class="nv-i-foot">
-                                            <h3 class="scope-score__percentage pad-t-0">65%</h3>
-                                            <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                            <p class="scope-score__footer">Recommended Score</p>
-                                        </div>
-                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                            <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                            <p class="mar-v-10">Re-Calculate</p>
-                                        </div>
+                                        <button class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add To Cart</button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- scope 2 ends -->
-                            <!-- scope 3 starts -->
-                            <div class="nv-row scope-row scope-row__yellow">
-                                <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                    <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
-                                        <span class="nv-i-three"></span>
-                                    </p>
+
+                            <div class="nv-row mar-b-20">
+                                <div class="nv-col-12 tablet:nv-col-4">
+                                    <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" >
                                 </div>
-                                <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
-                                    <div>
-                                        <h2 class="mar-b-0 mar-t-60">Others</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores. Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
-                                    </div>
-                                    <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Electricity</label>
+                                <div class="nv-col-12 tablet:nv-col-8">
+                                    <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+
+                                    <div class="nv-d-flex nv-justify-content-between">
+                                        <div>
+                                            <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
+                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5" value="1">
                                         </div>
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Waste</label>
-                                        </div>
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Fossil Fuel</label>
-                                        </div>
-                                        <div class="nv-d-inline mar-v-5 mar-r-10">
-                                            <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Laundry</label>
-                                        </div>
-                                    </div>
-                                      <div class="nv-row nv-justify-content-between full-width scope-controls">
-                                        <div class="scope-score scope-score__sm">
-                                            <p class="nv-i-foot">
-                                            <h3 class="scope-score__percentage pad-t-0">45%</h3>
-                                            <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                            <p class="scope-score__footer">Others Score</p>
-                                        </div>
-                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                            <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                            <p class="mar-v-10">Re-Calculate</p>
-                                        </div>
+                                        <button class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add To Cart</button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- scope 3 ends -->
+
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </main>
-        <script src="./../build/script.js"></script>
-    </body>
+        </div>
+        <hr class="mar-h-40 mar-v-30 border-top-1 border-bottom-0 border-light nv-d-block">
+        <div class="fluid-wrapper">
+            <h1 class="mar-v-0">Scope Summary</h1>
+            <p>Summary of your custom calcualator</p>
+            <section>
+                <div class="nv-row">
+                    <div class="nv-col-12">
+                        <!-- scope 1 starts -->
+                        <div class="nv-row scope-row scope-row__blue">
+                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                <p class="scope-circle scope-circle__blue scope-no scope-no__1">
+                                    <span class="nv-i-one"></span>
+                                </p>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
+                                <div>
+                                    <h2 class="mar-b-0 mar-t-60">Mandatory</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores.
+                                        Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
+                                </div>
+                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Participant
+                                            Travel</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Food &
+                                            Drink</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Hotel
+                                            Stay</label>
+                                    </div>
+
+
+                                </div>
+                                <div class="nv-row nv-justify-content-between full-width scope-controls">
+                                    <div class="scope-score scope-score__sm">
+                                        <p class="nv-i-foot">
+                                        <h3 class="scope-score__percentage pad-t-0">15%</h3>
+                                        <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
+                                        <p class="scope-score__footer">Mandatory Score</p>
+                                    </div>
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                        <button class="scope-button scope-reset"><span
+                                                class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Re-Calculate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- scope 1 ends -->
+                        <!-- scope 2 starts -->
+                        <div class="nv-row scope-row scope-row__green">
+                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                <p class="scope-circle scope-circle__green scope-no scope-no__2">
+                                    <span class="nv-i-two"></span>
+                                </p>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
+                                <div>
+                                    <h2 class="mar-b-0 mar-t-60">Recommended</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores.
+                                        Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
+                                </div>
+                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i> Participant
+                                            Local Transport</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i
+                                                class="bi bi-check-circle-fill"></i>Materials</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i
+                                                class="bi bi-check-circle-fill"></i>Logistics</label>
+                                    </div>
+                                </div>
+                                <div class="nv-row nv-justify-content-between full-width scope-controls">
+                                    <div class="scope-score scope-score__sm">
+                                        <p class="nv-i-foot">
+                                        <h3 class="scope-score__percentage pad-t-0">65%</h3>
+                                        <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
+                                        <p class="scope-score__footer">Recommended Score</p>
+                                    </div>
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                        <button class="scope-button scope-reset"><span
+                                                class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Re-Calculate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- scope 2 ends -->
+                        <!-- scope 3 starts -->
+                        <div class="nv-row scope-row scope-row__yellow">
+                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
+                                    <span class="nv-i-three"></span>
+                                </p>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
+                                <div>
+                                    <h2 class="mar-b-0 mar-t-60">Others</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sed dolores.
+                                        Sed, explicabo repellendus. Minus corporis aliquam qui voluptatem nesciunt?</p>
+                                </div>
+                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i
+                                                class="bi bi-check-circle-fill"></i>Electricity</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Waste</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Fossil
+                                            Fuel</label>
+                                    </div>
+                                    <div class="nv-d-inline mar-v-5 mar-r-10">
+                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Laundry</label>
+                                    </div>
+                                </div>
+                                <div class="nv-row nv-justify-content-between full-width scope-controls">
+                                    <div class="scope-score scope-score__sm">
+                                        <p class="nv-i-foot">
+                                        <h3 class="scope-score__percentage pad-t-0">45%</h3>
+                                        <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
+                                        <p class="scope-score__footer">Others Score</p>
+                                    </div>
+                                    <div
+                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                        <button class="scope-button scope-reset"><span
+                                                class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Re-Calculate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- scope 3 ends -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./../build/script.js"></script>
+</body>
+
 </html>

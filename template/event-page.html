@@ -2436,7 +2436,7 @@
                                                                         data-toggle-container="waste-metal-container"
                                                                         for="waste-metal">
                                                                         <span
-                                                                            class="nv-i-LPG heading-1 nv-d-block text-yellow"></span>
+                                                                            class="nv-i-metal heading-1 nv-d-block text-yellow"></span>
                                                                         metal
                                                                     </label>
                                                                 </div>
@@ -2696,7 +2696,8 @@
                                                             <i class="bi bi-arrow-left nv-pe-none"></i> <span
                                                                 class="nv-d-none  nv-pe-none">Previous</span>
                                                         </a>
-                                                        <a class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
+                                                        <a data-toggle="modal"
+                                                        data-target="#hiddenEmission" class="badge text-decoration-none rounded-pill bg-primary text-white pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto"
                                                             >
                                                             <span class=" nv-pe-none pad-r-5"> Submit </span>
                                                             <i class="bi bi-arrow-right nv-pe-none"></i>
@@ -2716,6 +2717,46 @@
             </ul>
         </section>
     </main>
+    <footer>
+
+        <!-- Modal -->
+        <div class="nv-modal fade" id="hiddenEmission" tabindex="-1" role="dialog" aria-labelledby="hiddenEmissionLabel"
+            aria-hidden="true">
+            <div class="nv-modal-dialog " role="document">
+                <div class="nv-modal-content">
+                    <div class="nv-modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="nv-modal-header_close">CLOSE <span aria-hidden="true"
+                                    class="nv-modal-header_x">×</span></span>
+                        </button>
+                    </div>
+                    <div class="nv-modal-body scope-row__green">
+                        <div class="nv-row nv-justify-content-center full-width scope-controls">
+                            <div class="scope-score">
+                                <p class="nv-i-foot mar-l-20 mar-t-n50">
+                                </p>
+                                <h3 class="scope-score__percentage pad-t-0">6.4 </h3>
+                                <p class="scope-score__footprint "><span class="font-weight-bold">Ton of
+                                        CO<sub>2</sub></span></p>
+                                <p class="scope-score__footer">Total Emission</p>
+                            </div>
+                        </div>
+                        <h4 class="text-center mar-b-60">We have found hidden emissions from your inputs do you want to
+                            add it to your summary?</h4>
+                    </div>
+                    <div class="nv-d-flex nv-justify-content-center">
+                        <button type="button"
+                            class="pad-v-5 pad-h-20  small-rounded text-white border-green border-1 bg-secondary mar-r-20"
+                            data-dismiss="modal" data-show-container="hidden-score">I Agree</button>
+                        <button type="button"
+                            class="pad-v-5 pad-h-20  small-rounded text-green border-green border-1 bg-white"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                an
+            </div>
+        </div>
+    </footer>
     <script src="./../build/script.js"></script>
     <script>
         function multiStepForm() {

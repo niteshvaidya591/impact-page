@@ -15,7 +15,7 @@
 <body>
     <main>
         <div class="desktop:pad-h-50">
-            <h1>XYZ Carbon Report</h1>
+            <h1 class="pad-h-15">XYZ Carbon Report</h1>
             <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20">
                 <div class="nv-col-12 tablet:nv-col-6 nv-align-self-center">
                     <div class="hex-container widescreen:pad-l-60 pad-b-30">
@@ -39,7 +39,7 @@
                             </li>
 
                         </ol>
-                        <ol class="even mar-t-n40 nv-d-none" id="hidden-score">
+                        <ol class="even mar-t-n40" id="hidden-score">
                             <li class='hex'>
                                 <span class="nv-i-foot"></span>
                                 <span class="hex-score">10%</span>
@@ -51,13 +51,13 @@
 
                     <div class="nv-col-12  mar-t-30 scope-row__green">
 
-                        <div class="nv-row nv-justify-content-end full-width scope-controls">
-                            <div
+                        <div class="nv-row nv-justify-content-center full-width scope-controls">
+                            <!-- <div
                                 class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
                                 <button class="scope-button scope-reset" data-toggle="modal"
                                     data-target="#hiddenEmission"><span class="bi heading-2 bi-plus"></span></button>
                                 <p class="mar-v-10">Hidden Emmision</p>
-                            </div>
+                            </div> -->
                             <div
                                 class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
                                 <button class="scope-button scope-reset"><span
@@ -190,7 +190,7 @@
                         <div class="nv-row scope-row scope-row__blue">
                             <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
                                 <p class="scope-circle scope-circle__blue scope-no scope-no__1">
-                                    <span class="nv-i-one"></span>
+                                    <span class="nv-i-one heading-1 text-white"></span>
                                 </p>
                             </div>
                             <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
@@ -220,7 +220,7 @@
                                         <p class="nv-i-foot">
                                         <h3 class="scope-score__percentage pad-t-0">15%</h3>
                                         <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                        <p class="scope-score__footer">Mandatory Score</p>
+                                        <p class="scope-score__footer">Mandatory <br class="nv-d-block tablet:nv-d-none"> Score</p>
                                     </div>
                                     <div
                                         class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
@@ -237,7 +237,7 @@
                         <div class="nv-row scope-row scope-row__green">
                             <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
                                 <p class="scope-circle scope-circle__green scope-no scope-no__2">
-                                    <span class="nv-i-two"></span>
+                                    <span class="nv-i-two heading-1 text-white"></span>
                                 </p>
                             </div>
                             <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
@@ -265,7 +265,7 @@
                                         <p class="nv-i-foot">
                                         <h3 class="scope-score__percentage pad-t-0">65%</h3>
                                         <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                        <p class="scope-score__footer">Recommended Score</p>
+                                        <p class="scope-score__footer">Recommended <br class="nv-d-block tablet:nv-d-none"> Score</p>
                                     </div>
                                     <div
                                         class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
@@ -281,7 +281,7 @@
                         <div class="nv-row scope-row scope-row__yellow">
                             <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
                                 <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
-                                    <span class="nv-i-three"></span>
+                                    <span class="nv-i-three heading-1 text-white"></span>
                                 </p>
                             </div>
                             <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
@@ -328,36 +328,7 @@
             </section>
         </div>
     </main>
-    <footer>
-
-        <!-- Modal -->
-        <div class="nv-modal fade" id="hiddenEmission" tabindex="-1" role="dialog" aria-labelledby="hiddenEmissionLabel"
-            aria-hidden="true">
-            <div class="nv-modal-dialog " role="document">
-                <div class="nv-modal-content">
-                    <div class="nv-modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span class="nv-modal-header_close">CLOSE <span aria-hidden="true"
-                                    class="nv-modal-header_x">×</span></span>
-                        </button>
-                    </div>
-                    <div class="nv-modal-body">
-                        <h4 class="text-center mar-v-60">We have found hidden emissions from your inputs do you want to
-                            add it to your summary?</h4>
-                    </div>
-                    <div class="nv-d-flex nv-justify-content-center">
-                        <button type="button"
-                            class="pad-v-5 pad-h-20  small-rounded text-white border-green border-1 bg-secondary mar-r-20"
-                            data-dismiss="modal" data-show-container="hidden-score">I Agree</button>
-                        <button type="button"
-                            class="pad-v-5 pad-h-20  small-rounded text-green border-green border-1 bg-white"
-                            data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-                an
-            </div>
-        </div>
-    </footer>
+ 
     <script src="./../build/script.js"></script>
 </body>
 

@@ -15,9 +15,11 @@
 <body>
     <main>
         <div class="desktop:pad-h-50">
-            <h1 class="pad-h-15">XYZ Carbon Report</h1>
-            <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20">
-                <div class="nv-col-12 tablet:nv-col-6 nv-align-self-center">
+          
+            <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20 mar-t-50">
+              
+                <div class="nv-col-12 tablet:nv-col-5 nv-align-self-center">
+                    <h3 class="text-center">XYZ Carbon Report</h3>
                     <div class="hex-container widescreen:pad-l-60 pad-b-30">
                         <ol class="even mar-b-n40">
                             <li class='hex hex-purple'>
@@ -52,25 +54,20 @@
                     <div class="nv-col-12  mar-t-30 scope-row__green">
 
                         <div class="nv-row nv-justify-content-center full-width scope-controls">
-                            <!-- <div
-                                class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
-                                <button class="scope-button scope-reset" data-toggle="modal"
-                                    data-target="#hiddenEmission"><span class="bi heading-2 bi-plus"></span></button>
-                                <p class="mar-v-10">Hidden Emmision</p>
-                            </div> -->
+                         
                             <div
                                 class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
                                 <button class="scope-button scope-reset"><span
                                         class="bi heading-3 bi-arrow-counterclockwise"></span></button>
                                 <p class="mar-v-10">Re-Calculate</p>
                             </div>
-                            <div
+                            <!-- <div
                                 class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
                                 <button data-hide-container="emmision-report" data-show-container="project-container"
                                     class="scope-button scope-reset"><span
                                         class="bi heading-3 bi-cart4"></span></button>
                                 <p class="mar-v-10">Buy</p>
-                            </div>
+                            </div> -->
                             <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
                                 <button class="scope-button scope-reset"><span
                                         class="bi heading-3 bi-download"></span></button>
@@ -80,7 +77,7 @@
                     </div>
                 </div>
                 <div class="nv-col-12 tablet:nv-col-6 scope-row__green">
-                    <div id="emmision-report">
+                    <!-- <div id="emmision-report">
                         <h2>XYZ Carbon Footprint is</h2>
                         <div class="nv-row nv-justify-content-center full-width scope-controls widescreen:nv-col-8">
                             <div class="scope-score">
@@ -95,8 +92,8 @@
                         <h5>XYZ highest emission source is <a href="" class="text-purple">Energy</a></h5>
                         <h5>XYZ highest emission area is <a href="#" class="text-green">Drinks</a></h5>
                         <h5>XYZ emission per participant is <a href="#" class="text-brown">Transport</a></h5>
-                    </div>
-                    <div id="project-container" class="nv-d-none">
+                    </div> -->
+                    <div id="project-container">
                         <div class="pad-20 mar-b-20 shadow-small">
                             <h3 class="mar-t-0">Choose your project</h3>
                             <div class="nv-row mar-b-20">
@@ -114,11 +111,11 @@
                                             <button
                                                 class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
                                                 10</button>
-                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5"
+                                            <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5"
                                                 value="1">
                                         </div>
                                         <button
-                                            class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add
+                                            width="140" data-show-container="cart-container" class="border-1 border-green  pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add
                                             To Cart</button>
                                     </div>
                                 </div>
@@ -139,11 +136,11 @@
                                             <button
                                                 class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
                                                 10</button>
-                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5"
+                                            <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5"
                                                 value="1">
                                         </div>
                                         <button
-                                            class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add
+                                            width="140" data-show-container="cart-container" class="border-1 border-green  pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add
                                             To Cart</button>
                                     </div>
                                 </div>
@@ -164,16 +161,122 @@
                                             <button
                                                 class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
                                                 10</button>
-                                            <input type="number" min="0" class="nv-col-4 pad-0 mobile:pad-l-5"
+                                            <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5"
                                                 value="1">
                                         </div>
                                         <button
-                                            class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15 full-width">Add
+                                            width="140" data-show-container="cart-container" class="border-1 border-green  pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add
                                             To Cart</button>
                                     </div>
                                 </div>
                             </div>
+                           <div id="cart-container" class="nv-d-none">
+                            <div class="nv-row bg-light mar-h-n20 mar-b-n20 nv-justify-content-between nv-align-items-center " >
+                                <h4 class="text-secondary mar-v-0 pad-l-20">1 Items Added</h4>
+                                <button class="float-right-0 bg-secondary text-white pad-v-10 pad-h-20 border-0" data-hide-container="project-container" data-show-container="checkout-container">Continue</button>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div id="checkout-container" class="nv-d-none">
+                     
+                        <div class="pad-20 mar-b-20 shadow-small">
+                            <h3 class="mar-t-0">Checkout </h3>
+<!-- tab section starts -->
 
+<div class="nv-tab-panel">
+    <div class="nv-tabs">
+        <div class="nv-tabs-header nv-flex-column desktop:nv-flex-row nv-d-flex" role="tablist" aria-label="Medical policies">
+            <a role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" class="ie-col-4">
+            Pay Now
+            </a>
+            <a role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1" class="ie-col-4">
+            Share Link
+            </a>
+           
+        </div>
+        <div class="nv-tab-body" tabindex="0" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+            <div class="nv-tab-body-content">
+                <form action="" class="mar-v-30">
+                    <div class="nv-row mar-0">                  
+                        <div class="nv-col-12 mar-b-30">
+                            <div class="form-group floating-label">
+                                <input type="text" id="checkout-name"
+                                    
+                                    class="full-width form-control small-rounded" />
+                                <label for="checkout-name">Name on certificate</label>
+                            </div>
+                        </div>
+                        <div class="nv-col-12 mar-b-30">
+                            <div class="form-group floating-label">
+                                <input type="text" id="checkout-card"
+                                    
+                                    class="full-width form-control small-rounded" />
+                                <label for="checkout-card">Card Number</label>
+                            </div>
+                        </div>
+                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30" >
+                            <div class="form-group floating-label">
+                                <input type="text" min="2" max="2"
+                                    id="checkout-month"
+                                    
+                                    class="full-width form-control small-rounded" />
+                                <label
+                                    for="checkout-month">Expiry Month</label>
+                            </div>
+                        </div>
+                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30" >
+                            <div class="form-group floating-label">
+                                <input type="number" min="4" max="4"
+                                    id="checkout-year"
+                                    
+                                    class="full-width form-control small-rounded" />
+                                <label
+                                    for="checkout-year">Expiry Year</label>
+                            </div>
+                        </div>
+                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30" >
+                            <div class="form-group floating-label">
+                                <input type="number"
+                                    id="checkout-cvv"
+                                    
+                                    class="full-width form-control small-rounded" />
+                                <label
+                                    for="checkout-cvv">CVV</label>
+                            </div>
+                        </div>
+                        <div class="nv-row nv-justify-content-end full-width">
+                            <button class="border-0 bg-primary text-white pad-v-10 pad-h-20">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nv-tab-body" tabindex="0" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="">
+            <div class="nv-tab-body-content">
+       
+              <form action="">
+                <div class="nv-row mar-0 mar-v-30">
+                    <div class="nv-col-12 mar-b-30">
+                        <div class="form-group floating-label">
+                            <input type="text" id="link-pay-email"
+                                
+                                class="full-width form-control small-rounded" />
+                            <label for="link-pay-email">Email ID</label>
+                        </div>
+                    </div>
+                <div class="nv-row nv-justify-content-end full-width">
+                    <button class="border-0 bg-primary text-white pad-v-10 pad-h-20">Submit</button>
+                </div>
+                  </div>
+            </form>
+            </div>
+        </div>
+      
+    </div>
+</div>
+      
+<!-- tab section ends -->
                         </div>
                     </div>
                 </div>

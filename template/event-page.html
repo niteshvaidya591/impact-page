@@ -44,78 +44,78 @@
                             <p class="text-center">
                                 Tell us more about your event
                             </p>
-                            <!-- <div class="text-center">
-                                    <img src="./images/event.png" alt="Event illustration" width="150" class="mar-h-0" />
-                                </div> -->
+                       
                             <form action="">
                                 <div class="mar-v-30 nv-col-12 desktop:nv-col-10 mar-h-auto">
                                     <div class="nv-row">
-                                        <div class="nv-col-12 tablet:nv-col-6">
+                                        <div class="nv-col-12">
                                             <div class="form-group mar-b-30 floating-label">
-                                                <input type="text" id="event-name" placeholder=" "
-                                                    class="full-width form-control small-rounded" />
-                                                <label for="event-name">My Event is called </label>
+                                                <input  type="text" id="event-name" placeholder="This will be the name on the certificate & saved calculation"
+                                                    class="full-width form-control small-rounded focus" />
+                                                <label for="event-name">Name on Certificate </label>
                                             </div>
                                         </div>
-                                        <div class="nv-col-12 tablet:nv-col-6">
-                                            <div class="form-group mar-b-30 floating-label">
-                                                <select class="form-control nv-custom-select small-rounded"
-                                                    id="event-area">
-                                                    <option value="">Select Country</option>
-                                                    <option>India</option>
-                                                    <option>France</option>
-                                                    <option>USA</option>
-                                                </select>
-                                                <label for="event-area">My Event is happening in </label>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
 
                                     <div class="nv-row">
-                                        <div class="nv-col-12 tablet:nv-col-6">
+                                        <div class="nv-col-12 tablet:nv-col-4">
                                             <div class="form-group mar-b-30 floating-label">
-                                                <input type="text" id="event-attend" placeholder=" "
-                                                    class="full-width form-control small-rounded" />
-                                                <label for="event-attend">No. of people at the event</label>
+                                                <input type="number" min="0" id="event-attend" placeholder="0"
+                                                    class="full-width focus form-control small-rounded" />
+                                                <label for="event-attend">No. of people</label>
                                             </div>
                                         </div>
-                                        <div class="nv-col-12 tablet:nv-col-6">
+                                        <div class="nv-col-12 tablet:nv-col-4">
                                             <div class="form-group mar-b-30 floating-label">
-                                                <input type="text" id="event-last" placeholder="(No of Days)"
-                                                    class="full-width form-control small-rounded" />
-                                                <label for="event-last">My event will last</label>
+                                                <input type="number" min="0" id="event-last" placeholder="(Days)"
+                                                    class="full-width focus form-control small-rounded" />
+                                                <label for="event-last">Event duration</label>
+                                            </div>
+                                        </div>
+                                        <div class="nv-col-12 tablet:nv-col-4">
+                                            <div class="form-group mar-b-30 floating-label">
+                                                <input type="number" min="0" id="event-area-occur"
+                                                    placeholder="(M&sup2;) "
+                                                    class="full-width focus form-control small-rounded" />
+                                                <label for="event-area-occur">Event area</label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label for="event-last">My event is </label>
+                                        <label for="event-last" class="text-medium">My event is </label>
                                         <div class=" nv-row">
                                             <div class="nv-col-12 tablet:nv-col-6">
                                                 <div class="pad-0 btn-group btn-group-toggle nv-col mar-b-30"
                                                     data-toggle="buttons">
                                                     <label for="option1" data-show-container="event-container"
-                                                        class="btn text-capitalize nv-col-4 border-2 rounded-left">
+                                                        class="btn text-capitalize nv-col-4 border-2 text-medium rounded-left">
                                                         <input type="radio" name="options" id="option1" value="online"
                                                             checked="" /> online </label>
                                                     <label for="option2" data-hide-container="event-container"
-                                                        class="btn text-capitalize nv-col-4 border-2"> <input
+                                                        class="btn text-capitalize nv-col-4 border-2 text-medium"> <input
                                                             type="radio" name="options" id="option2" value="offline" />
                                                         offline </label>
                                                     <label for="option3" data-show-container="event-container"
-                                                        class="btn text-capitalize nv-col-4 border-2 rounded-right">
+                                                        class="btn text-capitalize nv-col-4 border-2 text-medium rounded-right">
                                                         <input type="radio" name="options" id="option3"
                                                             value="hybrid" /> hybrid </label>
                                                 </div>
                                             </div>
                                             <div class="nv-col-12 tablet:nv-col-6">
                                                 <div class="form-group mar-b-30 floating-label">
-                                                    <input type="number" min="0" id="event-area-occur"
-                                                        placeholder="in M&sup2; "
-                                                        class="full-width form-control small-rounded" />
-                                                    <label for="event-area-occur">My event area</label>
+                                                    <select class="form-control nv-custom-select small-rounded"
+                                                        id="event-area">
+                                                        <option value="">Select Country</option>
+                                                        <option>India</option>
+                                                        <option>France</option>
+                                                        <option>USA</option>
+                                                    </select>
+                                                    <label for="event-area">My Event is happening in </label>
                                                 </div>
                                             </div>
+                                            
                                         </div>
 
                                         <div id="event-container" class="mar-t-30 nv-d-none">
@@ -141,7 +141,7 @@
                                                         <div class="form-group floating-label">
                                                             <input type="number" id="event-participants" placeholder=""
                                                                 min="0" class="full-width form-control small-rounded">
-                                                            <label for="event-participants">Participants</label>
+                                                            <label for="event-participants" class="text-medium">Participants</label>
                                                         </div>
                                                     </div>
                                                     <div
@@ -149,7 +149,7 @@
                                                         <div class="form-group floating-label">
                                                             <input type="number" id="event-hours" placeholder="" min="0"
                                                                 class="full-width form-control small-rounded">
-                                                            <label for="event-hours">No of Hours</label>
+                                                            <label for="event-hours" class="text-medium">No of Hours</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2747,10 +2747,10 @@
                     <div class="nv-d-flex nv-justify-content-center">
                         <button type="button"
                             class="pad-v-5 pad-h-20  small-rounded text-white border-green border-1 bg-secondary mar-r-20"
-                            data-dismiss="modal" data-show-container="hidden-score">I Agree</button>
+                            data-dismiss="modal" data-show-container="hidden-score">Yes</button>
                         <button type="button"
                             class="pad-v-5 pad-h-20  small-rounded text-green border-green border-1 bg-white"
-                            data-dismiss="modal">Cancel</button>
+                            data-dismiss="modal">No</button>
                     </div>
                 </div>
                 an

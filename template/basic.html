@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./reflora/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <style>
+   
+    </style>
+</head>
+
+<body>
+    <main>
+
+
+        <div class="fluid-wrapper" id="eventAccordion">
+            <form action="" class="nv-row">
+                <div class="nv-d-none tablet:nv-d-block nv-col-5">
+                    <lottie-player class="bg-lottie  pad-b-40" src="./animation/event.json" background="transparent"
+                        speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="mar-v-30 nv-col-12 desktop:nv-col-5 mar-h-auto">
+                    <h1>
+                        Tell us more about your event
+                    </h1>
+                    <div class="nv-row">
+                        <div class="nv-col-12">
+                            <div class="form-group mar-b-30 floating-label">
+                                <input type="text" id="event-name"
+                                    placeholder="This will be the name on the certificate & saved calculation"
+                                    class="full-width form-control focus small-rounded " />
+                                <label for="event-name">Name on Certificate </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nv-row">
+                        <div class="nv-col-12 tablet:nv-col-4">
+                            <div class="form-group mar-b-30 floating-label">
+                                <input type="number" min="0" id="event-attend" placeholder="0"
+                                    class="full-width  form-control focus small-rounded" />
+                                <label for="event-attend">No. of Participants</label>
+                                <span data-placeholder="People(s)"></span>
+                            </div>
+                        </div>
+                        <div class="nv-col-12 tablet:nv-col-4">
+                            <div class="form-group mar-b-30 floating-label">
+                                <input type="number" min="0" id="event-last" placeholder="0"
+                                    class="full-width  form-control focus small-rounded" />
+                                <label for="event-last">Event duration</label>
+                                <span data-placeholder="Day(s)"></span>
+                            </div>
+                        </div>
+                        <div class="nv-col-12 tablet:nv-col-4">
+                            <div class="form-group mar-b-30 floating-label">
+                                <input type="number" min="0" id="event-area-occur" placeholder="0"
+                                    class="full-width  form-control focus small-rounded" />
+                                <label for="event-area-occur">Event area</label>
+                                <span data-placeholder="M&sup2;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="event-last" class="text-medium">My event is </label>
+                        <div class="nv-row">
+                            <div class="nv-col-12 tablet:nv-col-6">
+                                <div class="pad-0 btn-group btn-group-toggle nv-col mar-b-30" data-toggle="buttons">
+                                    <label for="option1" data-show-container="event-container"
+                                        class="btn text-capitalize nv-col-4 text-medium rounded-left">
+                                        <input type="radio" name="options" id="option1" value="online" checked="" />
+                                        online
+                                    </label>
+                                    <label for="option2" data-hide-container="event-container"
+                                        class="btn text-capitalize nv-col-4 text-medium">
+                                        <input type="radio" name="options" id="option2" value="offline" /> offline
+                                    </label>
+                                    <label for="option3" data-show-container="event-container"
+                                        class="btn text-capitalize nv-col-4 text-medium rounded-right">
+                                        <input type="radio" name="options" id="option3" value="hybrid" /> hybrid
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="nv-col-12 tablet:nv-col-6">
+                                <div class="form-group mar-b-30 floating-label">
+                                    <select class="form-control focus nv-custom-select small-rounded" id="event-area">
+                                        <option value="">Select Country</option>
+                                        <option>India</option>
+                                        <option>France</option>
+                                        <option>USA</option>
+                                    </select>
+                                    <label for="event-area">My Event is happening in </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="event-container" class="mar-t-30 nv-d-none">
+                            <p class="mar-b-30"> Tell us about <span class="text-warning">XYZ's</span> online
+                                participants</p>
+                            <div>
+                                <div class="nv-row">
+                                    <div
+                                        class="nv-col-12 tablet:nv-col-4 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
+                                        <div class="form-group floating-label">
+                                            <select class="form-control focus nv-custom-select small-rounded"
+                                                id="event-country">
+                                                <option value="">Select Country</option>
+                                                <option>India</option>
+                                                <option>France</option>
+                                                <option>USA</option>
+                                            </select>
+                                            <label for="event-location">Location</label>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="nv-col-12 tablet:nv-col-4 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
+                                        <div class="form-group floating-label">
+                                            <input type="number" id="event-participants" placeholder="0" min="0"
+                                                class="full-width form-control focus small-rounded" />
+                                            <label for="event-participants" class="text-medium">No of
+                                                Participants</label>
+                                                <span data-placeholder="People(s)"></span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="nv-col-12 tablet:nv-col-4 border-0 tablet:border-bottom-1 border-light mar-b-20 border-dashed pad-b-20">
+                                        <div class="form-group floating-label">
+                                            <input type="number" id="event-hours" placeholder="0" min="0"
+                                                class="full-width form-control focus small-rounded" />
+                                            <label for="event-hours" class="text-medium">Event duration</label>
+                                            <span data-placeholder="Hour(s)"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nv-d-flex nv-justify-content-end mar-t-20">
+                                <a
+                                    class="badge text-decoration-none rounded-pill border-solid border-1 border-brown text-brown pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto">
+                                    <i class="bi bi-plus nv-pe-none"></i> <span
+                                        class="nv-d-none tablet:nv-d-block nv-pe-none">Add Location</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nv-d-flex nv-justify-content-end mar-t-30">
+                        <a data-open-accordion="#mandatoryAccordion"
+                            class="badge text-decoration-none rounded-pill border-solid border-1 border-brown text-brown pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto">
+                            <span class="nv-pe-none"> Next</span>
+                            <i class="bi bi-arrow-right nv-pe-none"></i>
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <script src="./../build/script.js"></script>
+</body>
+
+</html>

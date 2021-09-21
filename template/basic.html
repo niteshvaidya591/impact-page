@@ -18,16 +18,17 @@
     <main>
 
 
-        <div class="fluid-wrapper" id="eventAccordion">
+        <div class="fluid-wrapper widescreen:mar-h-60" id="eventAccordion">
             <form action="" class="nv-row">
-                <div class="nv-col-12 tablet:nv-col-3">
-                    <lottie-player class="bg-lottie  pad-b-40" src="./animation/event.json" background="transparent"
-                        speed="1" loop autoplay></lottie-player>
-                </div>
+               
                 <div class="mar-v-30 nv-col-12 tablet:nv-col-7 mar-h-auto">
-                    <h1>
+                    <h1 class="mar-b-n20">
                         Tell us more about your event
                     </h1>
+                  <div class="text-center">
+                    <lottie-player class=" mar-h-auto nv-width-12 mar-b-30"  src="./animation/event.json" background="transparent"
+                    speed="1" loop autoplay></lottie-player>
+                  </div>
                     <div class="nv-row">
                         <div class="nv-col-12">
                             <div class="form-group mar-b-30 floating-label">
@@ -45,7 +46,7 @@
                                 <input type="number" min="0" id="event-attend" placeholder="0"
                                     class="full-width  form-control focus small-rounded" />
                                 <label for="event-attend">No. of Participants</label>
-                                <span data-placeholder="People(s)"></span>
+                                <span data-placeholder="People"></span>
                             </div>
                         </div>
                         <div class="nv-col-12 tablet:nv-col-4">
@@ -61,7 +62,7 @@
                                 <input type="number" min="0" id="event-area-occur" placeholder="0"
                                     class="full-width  form-control focus small-rounded" />
                                 <label for="event-area-occur">Event area</label>
-                                <span data-placeholder="M&sup2;"></span>
+                                <span data-placeholder="m&sup2;"></span>
                             </div>
                         </div>
                     </div>
@@ -124,7 +125,7 @@
                                                 class="full-width form-control focus small-rounded" />
                                             <label for="event-participants" class="text-medium">No of
                                                 Participants</label>
-                                                <span data-placeholder="People(s)"></span>
+                                                <span data-placeholder="People"></span>
                                         </div>
                                     </div>
                                     <div

@@ -15,7 +15,7 @@
     <main>
         <div class="fluid-wrapper">
             <h1 class="mar-b-0">Events Calculator</h1>
-            <p>Please select the area that your event will cover</p>
+            <p>Please select the sources relevant to your event.</p>
             <section>
                 <div class="nv-row">
                     <p
@@ -105,8 +105,7 @@
                                     <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
                                         title="Add to custom calculator">
                                         <input type="checkbox" name="" id="transport" />
-                                        <label for="transport"><i class="bi bi-plus-circle-fill"></i> Participant Local
-                                            Transport</label>
+                                        <label for="transport"><i class="bi bi-plus-circle-fill"></i> Mobility in the event</label>
                                     </a>
                                     <a class="nv-d-inline mar-v-5 mar-r-10" data-toggle="tooltip" data-placement="top"
                                         title="Add to custom calculator">
@@ -138,7 +137,7 @@
                             </div>
                             <div class="mobile:nv-d-none tablet:nv-d-flex tablet:nv-col-3 scope-checkbox__uncheck">
                                 <label class="nv-d-none" for="transport"><i class="bi bi-x-circle-fill"></i> Participant
-                                    Local Transport</label>
+                                    Mobility in the event</label>
                                 <label class="nv-d-none" for="materials"><i class="bi bi-x-circle-fill"></i>
                                     Materials</label>
                                 <label class="nv-d-none" for="logistics"><i class="bi bi-x-circle-fill"></i>
@@ -212,9 +211,11 @@
                         <!-- scope 3 ends -->
                     </div>
                     <div
-                        class="nv-row nv-justify-content-end full-width desktop:nv-offset-9 pad-v-30 bg-white zindex-4 nv-pos-relative ">
-                        <button
-                            class="rounded-pill bg-secondary text-white border-white btn text-primary font-weight-bold pad-v-5 pad-h-15 mar-h-auto bg-white border-1 border-primary">Calculate</button>
+                        class="nv-row nv-justify-content-center full-width desktop:nv-offset-9 pad-v-30 bg-white zindex-4 nv-pos-relative ">
+                        <a href="./event-page.html" data-open-accordion="#mandatoryAccordion" class="badge text-decoration-none heading-3 font-weight-bold text-secondary pad-v-5 nv-align-items-center pad-h-15 nv-d-flex nv-pe-auto">
+                            <span class="nv-pe-none"> Start Calculation</span>
+                            <i class="bi bi-arrow-right pad-l-10 nv-pe-none"></i>
+                        </a>
                     </div>
                 </div>
             </section>

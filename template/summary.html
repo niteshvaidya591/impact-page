@@ -1,440 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reflora</title>
+        <link rel="stylesheet" href="./../build/style.css" />
+        <link rel="stylesheet" href="./reflora/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <style>
+            /*  */
+        </style>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reflora</title>
-    <link rel="stylesheet" href="./../build/style.css" />
-    <link rel="stylesheet" href="./reflora/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-<style>
-    
-/*  */
+    <body>
+        <main>
+            <div class="desktop:pad-h-50">
+                <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20 mar-t-50">
+                    <div class="nv-col-12 desktop:nv-col-5 nv-align-self-center">
+                        <h3 class="text-center">
+                            Your event's total carbon emission are
+                            <span class="text-danger heading-2 pad-h-5">
+                                <br />
+                                5 Tonnes Co<sub>2</sub>e
+                            </span>
+                        </h3>
+                        <div class="hex-container tablet:pad-t-60 tablet:pad-l-60 tablet:mar-l-60 desktop:pad-l-0 desktop:mar-l-0  pad-b-30">
+                            <ol class="odd mar-b-n40">
+                                <li class="hex"></li>
+                                <li class="hex hex-purple">
+                                    <div class="hex-front">
+                                        <span class="nv-i-foot"></span>
+                                        <span class="hex-score">80%</span>
+                                        <span class="hex-title">Mandatory</span>
+                                    </div>
+                                    <div class="hex-back pad-20">
+                                        <p class="heading-1 mar-0">1</p>
+                                        <span class="font-weight-bold"> tonnes of Co2e</span>
+                                    </div>
+                                </li>
+                                <li class="hex"></li>
+                            </ol>
+                            <ol class="even">
+                                <li class="hex hex-green">
+                                    <div class="hex-front">
+                                        <span class="nv-i-foot"></span>
+                                        <span class="hex-score">80%</span>
+                                        <span class="hex-title">Recommended</span>
+                                    </div>
+                                    <div class="hex-back pad-20">
+                                        <p class="heading-1 mar-0">1</p>
+                                        <span class="font-weight-bold"> tonnes of Co2e</span>
+                                    </div>
+                                </li>
+                                <li class="hex hex-yellow">
+                                    <div class="hex-front">
+                                        <span class="nv-i-foot"></span>
+                                        <span class="hex-score">80%</span>
+                                        <span class="hex-title">Recommended</span>
+                                    </div>
+                                    <div class="hex-back pad-20">
+                                        <p class="heading-1 mar-0">1</p>
+                                        <span class="font-weight-bold"> tonnes of Co2e</span>
+                                    </div>
+                                </li>
+                            </ol>
+                            <ol class="odd mar-t-n40" id="hidden-score">
+                                <li class="hex"></li>
+                                <li class="hex hex-brown">
+                                    <div class="hex-front">
+                                        <span class="nv-i-foot"></span>
+                                        <span class="hex-score">80%</span>
+                                        <span class="hex-title">Indirect score</span>
+                                    </div>
+                                    <div class="hex-back pad-20">
+                                        <p class="heading-1 mar-0">1</p>
+                                        <span class="font-weight-bold"> tonnes of Co2e</span>
+                                    </div>
+                                </li>
+                                <li class="hex"></li>
+                            </ol>
+                        </div>
+                       
 
-</style>
-</head>
-
-<body>
-    <main>
-        <div class="desktop:pad-h-50">
-          
-            <div class="nv-row nv-no-gutters nv-justify-content-center mobile:pad-h-20 mar-t-50">
-              
-                <div class="nv-col-12 tablet:nv-col-5 nv-align-self-center">
-                    <h3 class="text-center">Your event's total carbon emission are <span class="text-danger heading-2 pad-h-5"><br> 5 Tonnes Co<sub>2</sub>e</span> </h3>
-                    <div class="hex-container widescreen:pad-l-60 pad-b-30">
-                        <ol class="even mar-b-n40">
-                            <li class='hex hex-purple'>
-                                <span class="nv-i-foot"></span>
-                                <span class="hex-score">80%</span>
-                                <span class="hex-title">Mandatory</span>
-                              
-                            </li>
-                        </ol>
-                        <ol class="odd">
-                            <li class='hex hex-green'>
-                                <span class="nv-i-foot"></span>
-                                <span class="hex-score">60%</span>
-                                <span class="hex-title">Recommended</span>
-                            </li>
-                            <li class='hex hex-yellow'>
-                                <span class="nv-i-foot"></span>
-                                <span class="hex-score">40%</span>
-                                <span class="hex-title">Others</span>
-                            </li>
-
-                        </ol>
-                        <ol class="even mar-t-n40" id="hidden-score">
-                            <li class='hex'>
-                                <span class="nv-i-foot"></span>
-                                <span class="hex-score">10%</span>
-                                <span class="hex-title">Hidden</span>
-                            </li>
-
-                        </ol>
-                    </div>
-
-                    <div class="nv-col-12  mar-t-30 scope-row__green">
-
-                        <div class="nv-row nv-justify-content-center full-width scope-controls">
-                         
-                            <div
-                                class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
-                                <button class="scope-button scope-reset"><span
-                                        class="bi heading-3 bi-arrow-counterclockwise"></span></button>
-                                <p class="mar-v-10">Re-Calculate</p>
+                        <div class="nv-col-12 mar-t-30 scope-row__green">
+                            <div class="nv-row nv-justify-content-center full-width scope-controls">
+                                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
+                                    <button class="scope-button scope-reset"><span class="bi heading-3 bi-arrow-counterclockwise"></span></button>
+                                    <p class="mar-v-10">Re-Calculate</p>
+                                </div>
+                             
+                                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                    <button class="scope-button scope-reset"><span class="bi heading-3 bi-download"></span></button>
+                                    <p class="mar-v-10">Download</p>
+                                </div>
                             </div>
-                            <!-- <div
-                                class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
-                                <button data-hide-container="emmision-report" data-show-container="project-container"
-                                    class="scope-button scope-reset"><span
-                                        class="bi heading-3 bi-cart4"></span></button>
-                                <p class="mar-v-10">Buy</p>
-                            </div> -->
-                            <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                <button class="scope-button scope-reset"><span
-                                        class="bi heading-3 bi-download"></span></button>
-                                <p class="mar-v-10">Download</p>
+                        </div>
+                    </div>
+                    <div class="nv-col-12 desktop:nv-col-6 scope-row__green">
+                      
+                        <div id="project-container">
+                            <div class="pad-20 mar-b-20 shadow-small">
+                                <h3 class="mar-t-0">Choose your project</h3>
+                                <div class="nv-row mar-b-20">
+                                    <div class="nv-col-12 tablet:nv-col-4">
+                                        <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" />
+                                    </div>
+                                    <div class="nv-col-12 tablet:nv-col-8">
+                                        <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+
+                                        <div class="nv-d-flex nv-justify-content-between">
+                                            <div class="nv-col-6">
+                                                <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
+
+                                                <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5" value="1" />
+                                            </div>
+                                            <button width="140" data-show-container="cart-container" class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nv-row mar-b-20">
+                                    <div class="nv-col-12 tablet:nv-col-4">
+                                        <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" />
+                                    </div>
+                                    <div class="nv-col-12 tablet:nv-col-8">
+                                        <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+
+                                        <div class="nv-d-flex nv-justify-content-between">
+                                            <div class="nv-col-6">
+                                                <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
+
+                                                <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5" value="1" />
+                                            </div>
+                                            <button width="140" data-show-container="cart-container" class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nv-row mar-b-20">
+                                    <div class="nv-col-12 tablet:nv-col-4">
+                                        <img src="./images/forest.jpg" alt="forest project image" class="img-fluid img-obj-fit" />
+                                    </div>
+                                    <div class="nv-col-12 tablet:nv-col-8">
+                                        <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.</p>
+
+                                        <div class="nv-d-flex nv-justify-content-between">
+                                            <div class="nv-col-6">
+                                                <button class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€ 10</button>
+
+                                                <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5" value="1" />
+                                            </div>
+                                            <button width="140" data-show-container="cart-container" class="border-1 border-green pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="cart-container" class="nv-d-none">
+                                    <div class="nv-row bg-light mar-h-n20 mar-b-n20 nv-justify-content-between nv-align-items-center">
+                                        <h4 class="text-secondary mar-v-0 pad-l-20">1 Items Added</h4>
+                                        <button class="float-right-0 bg-secondary text-white pad-v-10 pad-h-20 border-0" data-hide-container="project-container" data-show-container="checkout-container">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="checkout-container" class="nv-d-none">
+                            <div class="pad-20 mar-b-20 shadow-small">
+                                <h3 class="mar-t-0">Checkout</h3>
+                                <!-- tab section starts -->
+
+                                <div class="nv-tab-panel">
+                                    <div class="nv-tabs">
+                                        <div class="nv-tabs-header nv-flex-column desktop:nv-flex-row nv-d-flex" role="tablist" aria-label="Medical policies">
+                                            <a role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" class="ie-col-4">
+                                                Pay Now
+                                            </a>
+                                            <a role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1" class="ie-col-4">
+                                                Share Link
+                                            </a>
+                                        </div>
+                                        <div class="nv-tab-body" tabindex="0" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                                            <div class="nv-tab-body-content">
+                                                <form action="" class="mar-v-30">
+                                                    <div class="nv-row mar-0">
+                                                        <div class="nv-col-12 mar-b-30">
+                                                            <div class="form-group floating-label">
+                                                                <input type="text" id="checkout-name" class="full-width form-control small-rounded" />
+                                                                <label for="checkout-name">Name on certificate</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nv-col-12 mar-b-30">
+                                                            <div class="form-group floating-label">
+                                                                <input type="text" id="checkout-card" class="full-width form-control small-rounded" />
+                                                                <label for="checkout-card">Card Number</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30">
+                                                            <div class="form-group floating-label">
+                                                                <input type="text" min="2" max="2" id="checkout-month" class="full-width form-control small-rounded" />
+                                                                <label for="checkout-month">Expiry Month</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30">
+                                                            <div class="form-group floating-label">
+                                                                <input type="number" min="4" max="4" id="checkout-year" class="full-width form-control small-rounded" />
+                                                                <label for="checkout-year">Expiry Year</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30">
+                                                            <div class="form-group floating-label">
+                                                                <input type="number" id="checkout-cvv" class="full-width form-control small-rounded" />
+                                                                <label for="checkout-cvv">CVV</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nv-row nv-justify-content-end full-width">
+                                                            <button class="border-0 bg-primary text-white pad-v-10 pad-h-20">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="nv-tab-body" tabindex="0" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="">
+                                            <div class="nv-tab-body-content">
+                                                <form action="">
+                                                    <div class="nv-row mar-0 mar-v-30">
+                                                        <div class="nv-col-12 mar-b-30">
+                                                            <div class="form-group floating-label">
+                                                                <input type="text" id="link-pay-email" class="full-width form-control small-rounded" />
+                                                                <label for="link-pay-email">Email ID</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nv-row nv-justify-content-end full-width">
+                                                            <button class="border-0 bg-primary text-white pad-v-10 pad-h-20">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- tab section ends -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="nv-col-12 tablet:nv-col-6 scope-row__green">
-                    <!-- <div id="emmision-report">
-                        <h2>XYZ Carbon Footprint is</h2>
-                        <div class="nv-row nv-justify-content-center full-width scope-controls widescreen:nv-col-8">
-                            <div class="scope-score">
-                                <p class="nv-i-foot mar-l-20 mar-t-n50">
-                                </p>
-                                <h3 class="scope-score__percentage pad-t-0">6.4 </h3>
-                                <p class="scope-score__footprint "><span class="font-weight-bold">Ton of
-                                        CO<sub>2</sub></span></p>
-                                <p class="scope-score__footer">Total Emission</p>
-                            </div>
-                        </div>
-                        <h5>XYZ highest emission source is <a href="" class="text-purple">Energy</a></h5>
-                        <h5>XYZ highest emission area is <a href="#" class="text-green">Drinks</a></h5>
-                        <h5>XYZ emission per participant is <a href="#" class="text-brown">Transport</a></h5>
-                    </div> -->
-                    <div id="project-container">
-                        <div class="pad-20 mar-b-20 shadow-small">
-                            <h3 class="mar-t-0">Choose your project</h3>
-                            <div class="nv-row mar-b-20">
-                                <div class="nv-col-12 tablet:nv-col-4">
-                                    <img src="./images/forest.jpg" alt="forest project image"
-                                        class="img-fluid img-obj-fit">
-                                </div>
-                                <div class="nv-col-12 tablet:nv-col-8">
-                                    <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.
-                                    </p>
-
-                                    <div class="nv-d-flex nv-justify-content-between">
-                                        <div>
-                                            <button
-                                                class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
-                                                10</button>
-                                            <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5"
-                                                value="1">
-                                        </div>
-                                        <button
-                                            width="140" data-show-container="cart-container" class="border-1 border-green  pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add
-                                            To Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="nv-row mar-b-20">
-                                <div class="nv-col-12 tablet:nv-col-4">
-                                    <img src="./images/forest.jpg" alt="forest project image"
-                                        class="img-fluid img-obj-fit">
-                                </div>
-                                <div class="nv-col-12 tablet:nv-col-8">
-                                    <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.
-                                    </p>
-
-                                    <div class="nv-d-flex nv-justify-content-between">
-                                        <div>
-                                            <button
-                                                class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
-                                                10</button>
-                                            <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5"
-                                                value="1">
-                                        </div>
-                                        <button
-                                            width="140" data-show-container="cart-container" class="border-1 border-green  pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add
-                                            To Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="nv-row mar-b-20">
-                                <div class="nv-col-12 tablet:nv-col-4">
-                                    <img src="./images/forest.jpg" alt="forest project image"
-                                        class="img-fluid img-obj-fit">
-                                </div>
-                                <div class="nv-col-12 tablet:nv-col-8">
-                                    <h5 class="mar-v-15 desktop:mar-t-0">Lorem ipsum dolor sit.</h5>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit.
-                                    </p>
-
-                                    <div class="nv-d-flex nv-justify-content-between">
-                                        <div>
-                                            <button
-                                                class="bg-secondary pad-v-2 border-0 small-rounded text-white pad-h-10">€
-                                                10</button>
-                                            <input type="number" min="0" class="nv-col-4 widescreen:nv-col-2 pad-0 mobile:pad-l-5"
-                                                value="1">
-                                        </div>
-                                        <button
-                                            width="140" data-show-container="cart-container" class="border-1 border-green  pad-v-2 bg-white small-rounded text-small text-green pad-h-15">Add
-                                            To Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                           <div id="cart-container" class="nv-d-none">
-                            <div class="nv-row bg-light mar-h-n20 mar-b-n20 nv-justify-content-between nv-align-items-center " >
-                                <h4 class="text-secondary mar-v-0 pad-l-20">1 Items Added</h4>
-                                <button class="float-right-0 bg-secondary text-white pad-v-10 pad-h-20 border-0" data-hide-container="project-container" data-show-container="checkout-container">Continue</button>
-                            </div>
-                           </div>
-                        </div>
-                    </div>
-                    <div id="checkout-container" class="nv-d-none">
-                     
-                        <div class="pad-20 mar-b-20 shadow-small">
-                            <h3 class="mar-t-0">Checkout </h3>
-<!-- tab section starts -->
-
-<div class="nv-tab-panel">
-    <div class="nv-tabs">
-        <div class="nv-tabs-header nv-flex-column desktop:nv-flex-row nv-d-flex" role="tablist" aria-label="Medical policies">
-            <a role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" class="ie-col-4">
-            Pay Now
-            </a>
-            <a role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1" class="ie-col-4">
-            Share Link
-            </a>
-           
-        </div>
-        <div class="nv-tab-body" tabindex="0" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
-            <div class="nv-tab-body-content">
-                <form action="" class="mar-v-30">
-                    <div class="nv-row mar-0">                  
-                        <div class="nv-col-12 mar-b-30">
-                            <div class="form-group floating-label">
-                                <input type="text" id="checkout-name"
-                                    
-                                    class="full-width form-control small-rounded" />
-                                <label for="checkout-name">Name on certificate</label>
-                            </div>
-                        </div>
-                        <div class="nv-col-12 mar-b-30">
-                            <div class="form-group floating-label">
-                                <input type="text" id="checkout-card"
-                                    
-                                    class="full-width form-control small-rounded" />
-                                <label for="checkout-card">Card Number</label>
-                            </div>
-                        </div>
-                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30" >
-                            <div class="form-group floating-label">
-                                <input type="text" min="2" max="2"
-                                    id="checkout-month"
-                                    
-                                    class="full-width form-control small-rounded" />
-                                <label
-                                    for="checkout-month">Expiry Month</label>
-                            </div>
-                        </div>
-                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30" >
-                            <div class="form-group floating-label">
-                                <input type="number" min="4" max="4"
-                                    id="checkout-year"
-                                    
-                                    class="full-width form-control small-rounded" />
-                                <label
-                                    for="checkout-year">Expiry Year</label>
-                            </div>
-                        </div>
-                        <div class="nv-col-12 tablet:nv-col-4 mar-b-30" >
-                            <div class="form-group floating-label">
-                                <input type="number"
-                                    id="checkout-cvv"
-                                    
-                                    class="full-width form-control small-rounded" />
-                                <label
-                                    for="checkout-cvv">CVV</label>
-                            </div>
-                        </div>
-                        <div class="nv-row nv-justify-content-end full-width">
-                            <button class="border-0 bg-primary text-white pad-v-10 pad-h-20">Submit</button>
-                        </div>
-                    </div>
-                </form>
             </div>
-        </div>
-        <div class="nv-tab-body" tabindex="0" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="">
-            <div class="nv-tab-body-content">
-       
-              <form action="">
-                <div class="nv-row mar-0 mar-v-30">
-                    <div class="nv-col-12 mar-b-30">
-                        <div class="form-group floating-label">
-                            <input type="text" id="link-pay-email"
-                                
-                                class="full-width form-control small-rounded" />
-                            <label for="link-pay-email">Email ID</label>
-                        </div>
-                    </div>
-                <div class="nv-row nv-justify-content-end full-width">
-                    <button class="border-0 bg-primary text-white pad-v-10 pad-h-20">Submit</button>
-                </div>
-                  </div>
-            </form>
-            </div>
-        </div>
-      
-    </div>
-</div>
-      
-<!-- tab section ends -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr class="mar-h-40 mar-v-30 border-top-1 border-bottom-0 border-light nv-d-block">
-        <div class="fluid-wrapper">
-            <h1 class="mar-v-0">Scope Summary</h1>
-            <p>Your emissions per source are </p>
-            <section>
-                <div class="nv-row">
-                    <div class="nv-col-12">
-                        <!-- scope 1 starts -->
-                        <div class="nv-row scope-row scope-row__blue">
-                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                <p class="scope-circle scope-circle__blue scope-no scope-no__1">
-                                    <span class="nv-i-one heading-1 text-white"></span>
-                                </p>
-                            </div>
-                            <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
-                                <div>
-                                    <h2 class="mar-b-0 mar-t-60">Mandatory</h2>
-                                    
+            <hr class="mar-h-40 mar-v-30 border-top-1 border-bottom-0 border-light nv-d-block" />
+            <div class="fluid-wrapper">
+                <h1 class="mar-v-0">Scope Summary</h1>
+                <p>Your emissions per source are</p>
+                <section>
+                    <div class="nv-row">
+                        <div class="nv-col-12">
+                            <!-- scope 1 starts -->
+                            <div class="nv-row scope-row scope-row__blue">
+                                <!-- <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                    <p class="scope-circle scope-circle__blue scope-no scope-no__1">
+                                        <span class="nv-i-one heading-1 text-white"></span>
+                                    </p>
+                                </div> -->
+                                <div class="nv-col-12 scope-checkbox__check">
+                                    <div>
+                                        <h2 class="mar-b-0 mar-t-60">Mandatory</h2>
+                                    </div>
+                               
+                                    <div class="nv-row nv-justify-content-between full-width scope-controls mar-h-0">
+                                        <div class="scope-score scope-score__sm">
+                                            <p class="nv-i-foot"></p>
+                                            <h3 class="scope-score__percentage pad-t-0">15%</h3>                                           
+                                            <p class="scope-score__footer">
+                                                Mandatory <br class="nv-d-block tablet:nv-d-none" />
+                                                Score
+                                            </p>
+                                        </div>
+                                        <div class="nv-d-flex nv-flex-wrap mar-v-30">
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Participant Travel</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Food & Drink</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Hotel Stay</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                        </div>
+                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                            <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
+                                            <p class="mar-v-10">Re-Calculate</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Participant
-                                            Travel</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Food &
-                                            Drink</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Hotel
-                                            Stay</label>
-                                    </div>
+                            </div>
 
-
-                                </div>
-                                <div class="nv-row nv-justify-content-between full-width scope-controls">
-                                    <div class="scope-score scope-score__sm">
-                                        <p class="nv-i-foot">
-                                        <h3 class="scope-score__percentage pad-t-0">15%</h3>
-                                        <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                        <p class="scope-score__footer">Mandatory <br class="nv-d-block tablet:nv-d-none"> Score</p>
+                            <!-- scope 1 ends -->
+                            <!-- scope 2 starts -->
+                            <div class="nv-row scope-row scope-row__green">
+                                <!-- <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                    <p class="scope-circle scope-circle__green scope-no scope-no__2">
+                                        <span class="nv-i-two heading-1 text-white"></span>
+                                    </p>
+                                </div> -->
+                                <div class="nv-col-12 scope-checkbox__check">
+                                    <div>
+                                        <h2 class="mar-b-0 mar-t-60">Recommended</h2>
                                     </div>
-                                    <div
-                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                        <button class="scope-button scope-reset"><span
-                                                class="bi bi-arrow-counterclockwise"></span></button>
-                                        <p class="mar-v-10">Re-Calculate</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- scope 1 ends -->
-                        <!-- scope 2 starts -->
-                        <div class="nv-row scope-row scope-row__green">
-                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                <p class="scope-circle scope-circle__green scope-no scope-no__2">
-                                    <span class="nv-i-two heading-1 text-white"></span>
-                                </p>
-                            </div>
-                            <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
-                                <div>
-                                    <h2 class="mar-b-0 mar-t-60">Recommended</h2>
-                                  
-                                </div>
-                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i> Participant
-                                            Local Transport</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i
-                                                class="bi bi-check-circle-fill"></i>Materials</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i
-                                                class="bi bi-check-circle-fill"></i>Logistics</label>
-                                    </div>
-                                </div>
-                                <div class="nv-row nv-justify-content-between full-width scope-controls">
-                                    <div class="scope-score scope-score__sm">
-                                        <p class="nv-i-foot">
-                                        <h3 class="scope-score__percentage pad-t-0">65%</h3>
-                                        <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                        <p class="scope-score__footer">Recommended <br class="nv-d-block tablet:nv-d-none"> Score</p>
-                                    </div>
-                                    <div
-                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                        <button class="scope-button scope-reset"><span
-                                                class="bi bi-arrow-counterclockwise"></span></button>
-                                        <p class="mar-v-10">Re-Calculate</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- scope 2 ends -->
-                        <!-- scope 3 starts -->
-                        <div class="nv-row scope-row scope-row__yellow">
-                            <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
-                                <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
-                                    <span class="nv-i-three heading-1 text-white"></span>
-                                </p>
-                            </div>
-                            <div class="nv-col-12 tablet:nv-col-10 desktop:nv-col-10 scope-checkbox__check">
-                                <div>
-                                    <h2 class="mar-b-0 mar-t-60">Others</h2>
                                    
-                                </div>
-                                <div class="nv-d-flex nv-flex-wrap mar-v-30">
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i
-                                                class="bi bi-check-circle-fill"></i>Electricity</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Waste</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Fossil
-                                            Fuel</label>
-                                    </div>
-                                    <div class="nv-d-inline mar-v-5 mar-r-10">
-                                        <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Laundry</label>
-                                    </div>
-                                </div>
-                                <div class="nv-row nv-justify-content-between full-width scope-controls">
-                                    <div class="scope-score scope-score__sm">
-                                        <p class="nv-i-foot">
-                                        <h3 class="scope-score__percentage pad-t-0">45%</h3>
-                                        <!-- <p class="scope-score__footprint">Carbon Footprint</p> -->
-                                        <p class="scope-score__footer">Others Score</p>
-                                    </div>
-                                    <div
-                                        class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
-                                        <button class="scope-button scope-reset"><span
-                                                class="bi bi-arrow-counterclockwise"></span></button>
-                                        <p class="mar-v-10">Re-Calculate</p>
+                                    <div class="nv-row nv-justify-content-between full-width scope-controls mar-h-0">
+                                        <div class="scope-score scope-score__sm">
+                                            <p class="nv-i-foot"></p>
+                                            <h3 class="scope-score__percentage pad-t-0">65%</h3>                                           
+                                            <p class="scope-score__footer">
+                                                Recommended <br class="nv-d-block tablet:nv-d-none" />
+                                                Score
+                                            </p>
+                                        </div>
+                                        <div class="nv-d-flex nv-flex-wrap mar-v-30 pad-h-15">
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i> Participant Local Transport</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Materials</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Logistics</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                        </div>
+                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                            <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
+                                            <p class="mar-v-10">Re-Calculate</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- scope 2 ends -->
+                            <!-- scope 3 starts -->
+                            <div class="nv-row scope-row scope-row__yellow">
+                                <!-- <div class="nv-col-12 tablet:nv-col-2 desktop:nv-col-2 mar-l-0 mar-t-30 desktop:mar-t-0">
+                                    <p class="scope-circle scope-circle__yellow scope-no scope-no__3">
+                                        <span class="nv-i-three heading-1 text-white"></span>
+                                    </p>
+                                </div> -->
+                                <div class="nv-col-12 scope-checkbox__check">
+                                    <div>
+                                        <h2 class="mar-b-0 mar-t-60">Others</h2>
+                                    </div>
+                                  
+                                    <div class="nv-row nv-justify-content-between full-width scope-controls mar-h-0">
+                                        <div class="scope-score scope-score__sm">
+                                            <p class="nv-i-foot"></p>
+                                            <h3 class="scope-score__percentage pad-t-0">45%</h3>                                           
+                                            <p class="scope-score__footer">Others Score</p>
+                                        </div>
+                                        <div class="nv-d-flex nv-flex-wrap mar-v-30 pad-h-15">
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Electricity</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Waste</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Fossil Fuel</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                            <div class="nv-d-inline mar-v-5 mar-r-10">
+                                                <label class="nv-c-auto"><i class="bi bi-check-circle-fill"></i>Laundry</label>
+                                                <p class="heading-5 text-center font-weight-bold mar-v-10">123 Tonnes</p>
+                                            </div>
+                                        </div>
+                                        <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column">
+                                            <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
+                                            <p class="mar-v-10">Re-Calculate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- scope 3 ends -->
                         </div>
-                        <!-- scope 3 ends -->
                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
- 
-    <script src="./../build/script.js"></script>
-</body>
+                </section>
+            </div>
+        </main>
 
+        <script src="./../build/script.js"></script>
+    </body>
 </html>
+

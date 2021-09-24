@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'reflora';
-  src:  url('fonts/reflora.eot?oi8qen');
-  src:  url('fonts/reflora.eot?oi8qen#iefix') format('embedded-opentype'),
-    url('fonts/reflora.ttf?oi8qen') format('truetype'),
-    url('fonts/reflora.woff?oi8qen') format('woff'),
-    url('fonts/reflora.svg?oi8qen#reflora') format('svg');
+  src:  url('fonts/reflora.eot?7w4zxk');
+  src:  url('fonts/reflora.eot?7w4zxk#iefix') format('embedded-opentype'),
+    url('fonts/reflora.ttf?7w4zxk') format('truetype'),
+    url('fonts/reflora.woff?7w4zxk') format('woff'),
+    url('fonts/reflora.svg?7w4zxk#reflora') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nv-i-carbon-tree:before {
+  content: "\e931";
+  color: #006827;
+}
+.nv-i-energy:before {
+  content: "\e932";
+  color: #006827;
+}
+.nv-i-project:before {
+  content: "\e933";
+  color: #006827;
+}
+.nv-i-logout:before {
+  content: "\e930";
+}
+.nv-i-airplane:before {
+  content: "\e928";
+}
+.nv-i-building:before {
+  content: "\e929";
+}
+.nv-i-calc:before {
+  content: "\e92a";
+}
+.nv-i-learn:before {
+  content: "\e92b";
+}
+.nv-i-menu:before {
+  content: "\e92c";
+}
+.nv-i-product:before {
+  content: "\e92d";
+}
+.nv-i-settings:before {
+  content: "\e92e";
+}
+.nv-i-user:before {
+  content: "\e92f";
+}
 .nv-i-foot:before {
   content: "\e91d";
 }

@@ -1,0 +1,116 @@
+/*
+ * jQuery Dynatable plugin 0.3.1
+ *
+ * Copyright (c) 2014 Steve Schwartz (JangoSteve)
+ *
+ * Dual licensed under the AGPL and Proprietary licenses:
+ *   http://www.dynatable.com/license/
+ *
+ * Date: Tue Jan 02 2014
+ */
+ table.dynatable-loaded{
+  border-spacing: 0px 1rem;
+  border-collapse: separate;
+ }
+thead {
+  margin-bottom: 1rem;
+}
+thead tr,
+tbody tr {
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.30);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.30);
+  border: 1px solid #ddd !important;
+}
+tbody tr td {
+  padding: 10px 5px;
+}
+th {
+  background: #e3f2e9;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+th a,
+th a:hover {
+  color: #006827 !important;
+  text-decoration: none !important;
+}
+th a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.dynatable-search {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.dynatable-pagination-links {
+  float: right;
+}
+
+.dynatable-record-count {
+  display: block;
+  padding: 5px 0;
+}
+
+.dynatable-pagination-links span,
+.dynatable-pagination-links li {
+  display: inline-block;
+}
+
+.dynatable-page-link,
+.dynatable-page-break {
+  display: block;
+  padding: 5px 7px;
+  
+}
+
+.dynatable-page-link {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px !important;
+  width: 30px;
+  border: 1px solid #ddd;
+  border-radius: inherit;
+  display: block;
+}
+
+.dynatable-active-page,
+.dynatable-disabled-page {
+  cursor: text;
+}
+.dynatable-active-page:hover,
+.dynatable-disabled-page:hover {
+  text-decoration: none;
+}
+
+.dynatable-active-page {
+  background: #006827;
+  border-color: #006827;
+  border-radius: 5px !important;
+  color: #fff;
+}
+.dynatable-active-page:hover {
+  color: #fff;
+}
+.dynatable-disabled-page,
+.dynatable-disabled-page:hover {
+  background: none;
+  cursor: not-allowed;
+  color: #999;
+}
+input#dynatable-query-search-table,
+select#dynatable-per-page-table {
+  border: 1px solid #006827;
+  border-radius: 5px;
+  min-height: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 10px;
+}
+ul#dynatable-pagination-links-table li {
+  margin-right: 5px;
+}
+a.dynatable-page-link.dynatable-page-prev.dynatable-disabled-page,a.dynatable-page-link.dynatable-page-next,a.dynatable-page-link.dynatable-page-prev{
+  width: auto;
+}

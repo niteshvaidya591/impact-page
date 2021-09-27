@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./reflora/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/jquery.dynatable.css" />
+  </head>
+
+  <body>
+    <section class="nv-d-none widescreen:nv-d-block">
+      <aside class="vertical-bar bg-white">
+        <div>
+          <img
+            src="./images/forest.jpg"
+            alt="profile photo"
+            class="rounded-circle mar-h-auto mar-v-25"
+            width="60"
+            height="60"
+          />
+
+          <ul class="list-unstyled pad-0 mar-0 vertical-bar__menu">
+            <li>
+              <a  href="#"><span class="nv-i-menu"></span></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-calc"></span></a>
+            </li>
+            <li>
+              <a class="active" href=""><i class="bi bi-graph-up"></i></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-product"></span></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-learn"></span></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-settings"></span></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="#" class="mar-b-25 nv-d-block"
+            ><i class="nv-i-logout"></i
+          ></a>
+          <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
+        </div>
+      </aside>
+    </section>
+
+    <main class="widescreen:pad-l-60 mar-b-60">
+      <div class="fluid-wrapper">
+        <h5 class="mar-b-15">Sales Diagnostics</h5>
+        <div class="nv-row tablet:mar-b-30">
+            <div class="nv-col-12 tablet:nv-col-4">
+                <div class="border-1 border-solid border-light text-secondary small-rounded shadow-large pad-20 mar-v-20 text-center">
+                    <i class="bi bi-cash heading-1 text-secondary"></i>
+                    <p class="mar-v-0  font-weight-bold">Total Rebate Earned</p>
+                    <p class="mar-t-5 mar-b-0">655165465489</p>
+                </div>
+            </div>
+            <div class="nv-col-12 tablet:nv-col-4">
+                <div class="border-1 border-solid border-light text-secondary small-rounded shadow-large pad-20 mar-v-20 text-center">
+                    <i class="bi bi-graph-up heading-1 text-secondary"></i>
+                    <p class="mar-v-0  font-weight-bold">Total Sales so far</p>
+                    <p class="mar-t-5 mar-b-0">655165465489</p>
+                </div>
+            </div>
+            <div class="nv-col-12 tablet:nv-col-4">
+                <div class="border-1 border-solid border-light text-secondary small-rounded shadow-large pad-20 mar-v-20 text-center">
+                    <i class="bi bi-calendar3 heading-1 text-secondary"></i>
+                    <p class="mar-v-0  font-weight-bold">Sales for the month of (August)</p>
+                    <p class="mar-t-5 mar-b-0">655165465489</p>
+                </div>
+            </div>
+        </div>
+        <table id="table" class="table table-bordered full-width text-center">
+            <thead>
+              <tr>
+              <th>S.No.</th>
+              <th>Name</th>
+              <th>Offset Project Name</th>
+              <th>Units</th>
+              <th>Rebate</th>
+              <th>Sales</th>
+              <th>Certificate</th>
+              <th>Invoice</th>
+              <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>    <tr>
+                <td>3.</td>
+                <td><a href="">Lorem ipsum</a></td>
+                <td>Lorem ipsum</td>
+                <td>2</td>
+                <td>345</td>
+                <td>3242</td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><a href="#" download=""><i class="bi bi-download"></i></a></i></td>
+                <td><span class="text-medium">06/01/2021</span></td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </div>
+    </main>
+    <script src="./../build/script.js"></script>
+    <script src="./js/jquery.dynatable.js"></script>
+    <script>
+$(document).ready(function(){
+    $('#table').dynatable();
+});
+    </script>
+     
+  </body>
+</html>

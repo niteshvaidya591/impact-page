@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./reflora/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/jquery.dynatable.css" />
+  </head>
+
+  <body>
+    <section class="nv-d-none widescreen:nv-d-block">
+      <aside class="vertical-bar bg-white">
+        <div>
+          <img
+            src="./images/forest.jpg"
+            alt="profile photo"
+            class="rounded-circle mar-h-auto mar-v-25"
+            width="60"
+            height="60"
+          />
+
+          <ul class="list-unstyled pad-0 mar-0 vertical-bar__menu">
+            <li>
+              <a  href="#"><span class="nv-i-menu"></span></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-calc"></span></a>
+            </li>
+            <li>
+              <a class="active" href=""><i class="bi bi-graph-up"></i></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-product"></span></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-learn"></span></a>
+            </li>
+            <li>
+              <a href=""><span class="nv-i-settings"></span></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="#" class="mar-b-25 nv-d-block"
+            ><i class="nv-i-logout"></i
+          ></a>
+          <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
+        </div>
+      </aside>
+    </section>
+
+    <main class="widescreen:pad-l-60 mar-b-60">
+      <div class="fluid-wrapper">
+     <div class="nv-row mar-0 nv-justify-content-between nv-align-items-center">
+      <h5 class="mar-b-15">TARANNA'S TOTAL CARBON SUMMARY</h5>
+     <a href="#" class="text-decoration-none"> <span class="rounded-circle nv-circle  mar-t-20  bi bi-download text-secondary heading-4 border-1 border-solid border-secondary shadow-large pad-h-10 pad-v-5"></span></a>
+     </div>
+      </div>
+    </main>
+    <script src="./../build/script.js"></script>
+    <script src="./js/jquery.dynatable.js"></script>
+    <script>
+$(document).ready(function(){
+    $('#table').dynatable();
+});
+    </script>
+     
+  </body>
+</html>

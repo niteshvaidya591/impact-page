@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'tipografia';
+    src: url('tipografia.eot');
+    src: url('tipografia.eot?#iefix') format('embedded-opentype'),
+        url('tipografia.woff2') format('woff2'),
+        url('tipografia.woff') format('woff'),
+        url('tipografia.ttf') format('truetype'),
+        url('tipografia.svg#tipografia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miluna Extra';
+    src: url('Miluna-ExtraLight.eot');
+    src: url('Miluna-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Miluna-ExtraLight.woff2') format('woff2'),
+        url('Miluna-ExtraLight.woff') format('woff'),
+        url('Miluna-ExtraLight.ttf') format('truetype'),
+        url('Miluna-ExtraLight.svg#Miluna-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+

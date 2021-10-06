@@ -155,7 +155,7 @@ text-align: center;
           </div>
           <div class="full-width">
             <div id="map" class="nv-col-12  tablet:nv-col-10 desktop:nv-col-8 mar-v-40 mar-h-auto" style="
-            height: 400px;
+            height: 320px;
           "></div>
 
             <div class="nv-row widescreen:mar-h-60">
@@ -290,106 +290,25 @@ text-align: center;
 
   </main>
   <script src="./../build/script.js"></script>
-  <script src="./js/jsvectormap.min.js"></script>
-  <script src="./maps/world.js"></script>
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+ 
   <script>
-    var markers = [{
-      name: 'Russia',
-      text: "this is a dummy lorem text",
-      coords: [61, 105],
-      style: {
-        fill: '#5c5cff',
-        image: "./images/marker.svg"
-      }
-    },
-    {
-      name: 'Geenland',
-      text: "this is a dummy lorem text",
-      coords: [72, -42],
-      style: {
-        fill: '#ff9251',
-        image: "./images/marker.svg"
-      }
-    },
-    {
-      name: 'Canada',
-      text: "this is a dummy lorem text",
-      coords: [56, -106],
-      style: {
-        fill: '#56de80',
-        image: "./images/marker.svg"
-      }
-    },
-    {
-      name: 'Palestine',
-      text: "this is a dummy lorem text",
-      coords: [31.5, 34.8],
-      style: {
-        fill: 'yellow',
-        image: "./images/marker.svg"
-      }
-    },
-    {
-      name: 'Brazil',
-      text: "this is a dummy lorem text",
-      coords: [-14.2350, -51.9253],
-      style: {
-        fill: '#000',
-        image: "./images/marker.svg"
-      }
-    },
-    {
-      name: 'United States',
-      text: "this is a dummy lorem text",
-      coords: [37.0902, -95.7129],
-      style: {
-        image: "./images/marker.svg"
-      },
-      offsets: [2, 2]
-    },
-    ];
-
-    var map = new jsVectorMap({
-      map: 'world',
-      selector: '#map',
-      markersSelectable: true,
-      // markersSelectableOne: true,
-
-      onMarkerSelected(index, isSelected, selectedMarkers) {
-        console.log(index, isSelected, selectedMarkers);
-      },
-
-      // -------- Labels --------
-      labels: {
-        markers: {
-          render: function (marker) {
-            return marker.name
-          },
-        },
-      },
-
-      // -------- Marker and label style --------
-      markers: markers,
-      markerStyle: {
-        hover: {
-          stroke: "#DDD",
-          strokeWidth: 3,
-          fill: '#FFF'
-        },
-        selected: {
-          fill: '#ff525d'
-        }
-      },
-      markerLabelStyle: {
-        initial: {
-          fontFamily: 'Poppins',
-          fontSize: 13,
-          fontWeight: 500,
-          fill: '#35373e',
-        },
-      },
-    })
+    var mymap = L.map('map').setView([51.505, -0.09], 13);
+    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Reflora',
+    maxZoom: 1,
+    id: 'mapbox/light-v10',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1Ijoibml0ZXNoNTkxIiwiYSI6ImNrdWZ1MGd3ejF2a3kycG12Z2NqOHRqMzIifQ.gpLO4jSUIEZBopGH8x8lIA'
+}).addTo(mymap);
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
   </script>
 </body>
 

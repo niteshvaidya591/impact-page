@@ -299,7 +299,24 @@ text-align: center;
  
   <script>
     var mymap = L.map('map').setView([51.505, -0.09], 13);
-    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+    var locations = [
+  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 11.8166, 12.0942],
+  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 6.9804, 221.9189],
+  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 4.7202, 432.5621],
+  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 3.3889, 52.6277],
+  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 7.5929, 122.6325]
+];
+var greenIcon = L.icon({
+    iconUrl: 'images/loc.png',
+
+    iconSize:     [48, 48], // size of the icon
+    shadowSize:    [48, 48], // size of the shadow
+    iconAnchor:    [48, 48], // point of the icon which will correspond to marker's location
+    shadowAnchor:  [48, 48],  // the same for the shadow
+    popupAnchor:  [-25, -25] // point from which the popup should open relative to the iconAnchor
+});
+    
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Reflora',
     maxZoom: 1,
@@ -308,6 +325,14 @@ text-align: center;
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoibml0ZXNoNTkxIiwiYSI6ImNrdWZ1MGd3ejF2a3kycG12Z2NqOHRqMzIifQ.gpLO4jSUIEZBopGH8x8lIA'
 }).addTo(mymap);
+
+for (var i = 0; i < locations.length; i++) {
+  marker = new L.marker([locations[i][1], locations[i][2]], {icon: greenIcon})
+    .bindPopup(locations[i][0])
+    
+    .addTo(mymap);
+}
+
 marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
   </script>
 </body>

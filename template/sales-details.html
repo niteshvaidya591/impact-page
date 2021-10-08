@@ -1,340 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reflora</title>
+        <link rel="stylesheet" href="./../build/style.css" />
+        <link rel="stylesheet" href="./fonts/reflora/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="./css/jsvectormap.min.css" />
+        <link href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css" rel="stylesheet" />
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reflora</title>
-  <link rel="stylesheet" href="./../build/style.css" />
-  <link rel="stylesheet" href="./fonts/reflora/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="./css/jsvectormap.min.css">
-  <link href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css" rel="stylesheet">
-</head>
-
-<body>
-  <header class="fluid-wrapper shadow-large bg-white">
-    <div class="nv-d-flex pad-10 nv-align-items-center nv-justify-content-between desktop:nv-d-none">
-        <i class="bi bi-list fs-2" data-toggle-container="mobile-container"></i>
-        <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
-    </div>
-</header>
-<section class="nv-d-none widescreen:nv-d-block" id="mobile-container">
-    <aside class="vertical-bar bg-white">
-        <div class="full-width">
-            <p class="mobile-container__close desktop:nv-d-none" data-toggle-container="mobile-container"><i class="bi bi-x-lg"></i></p>
-            <img src="./images/forest.jpg" alt="profile photo" class="rounded-circle mar-h-auto mar-v-25" width="60" height="60" />
-
-            <ul class="list-unstyled pad-0 mar-0 vertical-bar__menu text-left desktop:text-center">
-                <li>
-                    <a  href="./dashboard.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><span class="nv-i-menu"></span> <span class="desktop:nv-d-none">Dashboard </span></a>
-                </li>
-                <li>
-                    <a href="./calculation.html" data-toggle="tooltip" data-placement="right" title="Calculation"><span class="nv-i-calc"></span> <span class="desktop:nv-d-none">Calculation </span></a>
-                </li>
-                <li>
-                    <a class="active" href="./sales.html" data-toggle="tooltip" data-placement="right" title="Sales Diagnostics"><span class="nv-i-growth fs-2"></span> <span class="desktop:nv-d-none">Sales Diagnostics </span></a>
-                </li>
-                <li>
-                    <a href="./project.html" data-toggle="tooltip" data-placement="right" title="Projects"><span class="nv-i-product fs-2"></span> <span class="desktop:nv-d-none">Projects </span></a>
-                </li>
-                <li>
-                    <a href="./client.html" data-toggle="tooltip" data-placement="right" title="Clients"><span class="nv-i-learn fs-2"></span> <span class="desktop:nv-d-none">Clients </span></a>
-                </li>
-                <li>
-                    <a href="./settings.html" data-toggle="tooltip" data-placement="right" title="Settings"><span class="nv-i-settings"></span> <span class="desktop:nv-d-none">Settings </span></a>
-                </li>
-            </ul>
+    <body>
+        <!-- preloader -->
+        <div class="loader-bg">
+            <div class="loader-p"></div>
         </div>
-        <div>
-            <a href="#" data-toggle="tooltip" data-placement="right" title="Logout"class="mar-b-25 nv-d-block"><i class="nv-i-logout"></i></a>
-            <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
-        </div>
-    </aside>
-</section>
-
-  <main class="widescreen:pad-l-60 mar-b-60">
-    <div class="fluid-wrapper">
-      <div class="nv-row mar-0 nv-justify-content-between nv-align-items-center">
-        <h5 class="mar-b-15">TARANNA'S TOTAL CARBON SUMMARY</h5>
-        <a href="#" class="text-decoration-none"> <span
-            class="rounded-circle nv-circle  mar-t-20  bi bi-download text-secondary heading-4 border-1 border-solid border-secondary shadow-large pad-h-10 pad-v-5"></span></a>
-      </div>
-
-      <div class="pad-20 border-1 border-solid border-light small-rounded shadow-large mar-v-40">
-        <div class="nv-row">
-          <div class="nv-col-12 tablet:nv-col-6">
-            <p class="font-weight-bold  mar-b-30">Your offset V/S Others</p>
-            <div class="nv-row tablet:nv-offset-2">
-              <div class="nv-col-12">
-                <div class="nv-d-flex" style="
-  align-items: center;
-">
-                  <p style="
-width:  87px;
-text-align: center;
-"><span class="heading-4 text-secondary">65%</span><span class="text-smallest nv-d-block text-center">The market
-                      average for the same is</span></p>
-
-                  <div class="nv-pos-relative" style="
-                      width: 100px;
-                      /* height: 87px; */
-                      background: gray;
-                    ">
-
-                    <img src="./images/foot-inverse.png" class=" full-width" alt="foot-inverse" style="
-                              z-index: 1;
-                              position: relative;
-                      ">
-                    <div width="50" class="nv-pos-absolute" style="
-                      background: #006827;
-                      z-index: 0;
-                      display: block;
-                      height: 65%;
-                      width: 100px;
-                      bottom: 0;
-                    "></div>
-                  </div>
-
-
-                </div>
-              </div>
-              <div class="nv-col-12">
-                <div class="nv-d-flex" style="
-  align-items: center;
-">
-
-
-                  <div class="nv-pos-relative" style="
-                                        width: 100px;
-                                        /* height: 87px; */
-                                        background: gray;
-                                      ">
-
-                    <img src="./images/foot-inverse.png" class=" full-width" alt="foot-inverse" style="
-                                                z-index: 1;
-                                                position: relative;
-                                        ">
-                    <div width="50" class="nv-pos-absolute" style="
-                                        background: #006827;
-                                        z-index: 0;
-                                        display: block;
-                                        height: 50%;
-                                        width: 100px;
-                                        bottom: 0;
-                                      "></div>
-                  </div>
-                  <p style="
-                                                      width:  87px;
-                                                      text-align: center;
-                                                      "><span class="heading-4 text-secondary">50%</span><span class="text-smallest nv-d-block text-center">Your offset/emission are at 50% as of date </span></p>
-
-                </div>
-              </div>
-
+        <!-- preloader ends -->
+        <header class="fluid-wrapper shadow-large bg-white">
+            <div class="nv-d-flex pad-10 nv-align-items-center nv-justify-content-between desktop:nv-d-none">
+                <i class="bi bi-list fs-2" data-toggle-container="mobile-container"></i>
+                <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
             </div>
-            <h4>status: <span class="text-purple">Carbon Neutral</span></h4>
-          </div>
-          <div class="nv-col-12 tablet:nv-col-6 text-center">
-            <p class="font-weight-bold mar-b-30"> Your project highlights</p>
-            <div class="nv-d-flex full-width nv-justify-content-around">
-              <div>
-                <span
-                  class="rounded-circle nv-circle nv-circle-70 mar-h-auto nv-i-project text-secondary heading-1 border-1 border-solid border-light shadow-large"></span>
-                <p class="mar-t-10"><span
-                    class="text-secondary font-weight-bold widescreen:nv-d-block">4</span>Supported Projects </p>
-              </div>
-              <div>
-                <span
-                  class="rounded-circle nv-circle nv-circle-70 mar-h-auto bi bi-tree-fill text-secondary heading-1 border-1 border-solid border-light shadow-large"></span>
-                <p class="mar-t-10"><span class="text-secondary font-weight-bold widescreen:nv-d-block ">90000</span>
-                  hectares of forest land Contribution</p>
-              </div>
+        </header>
+        <section class="nv-d-none widescreen:nv-d-block" id="mobile-container">
+            <aside class="vertical-bar bg-white">
+                <div class="full-width">
+                    <p class="mobile-container__close desktop:nv-d-none" data-toggle-container="mobile-container"><i class="bi bi-x-lg"></i></p>
+                    <img src="./images/forest.jpg" alt="profile photo" class="rounded-circle mar-h-auto mar-v-25" width="60" height="60" />
+
+                    <ul class="list-unstyled pad-0 mar-0 vertical-bar__menu text-left desktop:text-center">
+                        <li>
+                            <a href="./dashboard.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><span class="nv-i-menu"></span> <span class="desktop:nv-d-none">Dashboard </span></a>
+                        </li>
+                        <li>
+                            <a href="./calculation.html" data-toggle="tooltip" data-placement="right" title="Calculation"><span class="nv-i-calc"></span> <span class="desktop:nv-d-none">Calculation </span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="./sales.html" data-toggle="tooltip" data-placement="right" title="Sales Diagnostics"><span class="nv-i-growth fs-2"></span> <span class="desktop:nv-d-none">Sales Diagnostics </span></a>
+                        </li>
+                        <li>
+                            <a href="./project.html" data-toggle="tooltip" data-placement="right" title="Projects"><span class="nv-i-product fs-2"></span> <span class="desktop:nv-d-none">Projects </span></a>
+                        </li>
+                        <li>
+                            <a href="./client.html" data-toggle="tooltip" data-placement="right" title="Clients"><span class="nv-i-learn fs-2"></span> <span class="desktop:nv-d-none">Clients </span></a>
+                        </li>
+                        <li>
+                            <a href="./settings.html" data-toggle="tooltip" data-placement="right" title="Settings"><span class="nv-i-settings"></span> <span class="desktop:nv-d-none">Settings </span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Logout" class="mar-b-25 nv-d-block"><i class="nv-i-logout"></i></a>
+                    <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
+                </div>
+            </aside>
+        </section>
+
+        <main class="widescreen:pad-l-60 mar-b-60">
+            <div class="fluid-wrapper">
+                <div class="nv-row mar-0 nv-justify-content-between nv-align-items-center">
+                    <h5 class="mar-b-15">TARANNA'S TOTAL CARBON SUMMARY</h5>
+                    <a href="#" class="text-decoration-none"> <span class="rounded-circle nv-circle mar-t-20 bi bi-download text-secondary heading-4 border-1 border-solid border-secondary shadow-large pad-h-10 pad-v-5"></span></a>
+                </div>
+
+                <div class="pad-20 border-1 border-solid border-light small-rounded shadow-large mar-v-40">
+                    <div class="nv-row">
+                        <div class="nv-col-12 tablet:nv-col-6">
+                            <p class="font-weight-bold mar-b-30">Your offset V/S Others</p>
+                            <div class="nv-row tablet:nv-offset-2">
+                                <div class="nv-col-12">
+                                    <div class="nv-d-flex" style="align-items: center;">
+                                        <p style="width: 87px; text-align: center;"><span class="heading-4 text-secondary">65%</span><span class="text-smallest nv-d-block text-center">The market average for the same is</span></p>
+
+                                        <div class="nv-pos-relative" style="width: 100px; /* height: 87px; */ background: gray;">
+                                            <img src="./images/foot-inverse.png" class="full-width" alt="foot-inverse" style="z-index: 1; position: relative;" />
+                                            <div width="50" class="nv-pos-absolute" style="background: #006827; z-index: 0; display: block; height: 65%; width: 100px; bottom: 0;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nv-col-12">
+                                    <div class="nv-d-flex" style="align-items: center;">
+                                        <div class="nv-pos-relative" style="width: 100px; /* height: 87px; */ background: gray;">
+                                            <img src="./images/foot-inverse.png" class="full-width" alt="foot-inverse" style="z-index: 1; position: relative;" />
+                                            <div width="50" class="nv-pos-absolute" style="background: #006827; z-index: 0; display: block; height: 50%; width: 100px; bottom: 0;"></div>
+                                        </div>
+                                        <p style="width: 87px; text-align: center;"><span class="heading-4 text-secondary">50%</span><span class="text-smallest nv-d-block text-center">Your offset/emission are at 50% as of date </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>status: <span class="text-purple">Carbon Neutral</span></h4>
+                        </div>
+                        <div class="nv-col-12 tablet:nv-col-6 text-center">
+                            <p class="font-weight-bold mar-b-30">Your project highlights</p>
+                            <div class="nv-d-flex full-width nv-justify-content-around">
+                                <div>
+                                    <span class="rounded-circle nv-circle nv-circle-70 mar-h-auto nv-i-project text-secondary heading-1 border-1 border-solid border-light shadow-large"></span>
+                                    <p class="mar-t-10"><span class="text-secondary font-weight-bold widescreen:nv-d-block">4</span>Supported Projects</p>
+                                </div>
+                                <div>
+                                    <span class="rounded-circle nv-circle nv-circle-70 mar-h-auto bi bi-tree-fill text-secondary heading-1 border-1 border-solid border-light shadow-large"></span>
+                                    <p class="mar-t-10"><span class="text-secondary font-weight-bold widescreen:nv-d-block">90000</span> hectares of forest land Contribution</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="full-width">
+                            <div id="map" class="nv-col-12 tablet:nv-col-10 desktop:nv-col-8 mar-v-40 mar-h-auto" style="height: 320px;"></div>
+
+                            <div class="nv-row widescreen:mar-h-60">
+                                <div class="nv-col-12 tablet:nv-col-4">
+                                    <div class="nv-d-flex nv-align-items-center nv-justify-content-start mar-b-30">
+                                        <div>
+                                            <span class="rounded-circle nv-circle nv-i-calc text-yellow heading-4 border-1 border-solid border-light shadow-large mar-h-15"></span>
+                                        </div>
+                                        <div>
+                                            <h5 class="mar-v-0">Total Calculation Number:</h5>
+                                            <p class="mar-b-0 text-secondary font-weight-bold">4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nv-col-12 tablet:nv-col-4">
+                                    <div class="nv-d-flex nv-align-items-center nv-justify-content-start mar-b-30">
+                                        <div>
+                                            <span class="rounded-circle nv-circle nv-i-carbon-tree text-purple heading-4 border-1 border-solid border-light shadow-large mar-h-15"></span>
+                                        </div>
+                                        <div>
+                                            <h5 class="mar-v-0">Total Emission:</h5>
+                                            <p class="mar-b-0"><span class="text-secondary font-weight-bold">34</span> Tons of CO<sub>2e</sub></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nv-col-12 tablet:nv-col-4">
+                                    <div class="nv-d-flex nv-align-items-center nv-justify-content-start mar-b-30">
+                                        <div>
+                                            <span class="rounded-circle nv-circle nv-i-energy text-green heading-4 border-1 border-solid border-light shadow-large mar-h-15"></span>
+                                        </div>
+                                        <div>
+                                            <h5 class="mar-v-0">Total Offset:</h5>
+                                            <p class="mar-b-0"><span class="text-secondary font-weight-bold">34</span> Tons offset</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="full-width mar-v-40">
+                                <div class="splide project" id="calculations">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <a href="#" class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                                    <p>calculation</p>
+                                                    <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration" />
+                                                    <p>2.5 Tons</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="full-width">
-            <div id="map" class="nv-col-12  tablet:nv-col-10 desktop:nv-col-8 mar-v-40 mar-h-auto" style="
-            height: 320px;
-          "></div>
+        </main>
+        <script src="./../build/script.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-            <div class="nv-row widescreen:mar-h-60">
-              <div class="nv-col-12 tablet:nv-col-4">
-                <div class="nv-d-flex nv-align-items-center nv-justify-content-start mar-b-30">
-                  <div>
-                    <span
-                      class="rounded-circle nv-circle  nv-i-calc text-yellow heading-4 border-1 border-solid border-light shadow-large mar-h-15"></span>
-                  </div>
-                  <div>
-                    <h5 class="mar-v-0">Total Calculation Number:</h5>
-                    <p class="mar-b-0 text-secondary font-weight-bold">4</p>
-                  </div>
-                </div>
-              </div>
-              <div class="nv-col-12 tablet:nv-col-4">
-                <div class="nv-d-flex nv-align-items-center nv-justify-content-start mar-b-30">
-                  <div>
-                    <span
-                      class="rounded-circle nv-circle  nv-i-carbon-tree text-purple heading-4 border-1 border-solid border-light shadow-large mar-h-15"></span>
-                  </div>
-                  <div>
-                    <h5 class="mar-v-0">Total Emission:</h5>
-                    <p class="mar-b-0"><span class="text-secondary font-weight-bold">34</span> Tons of CO<sub>2e</sub>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="nv-col-12 tablet:nv-col-4">
-                <div class="nv-d-flex nv-align-items-center nv-justify-content-start mar-b-30">
-                  <div>
-                    <span
-                      class="rounded-circle nv-circle  nv-i-energy text-green heading-4 border-1 border-solid border-light shadow-large mar-h-15"></span>
-                  </div>
-                  <div>
-                    <h5 class="mar-v-0">Total Offset:</h5>
-                    <p class="mar-b-0"><span class="text-secondary font-weight-bold">34</span> Tons offset</p>
-                  </div>
-                </div>
+        <script>
+            var mymap = L.map("map").setView([51.505, -0.09], 13);
 
-              </div>
-            </div>
+            var locations = [
+                ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 11.8166, 12.0942],
+                ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 6.9804, 221.9189],
+                ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 4.7202, 432.5621],
+                ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 3.3889, 52.6277],
+                ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 7.5929, 122.6325],
+            ];
+            var greenIcon = L.icon({
+                iconUrl: "images/loc.png",
 
-            <div class="full-width mar-v-40">
-              <div class="splide project" id="calculations">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                    <li class="splide__slide">
-                      <a href="#"
-                        class="border-solid border-light border-1 small-rounded shadow-large pad-15 mar-15 text-center nv-d-block text-decoration-none">
-                        <p>calculation</p>
-                        <img src="./images/foot.png" class="mar-b-10" alt="carbon foot illustration">
-                        <p>2.5 Tons</p>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                iconSize: [48, 48], // size of the icon
+                shadowSize: [48, 48], // size of the shadow
+                iconAnchor: [48, 48], // point of the icon which will correspond to marker's location
+                shadowAnchor: [48, 48], // the same for the shadow
+                popupAnchor: [-25, -25], // point from which the popup should open relative to the iconAnchor
+            });
 
-          </div>
-        </div>
-      </div>
+            L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+                attribution: "Reflora",
+                maxZoom: 1,
+                id: "mapbox/light-v10",
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: "pk.eyJ1Ijoibml0ZXNoNTkxIiwiYSI6ImNrdWZ1MGd3ejF2a3kycG12Z2NqOHRqMzIifQ.gpLO4jSUIEZBopGH8x8lIA",
+            }).addTo(mymap);
 
+            for (var i = 0; i < locations.length; i++) {
+                marker = new L.marker([locations[i][1], locations[i][2]], { icon: greenIcon })
+                    .bindPopup(locations[i][0])
 
+                    .addTo(mymap);
+            }
 
-    </div>
-
-  </main>
-  <script src="./../build/script.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
- 
-  <script>
-    var mymap = L.map('map').setView([51.505, -0.09], 13);
-
-    var locations = [
-  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 11.8166, 12.0942],
-  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 6.9804, 221.9189],
-  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 4.7202, 432.5621],
-  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 3.3889, 52.6277],
-  ["<b>Impact Indicators!</b><br><ul class='pad-l-20'><li> 300,000 Hectares of forest land</li><li>  49 endangered species</li><li>  Endemic Plant species</li><li>  405 families</li></ul>", 7.5929, 122.6325]
-];
-var greenIcon = L.icon({
-    iconUrl: 'images/loc.png',
-
-    iconSize:     [48, 48], // size of the icon
-    shadowSize:    [48, 48], // size of the shadow
-    iconAnchor:    [48, 48], // point of the icon which will correspond to marker's location
-    shadowAnchor:  [48, 48],  // the same for the shadow
-    popupAnchor:  [-25, -25] // point from which the popup should open relative to the iconAnchor
-});
-    
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Reflora',
-    maxZoom: 1,
-    id: 'mapbox/light-v10',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1Ijoibml0ZXNoNTkxIiwiYSI6ImNrdWZ1MGd3ejF2a3kycG12Z2NqOHRqMzIifQ.gpLO4jSUIEZBopGH8x8lIA'
-}).addTo(mymap);
-
-for (var i = 0; i < locations.length; i++) {
-  marker = new L.marker([locations[i][1], locations[i][2]], {icon: greenIcon})
-    .bindPopup(locations[i][0])
-    
-    .addTo(mymap);
-}
-
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-  </script>
-</body>
-
+            marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        </script>
+    </body>
 </html>

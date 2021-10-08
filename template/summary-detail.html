@@ -6,129 +6,131 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Reflora</title>
         <link rel="stylesheet" href="./../build/style.css" />
-            <link rel="stylesheet" href="./fonts/reflora/style.css" />
+        <link rel="stylesheet" href="./fonts/reflora/style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-        
     </head>
     <body>
-        
-    
-  <header class="fluid-wrapper shadow-large bg-white">
-    <div class="nv-d-flex pad-10 nv-align-items-center nv-justify-content-between desktop:nv-d-none">
-        <i class="bi bi-list fs-2" data-toggle-container="mobile-container"></i>
-        <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
-    </div>
-</header>
-<section class="nv-d-none widescreen:nv-d-block" id="mobile-container">
-    <aside class="vertical-bar bg-white">
-        <div class="full-width">
-            <p class="mobile-container__close desktop:nv-d-none" data-toggle-container="mobile-container"><i class="bi bi-x-lg"></i></p>
-            <img src="./images/forest.jpg" alt="profile photo" class="rounded-circle mar-h-auto mar-v-25" width="60" height="60" />
-
-            <ul class="list-unstyled pad-0 mar-0 vertical-bar__menu text-left desktop:text-center">
-                <li>
-                    <a  href="./dashboard.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><span class="nv-i-menu"></span> <span class="desktop:nv-d-none">Dashboard </span></a>
-                </li>
-                <li>
-                    <a href="./calculation.html" data-toggle="tooltip" data-placement="right" title="Calculation"><span class="nv-i-calc"></span> <span class="desktop:nv-d-none">Calculation </span></a>
-                </li>
-                <li>
-                    <a class="active" href="./sales.html" data-toggle="tooltip" data-placement="right" title="Sales Diagnostics"><span class="nv-i-growth fs-2"></span> <span class="desktop:nv-d-none">Sales Diagnostics </span></a>
-                </li>
-                <li>
-                    <a href="./project.html" data-toggle="tooltip" data-placement="right" title="Projects"><span class="nv-i-product fs-2"></span> <span class="desktop:nv-d-none">Projects </span></a>
-                </li>
-                <li>
-                    <a href="./client.html" data-toggle="tooltip" data-placement="right" title="Clients"><span class="nv-i-learn fs-2"></span> <span class="desktop:nv-d-none">Clients </span></a>
-                </li>
-                <li>
-                    <a href="./settings.html" data-toggle="tooltip" data-placement="right" title="Settings"><span class="nv-i-settings"></span> <span class="desktop:nv-d-none">Settings </span></a>
-                </li>
-            </ul>
+        <!-- preloader -->
+        <div class="loader-bg">
+            <div class="loader-p"></div>
         </div>
-        <div>
-            <a href="#" data-toggle="tooltip" data-placement="right" title="Logout"class="mar-b-25 nv-d-block"><i class="nv-i-logout"></i></a>
-            <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
-        </div>
-    </aside>
-</section>
-    <main class="widescreen:pad-l-60 widescreen:mar-l-30 mar-b-60">
+        <!-- preloader ends -->
 
+        <header class="fluid-wrapper shadow-large bg-white">
+            <div class="nv-d-flex pad-10 nv-align-items-center nv-justify-content-between desktop:nv-d-none">
+                <i class="bi bi-list fs-2" data-toggle-container="mobile-container"></i>
+                <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
+            </div>
+        </header>
+        <section class="nv-d-none widescreen:nv-d-block" id="mobile-container">
+            <aside class="vertical-bar bg-white">
+                <div class="full-width">
+                    <p class="mobile-container__close desktop:nv-d-none" data-toggle-container="mobile-container"><i class="bi bi-x-lg"></i></p>
+                    <img src="./images/forest.jpg" alt="profile photo" class="rounded-circle mar-h-auto mar-v-25" width="60" height="60" />
 
-             <div class="fluid-wrapper">
+                    <ul class="list-unstyled pad-0 mar-0 vertical-bar__menu text-left desktop:text-center">
+                        <li>
+                            <a href="./dashboard.html" data-toggle="tooltip" data-placement="right" title="Dashboard"><span class="nv-i-menu"></span> <span class="desktop:nv-d-none">Dashboard </span></a>
+                        </li>
+                        <li>
+                            <a href="./calculation.html" data-toggle="tooltip" data-placement="right" title="Calculation"><span class="nv-i-calc"></span> <span class="desktop:nv-d-none">Calculation </span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="./sales.html" data-toggle="tooltip" data-placement="right" title="Sales Diagnostics"><span class="nv-i-growth fs-2"></span> <span class="desktop:nv-d-none">Sales Diagnostics </span></a>
+                        </li>
+                        <li>
+                            <a href="./project.html" data-toggle="tooltip" data-placement="right" title="Projects"><span class="nv-i-product fs-2"></span> <span class="desktop:nv-d-none">Projects </span></a>
+                        </li>
+                        <li>
+                            <a href="./client.html" data-toggle="tooltip" data-placement="right" title="Clients"><span class="nv-i-learn fs-2"></span> <span class="desktop:nv-d-none">Clients </span></a>
+                        </li>
+                        <li>
+                            <a href="./settings.html" data-toggle="tooltip" data-placement="right" title="Settings"><span class="nv-i-settings"></span> <span class="desktop:nv-d-none">Settings </span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Logout" class="mar-b-25 nv-d-block"><i class="nv-i-logout"></i></a>
+                    <img src="./images/logo.png" alt="Reflora Brand logo" width="60" />
+                </div>
+            </aside>
+        </section>
+        <main class="widescreen:pad-l-60 widescreen:mar-l-30 mar-b-60">
+            <div class="fluid-wrapper">
                 <h1 style="color: #116b37;">XYZ Carbon Report</h1>
                 <div class="nv-row">
                     <div class="nv-col-3 text-center">
-                        <img src="./images/seal.PNG" alt="Reflora seal" width="200" class="mar-h-auto">
+                        <img src="./images/seal.PNG" alt="Reflora seal" width="200" class="mar-h-auto" />
                     </div>
                     <div class="nv-col-9">
-                        <div class="nv-row  scope-row__blue">
+                        <div class="nv-row scope-row__blue">
                             <p class="mar-b-10 mar-l-n15 font-weight-bold">Mandatory</p>
                             <div class="nv-row nv-justify-content-between pad-l-30 full-width scope-controls border-0 border-bottom-1 border-light mar-b-10">
-                               <div class="nv-row">
-                                <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                    <span class="scope-bubble"><i class="bi bi-truck"></i></span>
-                                    <h3 class="scope-score__percentage">15%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Participant Travel </p>
-                                </div> 
-                                <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                    <span class="scope-bubble"><i class="bi bi-cup-straw"></i></span>
-                                    <h3 class="scope-score__percentage">35%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Food & Drink </p>
-                                </div> 
-                                <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                   <span class="scope-bubble"><i class="bi bi-house"></i></span>
-                                    <h3 class="scope-score__percentage">65%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Home Stay </p>
-                                </div>                                   
-                               </div>       
-                               <div class="nv-row">
-                                <div class="scope-score mar-0 mobile:mar-r-60">
-                                    <p class="nv-i-foot mar-t-n45 mar-l-25">
-                                        
-                                    <h3 class="scope-score__percentage">15%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Mandatory Score</p>
+                                <div class="nv-row">
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-truck"></i></span>
+                                        <h3 class="scope-score__percentage">15%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Participant Travel</p>
+                                    </div>
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-cup-straw"></i></span>
+                                        <h3 class="scope-score__percentage">35%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Food & Drink</p>
+                                    </div>
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-house"></i></span>
+                                        <h3 class="scope-score__percentage">65%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Home Stay</p>
+                                    </div>
                                 </div>
-                                <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
-                                    <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
-                                    <p class="mar-v-10">Re-Calculate</p>
-                                </div>
-                            </div> 
-
-                            </div>
-                        </div>
-                        <div class="nv-row  scope-row__green">
-                            <p class="mar-b-10 mar-l-n15 font-weight-bold">Recommended</p>
-                            <div class="nv-row nv-justify-content-between pad-l-30 full-width scope-controls border-0 border-bottom-1 border-light mar-b-10">
-                               <div class="nv-row">
-                                <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                    <span class="scope-bubble"><i class="bi bi-truck"></i></span>
-                                    <h3 class="scope-score__percentage">15%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Participant Local <br> Transport </p>
-                                </div> 
-                                <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                    <span class="scope-bubble"><i class="bi bi-basket"></i></span>
-                                    <h3 class="scope-score__percentage">35%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Materials </p>
-                                </div> 
-                                <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                   <span class="scope-bubble"><i class="bi bi-truck-flatbed"></i></span>
-                                    <h3 class="scope-score__percentage">65%</h3>
-                                    <p class="scope-score__footprint">Carbon Footprint</p>
-                                    <p class="scope-score__footer">Logistics </p>
-                                </div> 
-                               </div>
                                 <div class="nv-row">
                                     <div class="scope-score mar-0 mobile:mar-r-60">
-                                   <p class="nv-i-foot mar-t-n45 mar-l-25">                                       
-                                   </p>
-                                            
+                                        <p class="nv-i-foot mar-t-n45 mar-l-25"></p>
+
+                                        <h3 class="scope-score__percentage">15%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Mandatory Score</p>
+                                    </div>
+                                    <div class="nv-d-flex nv-justify-content-center nv-align-items-center nv-flex-column mar-r-30">
+                                        <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
+                                        <p class="mar-v-10">Re-Calculate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-row scope-row__green">
+                            <p class="mar-b-10 mar-l-n15 font-weight-bold">Recommended</p>
+                            <div class="nv-row nv-justify-content-between pad-l-30 full-width scope-controls border-0 border-bottom-1 border-light mar-b-10">
+                                <div class="nv-row">
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-truck"></i></span>
+                                        <h3 class="scope-score__percentage">15%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">
+                                            Participant Local <br />
+                                            Transport
+                                        </p>
+                                    </div>
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-basket"></i></span>
+                                        <h3 class="scope-score__percentage">35%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Materials</p>
+                                    </div>
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-truck-flatbed"></i></span>
+                                        <h3 class="scope-score__percentage">65%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Logistics</p>
+                                    </div>
+                                </div>
+                                <div class="nv-row">
+                                    <div class="scope-score mar-0 mobile:mar-r-60">
+                                        <p class="nv-i-foot mar-t-n45 mar-l-25"></p>
+
                                         <h3 class="scope-score__percentage">15%</h3>
                                         <p class="scope-score__footprint">Carbon Footprint</p>
                                         <p class="scope-score__footer">Recommended Score</p>
@@ -137,10 +139,10 @@
                                         <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
                                         <p class="mar-v-10">Re-Calculate</p>
                                     </div>
-                                </div>                                        
+                                </div>
                             </div>
                         </div>
-                        <div class="nv-row  scope-row__yellow">
+                        <div class="nv-row scope-row__yellow">
                             <p class="mar-b-10 mar-l-n15 font-weight-bold">Others</p>
                             <div class="nv-row pad-l-30 full-width scope-controls nv-justify-content-between">
                                 <div class="nv-row">
@@ -148,30 +150,30 @@
                                         <span class="scope-bubble"><i class="bi bi-truck"></i></span>
                                         <h3 class="scope-score__percentage">15%</h3>
                                         <p class="scope-score__footprint">Carbon Footprint</p>
-                                        <p class="scope-score__footer">Electricity </p>
-                                    </div> 
+                                        <p class="scope-score__footer">Electricity</p>
+                                    </div>
                                     <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
                                         <span class="scope-bubble"><i class="bi bi-trash"></i></span>
                                         <h3 class="scope-score__percentage">35%</h3>
                                         <p class="scope-score__footprint">Carbon Footprint</p>
                                         <p class="scope-score__footer">Waste</p>
-                                    </div> 
-                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
-                                       <span class="scope-bubble"><i class="bi bi-truck-flatbed"></i></span>
-                                        <h3 class="scope-score__percentage">65%</h3>
-                                        <p class="scope-score__footprint">Carbon Footprint</p>
-                                        <p class="scope-score__footer">Fossil Fuel </p>
                                     </div>
                                     <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
                                         <span class="scope-bubble"><i class="bi bi-truck-flatbed"></i></span>
-                                         <h3 class="scope-score__percentage">65%</h3>
-                                         <p class="scope-score__footprint">Carbon Footprint</p>
-                                         <p class="scope-score__footer">Laundry </p>
-                                     </div>
-                                </div> 
+                                        <h3 class="scope-score__percentage">65%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Fossil Fuel</p>
+                                    </div>
+                                    <div class="scope-score mar-0 mobile:mar-r-50 mobile:mar-b-60 scope-score__sm">
+                                        <span class="scope-bubble"><i class="bi bi-truck-flatbed"></i></span>
+                                        <h3 class="scope-score__percentage">65%</h3>
+                                        <p class="scope-score__footprint">Carbon Footprint</p>
+                                        <p class="scope-score__footer">Laundry</p>
+                                    </div>
+                                </div>
                                 <div class="nv-row">
                                     <div class="scope-score mar-0 mobile:mar-r-60">
-                                        <p class="nv-i-foot mar-t-n45 mar-l-25">                                            
+                                        <p class="nv-i-foot mar-t-n45 mar-l-25"></p>
                                         <h3 class="scope-score__percentage">15%</h3>
                                         <p class="scope-score__footprint">Carbon Footprint</p>
                                         <p class="scope-score__footer">Others Score</p>
@@ -180,14 +182,12 @@
                                         <button class="scope-button scope-reset"><span class="bi bi-arrow-counterclockwise"></span></button>
                                         <p class="mar-v-10">Re-Calculate</p>
                                     </div>
-                                </div>                                  
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div>  
-     
+            </div>
         </main>
         <script src="./../build/script.js"></script>
     </body>

@@ -19,10 +19,11 @@
                 <!-- 1st page starts -->
                 <article class="splide__slide">
                     <section class="nv-pos-relative impact-page__1">
-                        <video playsinline autoplay loop muted class="nv-pos-absolute vw-100 vh-100 obj-fit-cover">
-                            <source src="./videos/nature.mp4" type="video/mp4" media="all and (max-width: 640px)"/>
+                        <video playsinline  loop class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block">
+                            <source src="./videos/nature.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
                         </video>
+                      
 
                         <div class="bg-overlay nv-pos-relative vh-100"></div>
 
@@ -42,9 +43,12 @@
                 <!-- 2nd page starts -->
                 <article class="splide__slide">
                     <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center impact-page__2">
-                        <video playsinline autoplay loop muted class="nv-pos-absolute vw-100 vh-100 obj-fit-cover">
-                            <source src="./videos/service.mp4" type="video/mp4" media="all and (max-width: 1023px)" />
-                            <source src="./videos/service-hd.mp4" type="video/mp4" media="all and (min-width: 1024px)" />
+                        <video playsinline  controls class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block desktop:nv-d-none">
+                            <source src="./videos/service.mp4" type="video/mp4"/>
+                            Your browser does not support the video tag.
+                        </video>
+                        <video playsinline  controls class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-none desktop:nv-d-block">
+                            <source src="./videos/service-hd.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
                         </video>
                         <!-- <h1 class="nv-pos-absolute text-center text-white">Forest Impact Video</h1> -->
@@ -54,8 +58,12 @@
                 <!-- 3rd page starts -->
                 <article class="splide__slide">
                     <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center impact-page__3">
-                        <video playsinline autoplay loop muted class="nv-pos-absolute vw-100 vh-100 obj-fit-cover">
-                            <source src="./videos/project.mp4" type="video/mp4" />
+                        <video playsinline  controls class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block desktop:nv-d-none">
+                            <source src="./videos/project.mp4" type="video/mp4"/>
+                            Your browser does not support the video tag.
+                        </video>
+                        <video playsinline  controls class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-none desktop:nv-d-block">
+                            <source src="./videos/project.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
                         </video>
                         <!-- <h1 class="nv-pos-absolute text-center text-white">Forest Impact Video</h1> -->
@@ -375,5 +383,22 @@
         </div>
         <!-- preloader ends -->
         <script src="./../build/script.js"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry"></script> 
+<script>
+    let video = document.querySelector('video');
+    let isPaused = false;
+    let observer = new IntersectionObserver((entries, observer) => { 
+        entries.forEach(entry => {
+        if(entry.intersectionRatio!=1  && !video.paused){
+            video.pause();
+            isPaused = true;
+        }
+        else if(isPaused) {
+            video.play(); 
+            isPaused=false}
+        });
+    }, {threshold: 1});
+    observer.observe(video);
+</script>
     </body>
 </html>

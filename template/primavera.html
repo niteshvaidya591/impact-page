@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primavera</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./fonts/reflora/style.css" />
+    <link rel="stylesheet" href="./fonts/miluna/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="preload" href="./fonts/miluna/tipografia.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/miluna/Miluna-ExtraLight.woff2" as="font" type="font/woff2" crossorigin />
+    <style>
+        #tsparticles canvas {
+            position: fixed !important;
+            z-index: 300 !important;
+        }
+    </style>
+</head>
+
+<body class="splide web-summit">
+    <main class="splide__track">
+        <div class="slides impact-page splide__list">
+            <!-- 1st page starts -->
+            <article class="splide__slide">
+                <section class="nv-pos-relative impact-page__1">
+                    <video playsinline autoplay mutedd loop
+                        class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block">
+                        <source src="./videos/nature.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
+
+                    <div class="bg-overlay bg-primavera-navy nv-pos-relative vh-100"></div>
+
+                    <div
+                        class="nv-d-flex nv-justify-content-center vh-100 nv-align-items-center full-width nv-pos-absolute">
+                        <div class="tablet:pad-b-50 tablet:mar-b-50 text-center nv-pos-relative mar-h-0">
+
+                            <!-- <img src="./images/primavera.png" alt="Primavera Logo"
+                                class="mar-v-30 nv-col-5 widescreen:nv-col-3" /> -->
+                            <h4 class="text-white mar-t-n5">Title</h4>
+                            <h1 class="text-white font-weight-light title mar-v-0 tablet:mar-v-auto">
+                                This is an headline
+                            </h1>
+                            <img src="./images/primavera.png" alt="Logo" width="400" class="nv-d-inline mar-t-25" />
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <!-- 1st page ends -->
+            <!-- 2nd page starts -->
+            <article class="splide__slide">
+                <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center impact-page__2">
+                    <video playsinline autoplay muted controls
+                        class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block desktop:nv-d-none">
+                        <source src="./videos/service-en.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <video playsinline autoplay muted controls
+                        class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-none desktop:nv-d-block">
+                        <source src="./videos/service-hd-en.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- <h1 class="nv-pos-absolute text-center text-white">Forest Impact Video</h1> -->
+                </section>
+            </article>
+            <!-- 2nd page ends -->
+            <!-- 3rd page starts -->
+            <article class="splide__slide">
+                <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center impact-page__3">
+                    <style>
+                        .carousel3d {
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            align-items: center;
+                            font-family: Arial;
+                        }
+
+                        .carousel3d__list {
+                            display: flex;
+                            list-style: none;
+                            position: relative;
+                            width: 100%;
+                            height: 300px;
+                            justify-content: center;
+                            perspective: 300px;
+                        }
+
+                        .carousel3d__item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff;
+                            font-size: 0px;
+                            width: 35vw;
+                            height: 50vh;
+                            border-radius: 12px;
+                            box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+                            position: absolute;
+                            transition: all 0.3s ease-in;
+                        }
+
+                        .carousel3d__item:nth-child(1) {
+                            background: linear-gradient(45deg, #2D35EB 0%, #904ED4 100%);
+                        }
+
+                        .carousel3d__item:nth-child(2) {
+                            background: linear-gradient(45deg, #2D35EB 0%, #fdbb2d 100%);
+                        }
+
+                        .carousel3d__item:nth-child(3) {
+                            background: linear-gradient(45deg, #2D35EB 0%, #22c1c3 100%);
+                        }
+
+                        .carousel3d__item:nth-child(4) {
+                            background: linear-gradient(45deg, #fdbb2d 0%, #904ED4 100%);
+                        }
+
+                        .carousel3d__item:nth-child(5) {
+                            background: linear-gradient(45deg, #22c1c3 0%, #904ED4 100%);
+                        }
+
+                        .carousel3d__item[data-pos="0"] {
+                            z-index: 5;
+                        }
+
+                        .carousel3d__item[data-pos="-1"],
+                        .carousel3d__item[data-pos="1"] {
+                            opacity: 0.7;
+                            filter: blur(1px) grayscale(10%);
+                        }
+
+                        .carousel3d__item[data-pos="-1"] {
+                            transform: translateX(-40%) scale(0.9);
+                            z-index: 4;
+                        }
+
+                        .carousel3d__item[data-pos="1"] {
+                            transform: translateX(40%) scale(0.9);
+                            z-index: 4;
+                        }
+
+                        .carousel3d__item[data-pos="-2"],
+                        .carousel3d__item[data-pos="2"] {
+                            opacity: 0.4;
+                            filter: blur(3px) grayscale(20%);
+                        }
+
+                        .carousel3d__item[data-pos="-2"] {
+                            transform: translateX(-70%) scale(0.8);
+                            z-index: 3;
+                        }
+
+                        .carousel3d__item[data-pos="2"] {
+                            transform: translateX(70%) scale(0.8);
+                            z-index: 3;
+                        }
+                    </style>
+                    <div class="carousel3d">
+                        <ul class="carousel3d__list">
+                            <li class="carousel3d__item" data-pos="-2">1</li>
+                            <li class="carousel3d__item" data-pos="-1">2</li>
+                            <li class="carousel3d__item" data-pos="0">3</li>
+                            <li class="carousel3d__item" data-pos="1">4</li>
+                            <li class="carousel3d__item" data-pos="2">5</li>
+                        </ul>
+                    </div>
+                    <script>
+                        const state = {};
+                        const carouselList = document.querySelector('.carousel3d__list');
+                        const carouselItems = document.querySelectorAll('.carousel3d__item');
+                        const elems = Array.from(carouselItems);
+
+                        carouselList.addEventListener('click', function (event) {
+                            var newActive = event.target;
+                            var isItem = newActive.closest('.carousel3d__item');
+
+                            if (!isItem || newActive.classList.contains('carousel3d__item_active')) {
+                                return;
+                            };
+
+                            update3d(newActive);
+                        });
+
+                        const update3d = function (newActive) {
+                            const newActivePos = newActive.dataset.pos;
+
+                            const current = elems.find((elem) => elem.dataset.pos == 0);
+                            const prev = elems.find((elem) => elem.dataset.pos == -1);
+                            const next = elems.find((elem) => elem.dataset.pos == 1);
+                            const first = elems.find((elem) => elem.dataset.pos == -2);
+                            const last = elems.find((elem) => elem.dataset.pos == 2);
+
+                            current.classList.remove('carousel3d__item_active');
+
+                            [current, prev, next, first, last].forEach(item => {
+                                var itemPos = item.dataset.pos;
+
+                                item.dataset.pos = getPos(itemPos, newActivePos)
+                            });
+                        };
+
+                        const getPos = function (current, active) {
+                            const diff = current - active;
+
+                            if (Math.abs(current - active) > 2) {
+                                return -current
+                            }
+
+                            return diff;
+                        }
+                    </script>
+                </section>
+            </article>
+            <!-- 3 page ends -->
+
+            <!-- 5 page starts -->
+            <article class="splide__slide">
+                <section class="impact-page__5">
+                    <div class="nv-d-flex nv-flex-wrap tablet:nv-flex-wrap text-center">
+                        <div class="nv-flex-fill">
+                            <div class="image animate full-height"
+                                style="background-image: url('./images/wind-mill.jpg'); background-repeat: no-repeat; background-size: cover;">
+                                <p class="pad-t-30 text-white mar-b-n30">
+                                    Reflora's Project Castañero is supported by
+                                    7 UN Sustainable Development Goals
+                                </p> <img src="./images/sdg-en.png" alt="" class="sdg-main-logo sdg-main-logo-en" />
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-1-en.png" alt="" />
+                            <div class="image animate">
+
+                                <img src="./images/sdg-bg1.png" />
+                                <div class="description">
+                                    <p>NO POVERTY <span class="nv-d-block mar-t-15 text-lowercase">Economic growth must
+                                            be inclusive to provide sustainable jobs and promote equality</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-2-en.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Health</span> -->
+
+                                <img src="./images/sdg-bg2.png" />
+                                <div class="description">
+                                    <p>ZERO HUNGER <span class="nv-d-block mar-t-15 text-lowercase">The food and
+                                            agriculture sector offers key solutions for development, and is central for
+                                            hunger and poverty eradication</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-4-en.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Education</span> -->
+
+                                <img src="./images/sdg-bg4.png" />
+                                <div class="description">
+                                    <p>
+                                        QUALITY EDUCATION
+                                        <span class="nv-d-block mar-t-15 text-lowercase">Obtaining a quality education
+                                            is the foundation to improving people’s lives and sustainable
+                                            development.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-8-en.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">pure water</span> -->
+
+                                <img src="./images/sdg-bg8.png" />
+                                <div class="description">
+                                    <p>
+                                        DECENT WORK AND ECONOMIC GROWTH
+                                        <span class="nv-d-block mar-t-15 text-lowercase">Sustainable economic growth
+                                            will require societies to create the conditions that allow people to have
+                                            quality jobs</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-12-en.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Energy</span> -->
+
+                                <img src="./images/sdg-bg12.png" />
+                                <div class="description">
+                                    <p>RESPONSIBLE CONSUMPTION AND PRODUCTION <span
+                                            class="nv-d-block mar-t-15 text-lowercase">Responsible Production and
+                                            Consumption</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-13-en.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Life below water</span> -->
+
+                                <img src="./images/sdg-bg13.png" />
+                                <div class="description">
+                                    <p>CLIMATE ACTION <span class="nv-d-block mar-t-15 text-lowercase">Climate change is
+                                            a global challenge that affects everyone, everywhere.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/sdg-15-en.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Sustainable Cities</span> -->
+
+                                <img src="./images/sdg-bg15.png" />
+                                <div class="description">
+                                    <p>
+                                        LIFE ON LAND
+                                        <span class="nv-d-block mar-t-15 text-lowercase">Sustainably manage forests,
+                                            combat desertification, halt and reverse land degradation, halt biodiversity
+                                            loss </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- 5 page starts -->
+            <!-- 4 page starts -->
+            <article class="splide__slide">
+                <section class="text-center pad-0 impact-page__4">
+                    <div class="wrap">
+                        <h1>Endangered Species</h1>
+                    </div>
+                    <style>
+                        .noselect {
+                            -webkit-touch-callout: none;
+                            -webkit-user-select: none;
+                            -khtml-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                        }
+
+
+
+                        .wrap {
+                            width: 980px;
+                            /* fixed width, centered in viewport */
+                            left: -490px;
+                            margin-left: 50%;
+                            position: relative;
+                        }
+
+                        .wrap>h1 {
+                            font-size: 2.5em;
+                            text-align: center;
+                            padding-bottom: 3px;
+                        }
+
+                        #showcase {
+                            visibility: hidden;
+                        }
+
+                        #showcase img {
+                            cursor: pointer;
+                            padding-bottom: 1rem;
+                        }
+
+                        a {
+                            color: #C83286;
+                        }
+
+                        a:hover {
+                            color: #88a7f7;
+                        }
+
+                        .wrap>h1 {
+                            margin: 14px auto 0;
+                        }
+
+                        #showcase {
+                            display: flex;
+                            overflow: visible !important;
+                        }
+
+                        .card {
+                            width: 360px;
+                            padding: 12px;
+                            text-align: center;
+                            background-color: #C83286;
+                            border: 1px solid #84C4F0;
+                            border-radius: 12px;
+                            color:#fff;
+                        }
+
+                        .card h2 {
+                            color: #fff;
+                            margin: 0 0 7px 0;
+                        }
+
+                        .card a {
+                            font-size: 18px;
+                            display: block;
+                        }
+
+                        .card p {
+                            font-size: 15px;
+                        }
+                    </style>
+                    <div class="wrap">
+                        <div id="showcase" class="noselect">
+                            <div class="card">
+                                <h2>Bengal Tiger</h2>
+                                <img src="images/species/tiger.jpg">
+                                <p>
+                                    Over the past century tiger numbers have fallen dramatically, with a decreasing
+                                    population trend. None of the
+                                    Tiger Conservation Landscapes within the Bengal tiger range is large enough to
+                                    support an effective population
+                                    size of 250 individuals. Habitat losses and the extremely large-scale incidences of
+                                    poaching are serious
+                                    threats to the species' survival.
+                                </p>
+                                <a href="http://en.wikipedia.org/wiki/Bengal_tiger">Learn more...</a>
+                            </div>
+                            <div class="card">
+                                <h2>Giant Panda</h2>
+                                <img src="images/species/panda.jpg">
+                                <p>
+                                    The giant panda is an endangered species, threatened by continued habitat loss and
+                                    by a very low birthrate,
+                                    both in the wild and in captivity. Its range is currently confined to a small
+                                    portion on the western edge of
+                                    its historical range, which stretched through southern and eastern China, northern
+                                    Myanmar, and northern
+                                    Vietnam.
+                                </p>
+                                <a href="http://en.wikipedia.org/wiki/Giant_panda">Learn more...</a>
+                            </div>
+                            <div class="card">
+                                <h2>Asian Elephant</h2>
+                                <img src="images/species/elephant.jpg">
+                                <p>
+                                    The pre-eminent threats to Asian elephants today are loss, degradation and
+                                    fragmentation of habitat, leading
+                                    in turn to increasing conflicts between humans and elephants. They are poached for
+                                    ivory and a variety of
+                                    other products including meat and leather.
+                                </p>
+                                <a href="http://en.wikipedia.org/wiki/Asian_elephant">Learn more...</a>
+                            </div>
+                            <div class="card">
+                                <h2>Bornean Orangutan</h2>
+                                <img src="images/species/orangutan.jpg">
+                                <p>
+                                    Orangutan are becoming increasingly endangered due to habitat destruction and the
+                                    bushmeat trade, and young
+                                    orangutans are captured to be sold as pets, usually entailing the killing of their
+                                    mothers.
+                                </p>
+                                <a href="http://en.wikipedia.org/wiki/Bornean_orangutan">Learn more...</a>
+                            </div>
+                            <div class="card">
+                                <h2>Common Chimpanzee</h2>
+                                <img src="images/species/chimp.jpg">
+                                <p>
+                                    The biggest threats to the common chimpanzee are habitat destruction, poaching and
+                                    disease. Chimpanzee
+                                    habitats have been limited by deforestation in both West and Central Africa. Road
+                                    building has caused habitat
+                                    degradation and fragmentation of chimpanzee populations and may allow poachers more
+                                    access to areas that have
+                                    not been seriously impacted by humans.
+                                </p>
+                                <a href="http://en.wikipedia.org/wiki/Common_chimpanzee">Learn more...</a>
+                            </div>
+                            <div class="card">
+                                <h2>Rothschild's Giraffe</h2>
+                                <img src="images/species/giraffe.jpg">
+                                <p>
+                                    While giraffes in general are classified as Least Concern, Rothschild's giraffe is
+                                    at particular risk of
+                                    hybridisation, as the population is so limited in numbers. Very few locations are
+                                    left where Rothschild's
+                                    giraffe can be seen in the wild, with notable spots being Lake Nakuru National Park
+                                    in Kenya and Murchison
+                                    Falls National Park in northern Uganda.
+                                </p>
+                                <a href="http://en.wikipedia.org/wiki/Rothschild%27s_giraffe">Learn more...</a>
+                            </div>
+                        </div>
+                        <button class="nav noselect left">
+                            &lt;
+                        </button>
+                        <button class="nav noselect right">
+                            &gt;
+                        </button>
+                    </div>
+                </section>
+            </article>
+
+            <!-- 4 page starts -->
+            <!-- 6 page starts -->
+            <article class="splide__slide">
+                <section
+                    class="impact-page__6 vh-100 desktop:nv-d-flex desktop:nv-justify-content-center desktop:nv-align-items-center bg-light">
+                    <div class="carousel vh-100">
+                        <div class="carousel__nav">
+                            <span id="moveLeft" class="carousel__arrow">
+                                <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span id="moveRight" class="carousel__arrow">
+                                <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="carousel-item carousel-item--1">
+                            <div class="carousel-item__image">
+                                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_tkM0Bo.json"
+                                    background="transparent" speed="1" loop autoplay></lottie-player>
+                            </div>
+                            <div class="carousel-item__info">
+                                <div class="carousel-item__container">
+                                    <h1 class="carousel-item__title"><span class="text-green">The climate is changing.
+                                            Are you? </span> <span class="text-navy widescreen:nv-d-block"> Offset your
+                                            presence at this web summit!</span></h1>
+                                    <button
+                                        class="carousel-item__btn mobile:nv-col-12 tablet:nv-col-6 tablet:mar-h-auto desktop:nv-col-12 next mar-t-40">Neutralise
+                                        my emissions through forests</button>
+
+                                    <div class="indicator-nav">
+                                        <span class="indicator-item active"></span>
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carousel-item--2 web">
+                            <div class="carousel-item__image"></div>
+                            <div class="carousel-item__info">
+                                <div class="carousel-item__container">
+                                    <h2 class="carousel-item__subtitle font-weight-bold mar-t-30">Project</h2>
+                                    <h1 class="carousel-item__title"><span class="text-navy">Castañero,</span> <span
+                                            class="text-green">Perú</span></h1>
+                                    <div class="nv-row">
+                                        <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                            <p class="text-small carousel-item__description mar-v-10">
+                                                Impact Indicators</p>
+                                            <ul class="mar-0 pad-0 mar-b-15 pad-l-20 text-smallest">
+                                                <li> 300,000 Hectares of forest land</li>
+                                                <li> 49 endangered species protected</li>
+                                                <li>Endemic Plant species</li>
+                                                <li> 405 families supported</li>
+                                            </ul>
+                                        </div>
+                                        <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                            <p class="text-small carousel-item__description mar-v-10">With 10 Euros ,
+                                                You can </p>
+                                            <ul class="mar-0 pad-0 mar-b-15 pad-l-20 text-smallest">
+                                                <li>Support in protecting the amazon and its people </li>
+                                                <li>Neutralise your emissions at Websummit</li>
+                                                <li>Receive a certificate valid globally </li>
+                                                <li>Win a chance to be Reflora's sustain-enabler of the year </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="carousel-item__btn mobile:nv-col-12 tablet:nv-col-6 tablet:mar-h-auto desktop:nv-col-12 next">CONTRIBUTE
+                                        NOW</button>
+
+                                    <div class="indicator-nav">
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item active"></span>
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carousel-item--3 web">
+                            <div class="carousel-item__image"></div>
+                            <div class="carousel-item__info">
+                                <div class="carousel-item__container">
+                                    <h1 class="carousel-item__title">
+                                        <span class="text-green">Erase My footprint
+                                        </span> <br />
+                                        <span class="text-navy"> for the Websummit </span>
+                                    </h1>
+                                    <form action="" class="mar-v-30">
+                                        <div class="nv-row">
+                                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                                <input type="text" placeholder="Name " />
+                                            </div>
+                                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                                <input type="text" placeholder="Email" />
+                                            </div>
+                                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
+                                                <input type="text" placeholder="Card number" />
+                                            </div>
+
+                                            <div class="nv-col-4 tablet:nv-col-2 desktop:nv-col-4">
+                                                <input type="text" placeholder="MM" />
+                                            </div>
+                                            <div class="nv-col-4 tablet:nv-col-2 desktop:nv-col-4">
+                                                <input type="text" placeholder="YYYY" />
+                                            </div>
+                                            <div class="nv-col-4 tablet:nv-col-2 desktop:nv-col-4">
+                                                <input type="text" placeholder="CVV" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <button
+                                        class="carousel-item__btn mobile:nv-col-12 tablet:nv-col-6 tablet:mar-h-auto desktop:nv-col-12 next">BUY
+                                        FOR 10 EUROS</button>
+                                    <div class="indicator-nav">
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item active"></span>
+                                        <span class="indicator-item"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item carousel-item--4">
+                            <div class="carousel-item__image">
+                                <div class="hb-d-block full-height" id="tsparticles">
+                                    <div class="text-center pad-20 bg-white full-height">
+                                        <h2 class="text-secondary mar-v-10">
+                                            <p class="nv-d-block font-weight-lighter text-small mar-b-0">CERTIFICATE</p>
+                                            <p class="nv-d-block font-weight-lighter text-small">Compensation Of Carbon
+                                                Emissions</p>
+                                        </h2>
+                                        <p class="text-medium text-smallest mar-v-10">On 2nd of June , 2021</p>
+                                        <h1 class="text-uppercase text-secondary heading-2 mar-v-15"><span
+                                                class="font-weight-lighter">JONES LANG LASALLE</span></h1>
+                                        <p class="text-medium">offset 6 Tons of their CO2 emissions by investing in the
+                                            project</p>
+                                        <h4
+                                            class="mar-h-auto border-bottom-3 border-secondary border-0 border-solid nv-d-inline-block text-secondary pad-b-10 mar-t-10 mar-b-15 heading-4">
+                                            <span class="font-weight-light">Ecopaiva - Portugal</span>
+                                        </h4>
+                                        <p class="text-secondary text-smallest">
+                                            WHICH IS CERTIFIED <br />
+                                            UNDER THE REGISTRY OF
+                                        </p>
+                                        <p class="text-medium">2BForest</p>
+                                        <div class="nv-d-flex full-width nv-justify-content-center">
+                                            <img src="./images/forest.png" alt="logo of 2BForest" class="mar-r-30" />
+                                            <img src="./images/qr.png" alt="QR code for 2BForest" />
+                                        </div>
+                                        <div
+                                            class="nv-d-flex full-width nv-justify-content-between nv-align-items-end mar-t-40">
+                                            <img src="./images/reflorawhite.png" alt="logo of reflora" class="mar-r-30"
+                                                width="130" />
+                                            <a href="#"
+                                                class="text-decoration-none text-medium mar-l-20">www.reflorainitiative.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item__info">
+                                <div class="carousel-item__container">
+                                    <h2
+                                        class="carousel-item__subtitle text-center mar-t-30 nv-d-none tablet:nv-d-block">
+                                        CERTIFICATE</h2>
+                                    <h1 class="mar-t-15 mar-b-0 text-center heading-2 nv-d-none tablet:nv-d-block"><span
+                                            class="text-navy">CONGRATULATIONS!
+                                        </span></h1>
+                                    <p class="text-center nv-d-none tablet:nv-d-block">The Amazon Forest thanks you!
+                                    </p>
+                                    <p class="text-center nv-d-none tablet:nv-d-block">Please check your email for
+                                        further details</p>
+                                    <div class="mar-v-0">
+                                        <p class="mar-v-20 text-center text-green font-weight-bold">
+                                            Share via:
+                                        </p>
+                                        <ul
+                                            class="list-unstyled nv-d-flex heading-2 nv-justify-content-center social-links">
+                                            <li class="pad-10">
+                                                <a class="text-navy" href="#"><i class="bi bi-facebook"></i></a>
+                                            </li>
+                                            <li class="pad-10">
+                                                <a class="text-navy" href="#"><i class="bi bi-instagram"></i></a>
+                                            </li>
+                                            <li class="pad-10">
+                                                <a class="text-navy" href="#"><i class="bi bi-twitter"></i></a>
+                                            </li>
+                                            <li class="pad-10">
+                                                <a class="text-navy" href="#"><i class="bi bi-linkedin"></i></a>
+                                            </li>
+                                            <li class="pad-10">
+                                                <a class="text-navy" href="#"><i class="bi bi-cloud-download"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="indicator-nav">
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item"></span>
+                                        <span class="indicator-item active"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- 6 page starts -->
+        </div>
+    </main>
+    <!-- preloader -->
+    <div class="loader-bg">
+        <div class="loader-p"></div>
+    </div>
+    <!-- preloader ends -->
+    <script src="./../build/script.js"></script>
+    <script crossorigin="anonymous"
+        src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry"></script>
+    <script>
+        let video = document.querySelector('video');
+        let isPaused = false;
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio != 1 && !video.paused) {
+                    video.pause();
+                    isPaused = true;
+                } else if (isPaused) {
+                    video.play();
+                    isPaused = false
+                }
+            });
+        }, {
+            threshold: 1
+        });
+        observer.observe(video);
+    </script>
+
+    <script src="./js/tsparticles.min.js"> </script>
+    <script>
+        tsParticles.load("tsparticles", {
+            backgroundMask: {
+                enable: false,
+                cover: {
+                    value: {
+                        r: 0,
+                        g: 0,
+                        b: 0
+                    }
+                }
+            },
+            background: {
+                zIndex: 3,
+                size: "100% 100%",
+                repeat: "no-repeat"
+            },
+            fullScreen: {
+                enable: true,
+                zIndex: -1
+            },
+            particles: {
+                color: {
+                    value: ["#1E00FF", "#FF0061", "#E1FF00", "#00FF9E"],
+                    animation: {
+                        enable: true,
+                        speed: 30
+                    }
+                },
+                move: {
+                    direction: "bottom",
+                    enable: true,
+                    outModes: {
+                        default: "out"
+                    },
+                    size: true,
+                    speed: {
+                        min: 1,
+                        max: 3
+                    }
+                },
+                number: {
+                    value: 700,
+                    density: {
+                        enable: true,
+                        area: 800
+                    }
+                },
+                opacity: {
+                    value: 1,
+                    animation: {
+                        enable: false,
+                        startValue: "max",
+                        destroy: "min",
+                        speed: 0.3,
+                        sync: true
+                    }
+                },
+                rotate: {
+                    value: {
+                        min: 0,
+                        max: 360
+                    },
+                    direction: "random",
+                    move: true,
+                    animation: {
+                        enable: true,
+                        speed: 60
+                    }
+                },
+                tilt: {
+                    direction: "random",
+                    enable: true,
+                    move: true,
+                    value: {
+                        min: 0,
+                        max: 360
+                    },
+                    animation: {
+                        enable: true,
+                        speed: 60
+                    }
+                },
+                shape: {
+                    type: ["circle", "square", "polygon"],
+                    options: {
+                        polygon: [{
+                                sides: 5
+                            },
+                            {
+                                sides: 6
+                            }
+                        ]
+                    }
+                },
+                size: {
+                    value: {
+                        min: 3,
+                        max: 5
+                    }
+                },
+                roll: {
+                    darken: {
+                        enable: true,
+                        value: 30
+                    },
+                    enlighten: {
+                        enable: true,
+                        value: 30
+                    },
+                    enable: true,
+                    speed: {
+                        min: 15,
+                        max: 25
+                    }
+                },
+                wobble: {
+                    distance: 30,
+                    enable: true,
+                    move: true,
+                    speed: {
+                        min: -15,
+                        max: 15
+                    }
+                }
+            }
+        });
+    </script>
+
+
+    <script src="js/lib/jquery.cloud9carousel.js"></script>
+    <script>
+        $(function () {
+            var showcase = $("#showcase")
+
+            showcase.Cloud9Carousel({
+                yOrigin: 52,
+                yRadius: 50,
+                itemClass: "card",
+                buttonLeft: $(".nav.left"),
+                buttonRight: $(".nav.right"),
+                bringToFront: true,
+                onLoaded: function () {
+                    showcase.css('visibility', 'visible')
+                    showcase.css('display', 'none')
+                    showcase.fadeIn(1500)
+                }
+            })
+
+            //
+            // Simulate physical button click effect
+            //
+            $('.nav').click(function (e) {
+                var b = $(e.target).addClass('down')
+                setTimeout(function () {
+                    b.removeClass('down')
+                }, 80)
+            })
+
+            $(document).keydown(function (e) {
+                //
+                // More codes: http://www.javascripter.net/faq/keycodes.htm
+                //
+                switch (e.keyCode) {
+                    /* left arrow */
+                    case 37:
+                        $('.nav.left').click()
+                        break
+
+                        /* right arrow */
+                    case 39:
+                        $('.nav.right').click()
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -17,6 +17,11 @@
             position: fixed !important;
             z-index: 300 !important;
         }
+
+        .impact-page__5 .nv-flex-fill {
+            max-width: 33.3% !important;
+            height: calc(100 vh / 2);
+        }
     </style>
 </head>
 
@@ -104,6 +109,27 @@
                             transition: all 0.3s ease-in;
                         }
 
+                        .carousel3d__item * {
+                            pointer-events: none;
+                        }
+
+                        .carousel3d__item img {
+                            position: relative;
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .carousel3d__item p {
+                            position: absolute;
+                            z-index: 11;
+                            bottom: 0rem;
+                            font-size: 1rem;
+                            padding: 2rem;
+                            background: #00000075;
+                            margin-bottom: 0;
+                        }
+
                         .carousel3d__item:nth-child(1) {
                             background: linear-gradient(45deg, #2D35EB 0%, #904ED4 100%);
                         }
@@ -162,11 +188,40 @@
                     </style>
                     <div class="carousel3d">
                         <ul class="carousel3d__list">
-                            <li class="carousel3d__item" data-pos="-2">1</li>
-                            <li class="carousel3d__item" data-pos="-1">2</li>
-                            <li class="carousel3d__item" data-pos="0">3</li>
-                            <li class="carousel3d__item" data-pos="1">4</li>
-                            <li class="carousel3d__item" data-pos="2">5</li>
+                            <li class="carousel3d__item" data-pos="-2">
+                                <img src="./images/primavera/puma.png" alt="">
+                                <p>
+                                    ¿Sabías que el puma es lo más parecido a un gato doméstico? Y es que el puma no
+                                    ruge, ¡se comunica mediante gruñidos, ronroneos y silbidos! Este increíble felino
+                                    ostenta el récord Guiness de mayor cantidad de nombres para referirse a él. El puma
+                                    es un excelente trepador de árboles, ¡y puede llegar a pegar saltos superiores a los
+                                    11 metros de longitud en tierra!
+                                </p>
+                            </li>
+                            <li class="carousel3d__item" data-pos="-1">
+                                <img src="./images/primavera/jaguar.png" alt="Jaguar">
+                                <p>
+                                    ¿Sabías que el jaguar es el tercer felino más grande del mundo, sólo por detrás del tigre y el león? Además, al contrario que otros muchos felinos, el jaguar no tiene miedo al agua, ¡es un gran nadador! Su pelaje moteado le ayuda a fundirse en la oscuridad de la selva para no ser visto.
+                                </p>
+                            </li>
+                            <li class="carousel3d__item" data-pos="0">
+                                <img src="./images/primavera/tapir.png" alt="Tapir">
+                                <p>
+                                    ¿Sabías que el tapir amazónico es el animal salvaje más longevo del continente sudamericano? El tapir es un animal súper curioso: se comunica con los de su especie mediante silbidos, y es capaz de bucear para alimentarse de plantas acuáticas. Además, le encanta revolcarse en el barro: ¡le ayuda a protegerse de las picaduras de los insectos!
+                                </p>
+                            </li>
+                            <li class="carousel3d__item" data-pos="1">
+                                <img src="./images/primavera/ant-eater.png" alt="Giant anteater">
+                                <p>
+                                    ¿Sabías que el oso hormiguero puede comer hasta 40.000 hormigas y termitas al día? Y es que tiene una lengua larguísima, de unos 61cm, capaz de salir y entrar de su boca hasta 150 veces por minuto. Además, el oso hormiguero es un animal muy dormilón: ¡duerme unas 15 horas al día!
+                                </p>
+                            </li>
+                            <li class="carousel3d__item" data-pos="2">
+                                <img src="./images/primavera/oat.png" alt="Giant otter">
+                                <p>
+                                    ¿Sabías que la nutria gigante es capaz de nadar 100 metros en menos de 30 segundos? Este animal es increíblemente familiar y sociable; de hecho, ¡produce hasta nueve vocalizaciones diferentes para comunicarse con los de su especie! Además, no almacena su comida: en su lugar, ¡busca un lugar tranquilo y hace un pícnic para comerse a su presa! 
+                                </p>
+                            </li>
                         </ul>
                     </div>
                     <script>
@@ -218,121 +273,7 @@
             </article>
             <!-- 3 page ends -->
 
-            <!-- 5 page starts -->
-            <article class="splide__slide">
-                <section class="impact-page__5">
-                    <div class="nv-d-flex nv-flex-wrap tablet:nv-flex-wrap text-center">
-                        <div class="nv-flex-fill">
-                            <div class="image animate full-height"
-                                style="background-image: url('./images/wind-mill.jpg'); background-repeat: no-repeat; background-size: cover;">
-                                <p class="pad-t-30 text-white mar-b-n30">
-                                    Reflora's Project Castañero is supported by
-                                    7 UN Sustainable Development Goals
-                                </p> <img src="./images/sdg-en.png" alt="" class="sdg-main-logo sdg-main-logo-en" />
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-1-en.png" alt="" />
-                            <div class="image animate">
 
-                                <img src="./images/sdg-bg1.png" />
-                                <div class="description">
-                                    <p>NO POVERTY <span class="nv-d-block mar-t-15 text-lowercase">Economic growth must
-                                            be inclusive to provide sustainable jobs and promote equality</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-2-en.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Health</span> -->
-
-                                <img src="./images/sdg-bg2.png" />
-                                <div class="description">
-                                    <p>ZERO HUNGER <span class="nv-d-block mar-t-15 text-lowercase">The food and
-                                            agriculture sector offers key solutions for development, and is central for
-                                            hunger and poverty eradication</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-4-en.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Education</span> -->
-
-                                <img src="./images/sdg-bg4.png" />
-                                <div class="description">
-                                    <p>
-                                        QUALITY EDUCATION
-                                        <span class="nv-d-block mar-t-15 text-lowercase">Obtaining a quality education
-                                            is the foundation to improving people’s lives and sustainable
-                                            development.</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-8-en.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">pure water</span> -->
-
-                                <img src="./images/sdg-bg8.png" />
-                                <div class="description">
-                                    <p>
-                                        DECENT WORK AND ECONOMIC GROWTH
-                                        <span class="nv-d-block mar-t-15 text-lowercase">Sustainable economic growth
-                                            will require societies to create the conditions that allow people to have
-                                            quality jobs</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-12-en.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Energy</span> -->
-
-                                <img src="./images/sdg-bg12.png" />
-                                <div class="description">
-                                    <p>RESPONSIBLE CONSUMPTION AND PRODUCTION <span
-                                            class="nv-d-block mar-t-15 text-lowercase">Responsible Production and
-                                            Consumption</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-13-en.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Life below water</span> -->
-
-                                <img src="./images/sdg-bg13.png" />
-                                <div class="description">
-                                    <p>CLIMATE ACTION <span class="nv-d-block mar-t-15 text-lowercase">Climate change is
-                                            a global challenge that affects everyone, everywhere.</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/sdg-15-en.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Sustainable Cities</span> -->
-
-                                <img src="./images/sdg-bg15.png" />
-                                <div class="description">
-                                    <p>
-                                        LIFE ON LAND
-                                        <span class="nv-d-block mar-t-15 text-lowercase">Sustainably manage forests,
-                                            combat desertification, halt and reverse land degradation, halt biodiversity
-                                            loss </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </article>
-
-            <!-- 5 page starts -->
             <!-- 4 page starts -->
             <article class="splide__slide">
                 <section class="text-center pad-0 impact-page__4">
@@ -398,7 +339,7 @@
                             background-color: #C83286;
                             border: 1px solid #84C4F0;
                             border-radius: 12px;
-                            color:#fff;
+                            color: #fff;
                         }
 
                         .card h2 {
@@ -508,6 +449,109 @@
             </article>
 
             <!-- 4 page starts -->
+            <!-- 5 page starts -->
+            <article class="splide__slide">
+                <section class="impact-page__5">
+                    <div class="nv-d-flex nv-flex-wrap tablet:nv-flex-wrap text-center">
+
+
+                        <div class="nv-flex-fill">
+                            <img src="./images/primavera/sdg-es-6.png" alt="" />
+                            <div class="image animate">
+
+
+                                <img src="./images/primavera/primavera-sdg-6.jpg" />
+                                <div class="description">
+                                    <p>
+                                        <!--Title goes here-->
+                                        <span class="nv-d-block mar-t-15 text-lowercase">Gestión
+                                            inteligente del agua: Reducimos el impacto medioambiental y el desperdicio
+                                            de recursos hídricos.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/primavera/sdg-es-7.png" alt="" />
+                            <div class="image animate">
+
+
+                                <img src="./images/primavera/primavera-sdg-7.jpg" />
+                                <div class="description">
+                                    <p>
+                                        <!--Title goes here-->
+                                        <span class="nv-d-block mar-t-15 text-lowercase">El 100% de la energía eléctrica
+                                            que consumimos en nuestras fábricas en España proviene directamente de
+                                            fuentes 100% renovables.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/primavera/sdg-es-9.png" alt="" />
+                            <div class="image animate">
+
+
+                                <img src="./images/primavera/primavera-sdg-9.jpg" />
+                                <div class="description">
+                                    <p>
+                                        <!--Title goes here-->
+                                        <span class="nv-d-block mar-t-15 text-lowercase">Hemos invertido más de 15
+                                            millones de € en innovación e inventado un nombre propio, ‘Ecolosofía’, para
+                                            referirnos a todas nuestras acciones de sostenibilidad</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/primavera/sdg-es-12.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Energy</span> -->
+
+                                <img src="./images/primavera/primavera-sdg-12.jpg" />
+                                <div class="description">
+                                    <p>
+                                        <!--Title goes here--> <span class="nv-d-block mar-t-15 text-lowercase">Tenemos
+                                            un acuerdo con Reciclatges Guerola S.L para garantizar que todos nuestros
+                                            residuos internos de cartón y plástico son adecuadamente tratados</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/primavera/sdg-es-13.png" alt="" />
+                            <div class="image animate">
+                                <!-- <span class="card-title">Life below water</span> -->
+
+                                <img src="./images/primavera/primavera-sdg-13.jpg" />
+                                <div class="description">
+                                    <p>
+                                        <!--Title goes here--> <span class="nv-d-block mar-t-15 text-lowercase">Nuestra
+                                            ‘Ecolosofía’ nace con el objetivo de combatir el cambio climático desde
+                                            nuestra perspectiva, impulsando acciones en distintas áreas.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-flex-fill">
+                            <img src="./images/primavera/sdg-es-14.png" alt="" />
+                            <div class="image animate">
+
+                                <img src="./images/primavera/primavera-sdg-15.jpg" />
+                                <div class="description">
+                                    <p>
+                                        <!--Title goes here-->
+                                        <span class="nv-d-block mar-t-15 text-lowercase">Organizamos plantaciones de
+                                            árboles en los alrededores de nuestras instalaciones y realizamos tareas de
+                                            limpieza para luchar contra el abandono de residuos.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- 5 page starts -->
             <!-- 6 page starts -->
             <article class="splide__slide">
                 <section

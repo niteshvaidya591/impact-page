@@ -18,7 +18,7 @@
             z-index: 300 !important;
         }
 
-        .impact-page__5 .nv-flex-fill {
+        .primavera-page__5 .nv-flex-fill {
             max-width: 33.3% !important;
             height: calc(100 vh / 2);
         }
@@ -27,10 +27,10 @@
 
 <body class="splide web-summit">
     <main class="splide__track">
-        <div class="slides impact-page splide__list">
+        <div class="slides primavera-page splide__list">
             <!-- 1st page starts -->
             <article class="splide__slide">
-                <section class="nv-pos-relative impact-page__1">
+                <section class="nv-pos-relative primavera-page__1">
                     <video playsinline autoplay mutedd loop
                         class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block">
                         <source src="./videos/nature.mp4" type="video/mp4" />
@@ -58,7 +58,7 @@
             <!-- 1st page ends -->
             <!-- 2nd page starts -->
             <article class="splide__slide">
-                <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center impact-page__2">
+                <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center primavera-page__2">
                     <video playsinline autoplay muted controls
                         class="nv-pos-absolute vw-100 vh-100 obj-fit-cover nv-d-block desktop:nv-d-none">
                         <source src="./videos/service-en.mp4" type="video/mp4" />
@@ -75,200 +75,553 @@
             <!-- 2nd page ends -->
             <!-- 3rd page starts -->
             <article class="splide__slide">
-                <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center impact-page__3">
+                <section class="nv-d-flex vh-100 nv-justify-content-center nv-align-items-center primavera-page__3">
                     <style>
-                        .carousel3d {
-                            display: flex;
+                        .js-transitions-disabled * {
+                            transition: none !important;
+                        }
+
+                        .cubic {
+                            position: relative;
+                            height: 100%;
+                            overflow: hidden;
+                            perspective: 50vw;
+                            perspective-origin: 50% 50%;
+                        }
+
+                        .cubic__control {
+                            position: absolute;
+                            height: 160px;
+                            width: 40px;
+                            background: #fff;
+                            right: 49%;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            z-index: 1;
+                        }
+
+                        .cubic__control a {
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            padding-top: 75%;
+                            box-sizing: border-box;
+                        }
+
+                        .cubic__control a:hover:before {
+                            background-color: rgba(0, 0, 0, 0.4);
+                        }
+
+                        .cubic__control a.active:before,
+                        .cubic__control a.active:hover:before {
+                            background-color: rgba(0, 0, 0, 0.6);
+                        }
+
+                        .cubic__control a:first-child {
+                            margin-top: 15px;
+                        }
+
+                        .cubic__control a:before {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            border-radius: 50%;
+                            padding-top: 25%;
+                            width: 25%;
+                            background: rgba(0, 0, 0, 0.2);
+                            content: "";
+                            display: block;
+                            margin-top: -12.5%;
+                        }
+
+                        .cubic__stage {
+                            position: absolute;
+                            top: 20px;
+                            bottom: 20px;
+                            left: 20px;
+                            right: 20px;
+                            margin: auto;
+                            transform-style: preserve-3d;
+                            transform: translateZ(calc(-50vh + 20px));
+                        }
+
+                        .spinner {
+                            position: absolute;
+                            width: calc(50vw - (20px));
+                            height: calc(100vh - 40px);
+                            top: 0;
+                            left: 0;
+                            right: auto;
+                            bottom: 0;
+                            margin: auto;
+                            transform-style: preserve-3d;
+                            transition: transform 1s;
+                            -webkit-backface-visibility: hidden;
+                            backface-visibility: hidden;
+                            transform-origin: 50% 50%;
+                            transform: rotateX(0);
+                        }
+
+                        .js-spin-fwd .spinner {
+                            transform: rotateX(-90deg);
+                        }
+
+                        .js-spin-bwd .spinner {
+                            transform: rotateX(90deg);
+                        }
+
+                        .js-spin-fwd .spinner--right {
+                            transform: rotateX(90deg);
+                        }
+
+                        .js-spin-bwd .spinner--right {
+                            transform: rotateX(-90deg);
+                        }
+
+                        .spinner--right {
+                            right: 0;
+                            left: auto;
+                        }
+
+                        .spinner__face {
+                            display: none;
+                            position: absolute;
                             width: 100%;
                             height: 100%;
-                            align-items: center;
-                            font-family: Arial;
+                            overflow: hidden;
                         }
 
-                        .carousel3d__list {
-                            display: flex;
-                            list-style: none;
-                            position: relative;
+                        .spinner__face.js-next {
+                            display: block;
+                            transform: rotateX(90deg) translateZ(calc(50vh - 20px));
+                        }
+
+                        .spinner--right .spinner__face.js-next {
+                            transform: rotateX(270deg) translateZ(calc(50vh - 20px));
+                        }
+
+                        .js-spin-bwd .spinner__face.js-next {
+                            transform: rotateX(-90deg) translateZ(calc(50vh - 20px));
+                        }
+
+                        .js-spin-bwd .spinner--right .spinner__face.js-next {
+                            transform: rotateX(-270deg) translateZ(calc(50vh - 20px));
+                        }
+
+                        .js-active {
+                            display: block;
+                            transform: translateZ(calc(50vh - 20px));
+                        }
+
+                        .content {
+                            position: absolute;
+                            width: 200%;
+                            height: 100%;
+                            left: 0;
+                        }
+
+                        .spinner--right .content {
+                            left: -100%;
+                        }
+
+                        .content__left,
+                        .content__right {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 50%;
+                            height: 100%;
+                        }
+
+                        .content__right {
+                            right: 0;
+                            left: auto;
+                        }
+
+                        .content__left {
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+
+                        .content__left:after {
+                            position: absolute;
+                            display: block;
+                            content: "";
                             width: 100%;
-                            height: 300px;
-                            justify-content: center;
-                            perspective: 300px;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.1);
                         }
 
-                        .carousel3d__item {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                        .content__left h1 {
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -3vw;
+                            text-align: center;
+                            font-family: oswald;
+                            font-size: 5vw;
+                            height: 10vw;
+                            opacity: 1;
                             color: #fff;
-                            font-size: 0px;
-                            width: 35vw;
-                            height: 50vh;
-                            border-radius: 12px;
-                            box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
-                            position: absolute;
-                            transition: all 0.3s ease-in;
-                        }
-
-                        .carousel3d__item * {
-                            pointer-events: none;
-                        }
-
-                        .carousel3d__item img {
-                            position: relative;
-                            object-fit: cover;
                             width: 100%;
-                            height: 100%;
+                            letter-spacing: 0.15em;
+                            line-height: 0.6;
                         }
 
-                        .carousel3d__item p {
+                        .content__left span {
+                            font-size: 1vw;
+                            font-weight: 300;
+                            letter-spacing: 0.2em;
+                            opacity: 0.9;
+                            font-family: Merriweather;
+                        }
+
+                        .content__right {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .content__right .content__main {
                             position: absolute;
-                            z-index: 11;
-                            bottom: 0rem;
-                            font-size: 1rem;
-                            padding: 2rem;
-                            background: #00000075;
-                            margin-bottom: 0;
+                            font-family: Merriweather, serif;
+                            text-align: left;
+                            color: #fff;
+                            font-size: 1.3vw;
+                            padding: 0 8vw;
+                            line-height: 1.65;
+                            font-weight: 300;
+                            margin: 0;
+                            opacity: 0.8;
                         }
 
-                        .carousel3d__item:nth-child(1) {
-                            background: linear-gradient(45deg, #2D35EB 0%, #904ED4 100%);
+                        .content__right .content__main p:last-child {
+                            text-transform: uppercase;
+                            letter-spacing: 0.15em;
+                            font-size: 0.85em;
                         }
 
-                        .carousel3d__item:nth-child(2) {
-                            background: linear-gradient(45deg, #2D35EB 0%, #fdbb2d 100%);
+                        .content__right .content__index {
+                            font-size: 30vh;
+                            position: absolute;
+                            right: -1vh;
+                            top: 35vh;
+                            opacity: 0.04;
+                            font-family: oswald;
+                            color: #fff;
                         }
 
-                        .carousel3d__item:nth-child(3) {
-                            background: linear-gradient(45deg, #2D35EB 0%, #22c1c3 100%);
+                        [data-type="puma"] .content__left {
+                            background-image: url("./images//primavera/puma.png");
                         }
 
-                        .carousel3d__item:nth-child(4) {
-                            background: linear-gradient(45deg, #fdbb2d 0%, #904ED4 100%);
+                        .spinner--right [data-type="puma"] .content__left {
+                            background-image: none;
                         }
 
-                        .carousel3d__item:nth-child(5) {
-                            background: linear-gradient(45deg, #22c1c3 0%, #904ED4 100%);
+                        [data-type="jaguar"] .content__left {
+                            background-image: url("./images/primavera/jaguar.png");
                         }
 
-                        .carousel3d__item[data-pos="0"] {
-                            z-index: 5;
+                        .spinner--right [data-type="jaguar"] .content__left {
+                            background-image: none;
                         }
 
-                        .carousel3d__item[data-pos="-1"],
-                        .carousel3d__item[data-pos="1"] {
-                            opacity: 0.7;
-                            filter: blur(1px) grayscale(10%);
+                        [data-type="oat"] .content__left {
+                            background-image: url("./images/primavera/oat.png");
                         }
 
-                        .carousel3d__item[data-pos="-1"] {
-                            transform: translateX(-40%) scale(0.9);
-                            z-index: 4;
+                        .spinner--right [data-type="oat"] .content__left {
+                            background-image: none;
                         }
 
-                        .carousel3d__item[data-pos="1"] {
-                            transform: translateX(40%) scale(0.9);
-                            z-index: 4;
+                        [data-type="eatter"] .content__left {
+                            background-image: url("./images/primavera/ant-eater.png");
+                            background-position: right;
                         }
 
-                        .carousel3d__item[data-pos="-2"],
-                        .carousel3d__item[data-pos="2"] {
-                            opacity: 0.4;
-                            filter: blur(3px) grayscale(20%);
-                        }
+                        .spinner--right [data-type="eatter"] .content__left {
+                            background-image: none;
 
-                        .carousel3d__item[data-pos="-2"] {
-                            transform: translateX(-70%) scale(0.8);
-                            z-index: 3;
-                        }
-
-                        .carousel3d__item[data-pos="2"] {
-                            transform: translateX(70%) scale(0.8);
-                            z-index: 3;
                         }
                     </style>
-                    <div class="carousel3d">
-                        <ul class="carousel3d__list">
-                            <li class="carousel3d__item" data-pos="-2">
-                                <img src="./images/primavera/puma.png" alt="">
-                                <p>
-                                    ¿Sabías que el puma es lo más parecido a un gato doméstico? Y es que el puma no
-                                    ruge, ¡se comunica mediante gruñidos, ronroneos y silbidos! Este increíble felino
-                                    ostenta el récord Guiness de mayor cantidad de nombres para referirse a él. El puma
-                                    es un excelente trepador de árboles, ¡y puede llegar a pegar saltos superiores a los
-                                    11 metros de longitud en tierra!
-                                </p>
-                            </li>
-                            <li class="carousel3d__item" data-pos="-1">
-                                <img src="./images/primavera/jaguar.png" alt="Jaguar">
-                                <p>
-                                    ¿Sabías que el jaguar es el tercer felino más grande del mundo, sólo por detrás del tigre y el león? Además, al contrario que otros muchos felinos, el jaguar no tiene miedo al agua, ¡es un gran nadador! Su pelaje moteado le ayuda a fundirse en la oscuridad de la selva para no ser visto.
-                                </p>
-                            </li>
-                            <li class="carousel3d__item" data-pos="0">
-                                <img src="./images/primavera/tapir.png" alt="Tapir">
-                                <p>
-                                    ¿Sabías que el tapir amazónico es el animal salvaje más longevo del continente sudamericano? El tapir es un animal súper curioso: se comunica con los de su especie mediante silbidos, y es capaz de bucear para alimentarse de plantas acuáticas. Además, le encanta revolcarse en el barro: ¡le ayuda a protegerse de las picaduras de los insectos!
-                                </p>
-                            </li>
-                            <li class="carousel3d__item" data-pos="1">
-                                <img src="./images/primavera/ant-eater.png" alt="Giant anteater">
-                                <p>
-                                    ¿Sabías que el oso hormiguero puede comer hasta 40.000 hormigas y termitas al día? Y es que tiene una lengua larguísima, de unos 61cm, capaz de salir y entrar de su boca hasta 150 veces por minuto. Además, el oso hormiguero es un animal muy dormilón: ¡duerme unas 15 horas al día!
-                                </p>
-                            </li>
-                            <li class="carousel3d__item" data-pos="2">
-                                <img src="./images/primavera/oat.png" alt="Giant otter">
-                                <p>
-                                    ¿Sabías que la nutria gigante es capaz de nadar 100 metros en menos de 30 segundos? Este animal es increíblemente familiar y sociable; de hecho, ¡produce hasta nueve vocalizaciones diferentes para comunicarse con los de su especie! Además, no almacena su comida: en su lugar, ¡busca un lugar tranquilo y hace un pícnic para comerse a su presa! 
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <script>
-                        const state = {};
-                        const carouselList = document.querySelector('.carousel3d__list');
-                        const carouselItems = document.querySelectorAll('.carousel3d__item');
-                        const elems = Array.from(carouselItems);
+                    <div translate="no" class="full-width full-height">
+                        <div class="cubic">
+                            <div class="cubic__control"></div>
+                            <div class="cubic__stage">
+                                <div class="spinner spinner--left">
+                                    <div class="spinner__face js-active" data-bg="#4d323d">
+                                        <div class="content" data-type="puma">
+                                            <div class="content__left">
+                                                <h1>
+                                                    PUMA<br />
+                                                    <span>El Puma</span>
+                                                </h1>
+                                            </div>
+                                            <div class="content__right">
+                                                <div class="content__main">
+                                                    <p> <img src="./images/primavera/puma.svg" alt="Puma illustration">
+                                                        “¿Sabías que el puma es lo más parecido a un gato doméstico? Y
+                                                        es que el puma no ruge, ¡se comunica mediante gruñidos,
+                                                        ronroneos y silbidos! Este increíble felino ostenta el récord
+                                                        Guiness de mayor cantidad de nombres para referirse a él. El
+                                                        puma es un excelente trepador de árboles, ¡y puede llegar a
+                                                        pegar saltos superiores a los 11 metros de longitud en tierra!”
+                                                    </p>
+                                                </div>
+                                                <h3 class="content__index">01</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="spinner__face" data-bg="#19304a">
+                                        <div class="content" data-type="jaguar">
+                                            <div class="content__left">
+                                                <h1>
+                                                    JAGUAR<br />
+                                                    <span>El Jaguar</span>
+                                                </h1>
+                                            </div>
+                                            <div class="content__right">
+                                                <div class="content__main">
+                                                    <p> <img src="./images/primavera/jaguar.svg"
+                                                            alt="Jaguar illustration">
+                                                        “¿Sabías que el jaguar es el tercer felino más grande del mundo,
+                                                        sólo por detrás del tigre y el león? Además, al contrario que
+                                                        otros muchos felinos, el jaguar no tiene miedo al agua, ¡es un
+                                                        gran nadador! Su pelaje moteado le ayuda a fundirse en la
+                                                        oscuridad de la selva para no ser visto. ”
+                                                    </p>
+                                                </div>
+                                                <h3 class="content__index">02</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="spinner__face" data-bg="#2b2533">
+                                        <div class="content" data-type="oat">
+                                            <div class="content__left">
+                                                <h1>
+                                                    Gieant otter<br />
+                                                    <span>La Nutria Gigante</span>
+                                                </h1>
+                                            </div>
+                                            <div class="content__right">
+                                                <div class="content__main">
+                                                    <p>
+                                                        <img src="./images/primavera/oat.svg" alt="Oatter illustration">
+                                                        “¿Sabías que la nutria gigante es capaz de nadar 100 metros en
+                                                        menos de 30 segundos? Este animal es increíblemente familiar y
+                                                        sociable; de hecho, ¡produce hasta nueve vocalizaciones
+                                                        diferentes para comunicarse con los de su especie! Además, no
+                                                        almacena su comida: en su lugar, ¡busca un lugar tranquilo y
+                                                        hace un pícnic para comerse a su presa! ”
+                                                    </p>
+                                                </div>
+                                                <h3 class="content__index">03</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="spinner__face" data-bg="#312f2d">
+                                        <div class="content" data-type="eatter">
+                                            <div class="content__left">
+                                                <h1>
+                                                    Giant Anteater<br />
+                                                    <span>El Oso Hormiguero</span>
+                                                </h1>
+                                            </div>
+                                            <div class="content__right">
+                                                <div class="content__main">
+                                                    <p>
+                                                        <img src="./images/primavera/eater.svg"
+                                                            alt="ant eatter illustration">
+                                                        “¿Sabías que el oso hormiguero puede comer hasta 40.000 hormigas
+                                                        y termitas al día? Y es que tiene una lengua larguísima, de unos
+                                                        61cm, capaz de salir y entrar de su boca hasta 150 veces por
+                                                        minuto. Además, el oso hormiguero es un animal muy dormilón:
+                                                        ¡duerme unas 15 horas al día!”
+                                                    </p>
+                                                </div>
+                                                <h3 class="content__index">04</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        carouselList.addEventListener('click', function (event) {
-                            var newActive = event.target;
-                            var isItem = newActive.closest('.carousel3d__item');
+                        <!--  Poor man's preloader -->
+                        <!-- <div style="height: 0; width: 0; overflow: hidden;">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/peru.jpg" />
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/canada.jpg" />
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/china.jpg" />
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/usa.jpg" />
+                            <img src="./images/primavera/puma.png" />
+                        </div> -->
 
-                            if (!isItem || newActive.classList.contains('carousel3d__item_active')) {
-                                return;
+
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                        <script>
+                            let activeIndex = 0;
+                            let limit = 0;
+                            let disabled = false;
+                            let $stage;
+                            let $controls;
+                            let canvas = false;
+
+                            const SPIN_FORWARD_CLASS = "js-spin-fwd";
+                            const SPIN_BACKWARD_CLASS = "js-spin-bwd";
+                            const DISABLE_TRANSITIONS_CLASS = "js-transitions-disabled";
+                            const SPIN_DUR = 1000;
+
+                            const appendControls = () => {
+                                for (let i = 0; i < limit; i++) {
+                                    $(".cubic__control").append(`<a href="#" data-index="${i}"></a>`);
+                                }
+                                let height = $(".cubic__control").children().last().outerHeight();
+
+                                $(".cubic__control").css("height", 30 + limit * height);
+                                $controls = $(".cubic__control").children();
+                                $controls.eq(activeIndex).addClass("active");
                             };
 
-                            update3d(newActive);
-                        });
+                            const setIndexes = () => {
+                                $(".spinner")
+                                    .children()
+                                    .each((i, el) => {
+                                        $(el).attr("data-index", i);
+                                        limit++;
+                                    });
+                            };
 
-                        const update3d = function (newActive) {
-                            const newActivePos = newActive.dataset.pos;
+                            const duplicateSpinner = () => {
+                                const $el = $(".spinner").parent();
+                                const html = $(".spinner").parent().html();
+                                $el.append(html);
+                                $(".spinner").last().addClass("spinner--right");
+                                $(".spinner--right").removeClass("spinner--left");
+                            };
 
-                            const current = elems.find((elem) => elem.dataset.pos == 0);
-                            const prev = elems.find((elem) => elem.dataset.pos == -1);
-                            const next = elems.find((elem) => elem.dataset.pos == 1);
-                            const first = elems.find((elem) => elem.dataset.pos == -2);
-                            const last = elems.find((elem) => elem.dataset.pos == 2);
+                            const paintFaces = () => {
+                                $(".spinner__face").each((i, el) => {
+                                    const $el = $(el);
+                                    let color = $(el).attr("data-bg");
+                                    $el.children().css("backgroundImage",
+                                        `url(${getBase64PixelByColor(color)})`);
+                                });
+                            };
 
-                            current.classList.remove('carousel3d__item_active');
+                            const getBase64PixelByColor = (hex) => {
+                                if (!canvas) {
+                                    canvas = document.createElement("canvas");
+                                    canvas.height = 1;
+                                    canvas.width = 1;
+                                }
+                                if (canvas.getContext) {
+                                    const ctx = canvas.getContext("2d");
+                                    ctx.fillStyle = hex;
+                                    ctx.fillRect(0, 0, 1, 1);
+                                    return canvas.toDataURL();
+                                }
+                                return false;
+                            };
 
-                            [current, prev, next, first, last].forEach(item => {
-                                var itemPos = item.dataset.pos;
+                            const prepareDom = () => {
+                                setIndexes();
+                                paintFaces();
+                                duplicateSpinner();
+                                appendControls();
+                            };
 
-                                item.dataset.pos = getPos(itemPos, newActivePos)
+                            const spin = (inc = 1) => {
+                                if (disabled) return;
+                                if (!inc) return;
+                                activeIndex += inc;
+                                disabled = true;
+
+                                if (activeIndex >= limit) {
+                                    activeIndex = 0;
+                                }
+
+                                if (activeIndex < 0) {
+                                    activeIndex = limit - 1;
+                                }
+
+                                const $activeEls = $(".spinner__face.js-active");
+                                const $nextEls = $(`.spinner__face[data-index=${activeIndex}]`);
+                                $nextEls.addClass("js-next");
+
+                                if (inc > 0) {
+                                    $stage.addClass(SPIN_FORWARD_CLASS);
+                                } else {
+                                    $stage.addClass(SPIN_BACKWARD_CLASS);
+                                }
+
+                                $controls.removeClass("active");
+                                $controls.eq(activeIndex).addClass("active");
+
+                                setTimeout(
+                                    () => {
+                                        spinCallback(inc);
+                                    },
+                                    SPIN_DUR,
+                                    inc
+                                );
+                            };
+
+                            const spinCallback = (inc) => {
+                                $(".js-active").removeClass("js-active");
+                                $(".js-next").removeClass("js-next").addClass("js-active");
+                                $stage.addClass(DISABLE_TRANSITIONS_CLASS).removeClass(SPIN_FORWARD_CLASS)
+                                    .removeClass(SPIN_BACKWARD_CLASS);
+
+                                $(".js-active").each((i, el) => {
+                                    const $el = $(el);
+                                    $el.prependTo($el.parent());
+                                });
+                                setTimeout(() => {
+                                    $stage.removeClass(DISABLE_TRANSITIONS_CLASS);
+                                    disabled = false;
+                                }, 100);
+                            };
+
+                            const attachListeners = () => {
+                                document.onkeyup = (e) => {
+                                    switch (e.keyCode) {
+                                        case 38:
+                                            spin(-1);
+                                            break;
+                                        case 40:
+                                            spin(1);
+                                            break;
+                                    }
+                                };
+
+                                $controls.on("click", (e) => {
+                                    e.preventDefault();
+                                    if (disabled) return;
+                                    const $el = $(e.target);
+                                    const toIndex = parseInt($el.attr("data-index"), 10);
+                                    spin(toIndex - activeIndex);
+                                });
+                            };
+
+                            const assignEls = () => {
+                                $stage = $(".cubic__stage");
+                            };
+
+                            const init = () => {
+                                assignEls();
+                                prepareDom();
+                                attachListeners();
+                            };
+
+                            $(() => {
+                                init();
                             });
-                        };
-
-                        const getPos = function (current, active) {
-                            const diff = current - active;
-
-                            if (Math.abs(current - active) > 2) {
-                                return -current
-                            }
-
-                            return diff;
-                        }
-                    </script>
+                        </script>
+                    </div>
                 </section>
             </article>
             <!-- 3 page ends -->
@@ -276,286 +629,125 @@
 
             <!-- 4 page starts -->
             <article class="splide__slide">
-                <section class="text-center pad-0 impact-page__4">
-                    <div class="wrap">
-                        <h1>Endangered Species</h1>
-                    </div>
+                <section class="text-center pad-0 primavera-page__4">
                     <style>
-                        .noselect {
-                            -webkit-touch-callout: none;
-                            -webkit-user-select: none;
-                            -khtml-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
-                            user-select: none;
+                        .primavera-page__4 {
+                            background-image: url(./images/primavera/SBDT_IlustracionesAnimales_05.svg);
+                            height: 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: cover;
                         }
 
-
-
-                        .wrap {
-                            width: 980px;
-                            /* fixed width, centered in viewport */
-                            left: -490px;
-                            margin-left: 50%;
-                            position: relative;
+                        div#card-slide {
+                            height: 100%;
+                            transform: translateY(35%);
                         }
-
-                        .wrap>h1 {
-                            font-size: 2.5em;
-                            text-align: center;
-                            padding-bottom: 3px;
-                        }
-
-                        #showcase {
-                            visibility: hidden;
-                        }
-
-                        #showcase img {
-                            cursor: pointer;
-                            padding-bottom: 1rem;
-                        }
-
-                        a {
-                            color: #C83286;
-                        }
-
-                        a:hover {
-                            color: #88a7f7;
-                        }
-
-                        .wrap>h1 {
-                            margin: 14px auto 0;
-                        }
-
-                        #showcase {
-                            display: flex;
-                            overflow: visible !important;
-                        }
-
-                        .card {
-                            width: 360px;
-                            padding: 12px;
-                            text-align: center;
-                            background-color: #C83286;
-                            border: 1px solid #84C4F0;
-                            border-radius: 12px;
-                            color: #fff;
-                        }
-
-                        .card h2 {
-                            color: #fff;
-                            margin: 0 0 7px 0;
-                        }
-
-                        .card a {
-                            font-size: 18px;
-                            display: block;
-                        }
-
-                        .card p {
-                            font-size: 15px;
+                        div#card-slide a{
+                            height: 320px;
                         }
                     </style>
-                    <div class="wrap">
-                        <div id="showcase" class="noselect">
-                            <div class="card">
-                                <h2>Bengal Tiger</h2>
-                                <img src="images/species/tiger.jpg">
-                                <p>
-                                    Over the past century tiger numbers have fallen dramatically, with a decreasing
-                                    population trend. None of the
-                                    Tiger Conservation Landscapes within the Bengal tiger range is large enough to
-                                    support an effective population
-                                    size of 250 individuals. Habitat losses and the extremely large-scale incidences of
-                                    poaching are serious
-                                    threats to the species' survival.
-                                </p>
-                                <a href="http://en.wikipedia.org/wiki/Bengal_tiger">Learn more...</a>
-                            </div>
-                            <div class="card">
-                                <h2>Giant Panda</h2>
-                                <img src="images/species/panda.jpg">
-                                <p>
-                                    The giant panda is an endangered species, threatened by continued habitat loss and
-                                    by a very low birthrate,
-                                    both in the wild and in captivity. Its range is currently confined to a small
-                                    portion on the western edge of
-                                    its historical range, which stretched through southern and eastern China, northern
-                                    Myanmar, and northern
-                                    Vietnam.
-                                </p>
-                                <a href="http://en.wikipedia.org/wiki/Giant_panda">Learn more...</a>
-                            </div>
-                            <div class="card">
-                                <h2>Asian Elephant</h2>
-                                <img src="images/species/elephant.jpg">
-                                <p>
-                                    The pre-eminent threats to Asian elephants today are loss, degradation and
-                                    fragmentation of habitat, leading
-                                    in turn to increasing conflicts between humans and elephants. They are poached for
-                                    ivory and a variety of
-                                    other products including meat and leather.
-                                </p>
-                                <a href="http://en.wikipedia.org/wiki/Asian_elephant">Learn more...</a>
-                            </div>
-                            <div class="card">
-                                <h2>Bornean Orangutan</h2>
-                                <img src="images/species/orangutan.jpg">
-                                <p>
-                                    Orangutan are becoming increasingly endangered due to habitat destruction and the
-                                    bushmeat trade, and young
-                                    orangutans are captured to be sold as pets, usually entailing the killing of their
-                                    mothers.
-                                </p>
-                                <a href="http://en.wikipedia.org/wiki/Bornean_orangutan">Learn more...</a>
-                            </div>
-                            <div class="card">
-                                <h2>Common Chimpanzee</h2>
-                                <img src="images/species/chimp.jpg">
-                                <p>
-                                    The biggest threats to the common chimpanzee are habitat destruction, poaching and
-                                    disease. Chimpanzee
-                                    habitats have been limited by deforestation in both West and Central Africa. Road
-                                    building has caused habitat
-                                    degradation and fragmentation of chimpanzee populations and may allow poachers more
-                                    access to areas that have
-                                    not been seriously impacted by humans.
-                                </p>
-                                <a href="http://en.wikipedia.org/wiki/Common_chimpanzee">Learn more...</a>
-                            </div>
-                            <div class="card">
-                                <h2>Rothschild's Giraffe</h2>
-                                <img src="images/species/giraffe.jpg">
-                                <p>
-                                    While giraffes in general are classified as Least Concern, Rothschild's giraffe is
-                                    at particular risk of
-                                    hybridisation, as the population is so limited in numbers. Very few locations are
-                                    left where Rothschild's
-                                    giraffe can be seen in the wild, with notable spots being Lake Nakuru National Park
-                                    in Kenya and Murchison
-                                    Falls National Park in northern Uganda.
-                                </p>
-                                <a href="http://en.wikipedia.org/wiki/Rothschild%27s_giraffe">Learn more...</a>
-                            </div>
+                    <div class="splide project" id="card-slide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <a href="#"
+                                        class="border-solid border-light border-1 small-rounded shadow-large bg-white pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                        <img src="./images/primavera/sdg-es-6.png" alt="" />
+                                        <p>
+                                            <!--Title goes here-->
+                                            <span class="nv-d-block mar-t-15 text-lowercase">Gestión
+                                                inteligente del agua: Reducimos el impacto medioambiental y el
+                                                desperdicio
+                                                de recursos hídricos.</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="#"
+                                        class="border-solid border-light border-1 small-rounded shadow-large bg-white pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                        <img src="./images/primavera/sdg-es-7.png" alt="" />
+                                        <p>
+                                            <!--Title goes here-->
+                                            <span class="nv-d-block mar-t-15 text-lowercase">El 100% de la energía
+                                                eléctrica
+                                                que consumimos en nuestras fábricas en España proviene directamente de
+                                                fuentes 100% renovables.</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="#"
+                                        class="border-solid border-light border-1 small-rounded shadow-large bg-white pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                        <img src="./images/primavera/sdg-es-9.png" alt="" />
+                                        <p>
+                                            <!--Title goes here-->
+                                            <span class="nv-d-block mar-t-15 text-lowercase">Hemos invertido más de 15
+                                                millones de € en innovación e inventado un nombre propio, ‘Ecolosofía’,
+                                                para
+                                                referirnos a todas nuestras acciones de sostenibilidad</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="#"
+                                        class="border-solid border-light border-1 small-rounded shadow-large bg-white pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                        <img src="./images/primavera/sdg-es-12.png" alt="" />
+                                        <p>
+                                            <!--Title goes here--> <span
+                                                class="nv-d-block mar-t-15 text-lowercase">Tenemos
+                                                un acuerdo con Reciclatges Guerola S.L para garantizar que todos
+                                                nuestros
+                                                residuos internos de cartón y plástico son adecuadamente tratados</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="#"
+                                        class="border-solid border-light border-1 small-rounded shadow-large bg-white pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                        <img src="./images/primavera/sdg-es-13.png" alt="" />
+                                        <p>
+                                            <!--Title goes here--> <span
+                                                class="nv-d-block mar-t-15 text-lowercase">Nuestra
+                                                ‘Ecolosofía’ nace con el objetivo de combatir el cambio climático desde
+                                                nuestra perspectiva, impulsando acciones en distintas áreas.</span></p>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="#"
+                                        class="border-solid border-light border-1 small-rounded shadow-large bg-white pad-15 mar-15 text-center nv-d-block text-decoration-none">
+                                        <img src="./images/primavera/sdg-es-14.png" alt="" />
+                                        <p>
+                                            <!--Title goes here-->
+                                            <span class="nv-d-block mar-t-15 text-lowercase">Organizamos plantaciones de
+                                                árboles en los alrededores de nuestras instalaciones y realizamos tareas
+                                                de
+                                                limpieza para luchar contra el abandono de residuos.
+                                            </span>
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
-                        <button class="nav noselect left">
-                            &lt;
-                        </button>
-                        <button class="nav noselect right">
-                            &gt;
-                        </button>
                     </div>
+
                 </section>
             </article>
 
             <!-- 4 page starts -->
             <!-- 5 page starts -->
-            <article class="splide__slide">
-                <section class="impact-page__5">
-                    <div class="nv-d-flex nv-flex-wrap tablet:nv-flex-wrap text-center">
+            <!-- <article class="splide__slide">
+                <section class="primavera-page__5">
 
-
-                        <div class="nv-flex-fill">
-                            <img src="./images/primavera/sdg-es-6.png" alt="" />
-                            <div class="image animate">
-
-
-                                <img src="./images/primavera/primavera-sdg-6.jpg" />
-                                <div class="description">
-                                    <p>
-                                        <!--Title goes here-->
-                                        <span class="nv-d-block mar-t-15 text-lowercase">Gestión
-                                            inteligente del agua: Reducimos el impacto medioambiental y el desperdicio
-                                            de recursos hídricos.</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/primavera/sdg-es-7.png" alt="" />
-                            <div class="image animate">
-
-
-                                <img src="./images/primavera/primavera-sdg-7.jpg" />
-                                <div class="description">
-                                    <p>
-                                        <!--Title goes here-->
-                                        <span class="nv-d-block mar-t-15 text-lowercase">El 100% de la energía eléctrica
-                                            que consumimos en nuestras fábricas en España proviene directamente de
-                                            fuentes 100% renovables.</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/primavera/sdg-es-9.png" alt="" />
-                            <div class="image animate">
-
-
-                                <img src="./images/primavera/primavera-sdg-9.jpg" />
-                                <div class="description">
-                                    <p>
-                                        <!--Title goes here-->
-                                        <span class="nv-d-block mar-t-15 text-lowercase">Hemos invertido más de 15
-                                            millones de € en innovación e inventado un nombre propio, ‘Ecolosofía’, para
-                                            referirnos a todas nuestras acciones de sostenibilidad</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/primavera/sdg-es-12.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Energy</span> -->
-
-                                <img src="./images/primavera/primavera-sdg-12.jpg" />
-                                <div class="description">
-                                    <p>
-                                        <!--Title goes here--> <span class="nv-d-block mar-t-15 text-lowercase">Tenemos
-                                            un acuerdo con Reciclatges Guerola S.L para garantizar que todos nuestros
-                                            residuos internos de cartón y plástico son adecuadamente tratados</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/primavera/sdg-es-13.png" alt="" />
-                            <div class="image animate">
-                                <!-- <span class="card-title">Life below water</span> -->
-
-                                <img src="./images/primavera/primavera-sdg-13.jpg" />
-                                <div class="description">
-                                    <p>
-                                        <!--Title goes here--> <span class="nv-d-block mar-t-15 text-lowercase">Nuestra
-                                            ‘Ecolosofía’ nace con el objetivo de combatir el cambio climático desde
-                                            nuestra perspectiva, impulsando acciones en distintas áreas.</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nv-flex-fill">
-                            <img src="./images/primavera/sdg-es-14.png" alt="" />
-                            <div class="image animate">
-
-                                <img src="./images/primavera/primavera-sdg-15.jpg" />
-                                <div class="description">
-                                    <p>
-                                        <!--Title goes here-->
-                                        <span class="nv-d-block mar-t-15 text-lowercase">Organizamos plantaciones de
-                                            árboles en los alrededores de nuestras instalaciones y realizamos tareas de
-                                            limpieza para luchar contra el abandono de residuos.
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </section>
-            </article>
+            </article> -->
 
             <!-- 5 page starts -->
             <!-- 6 page starts -->
             <article class="splide__slide">
                 <section
-                    class="impact-page__6 vh-100 desktop:nv-d-flex desktop:nv-justify-content-center desktop:nv-align-items-center bg-light">
+                    class="primavera-page__6 vh-100 desktop:nv-d-flex desktop:nv-justify-content-center desktop:nv-align-items-center bg-light">
                     <div class="carousel vh-100">
                         <div class="carousel__nav">
                             <span id="moveLeft" class="carousel__arrow">

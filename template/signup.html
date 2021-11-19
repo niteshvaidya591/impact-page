@@ -8,7 +8,12 @@
         <link rel="stylesheet" href="./../build/style.css" />
         <link rel="stylesheet" href="./fonts/reflora/style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-        <style></style>
+        <style>
+            #signup-bg{
+                /* height: calc(100vw); */
+                object-fit: cover;
+            }
+        </style>
     </head>
 
     <body>
@@ -19,38 +24,33 @@
         <!-- preloader ends -->
 
 <main>
-    <div class="nv-row  mar-0 nv-no-gutters">
-        <div class="nv-col-7">
+    <div class="nv-row  mar-0 nv-no-gutters nv-flex-column desktop:nv-flex-row ">
+        <div class="nv-col-12 desktop:nv-col-7">
        <div class="nv-d-flex nv-justify-content-center nv-align-items-center ">
-        <img src="./images/bg-sign-up.png" alt="Sign up background image" class="full-width img-fluid">
-        <h1 class="nv-pos-absolute text-white pad-h-60 mar-h-60 text-center"><span class="pad-h-60 nv-d-block">IT'S TIME TO ERASE  YOUR FOOTPRINT</span> <span class="mar-t-50 fs-20">Join 5700 companies in Net-Zero Commitment </span></h1>
-        <p class="nv-align-self-end text-white text-right heading-5 nv-pos-absolute pad-r-30 full-width">Photo: Castañero, Peru</p>
+        <img id="signup-bg" src="./images/bg-sign-up.png" alt="Sign up background image" class="full-width img-fluid full-height vw-100">
+        <h1 class="nv-pos-absolute heading-2 text-white desktop:pad-h-60  desktop:mar-h-60 text-center"><p class="pad-h-60 pad-t-20 desktop:pad-t-0 nv-d-block">IT'S TIME TO ERASE  YOUR FOOTPRINT</p> <p class="mar-t-20 desktop:mar-t-50 fs-16 pad-b-20">Join 5700 companies in Net-Zero Commitment </p></h1>
+        <p class="nv-align-self-end text-white text-right heading-5 nv-pos-absolute pad-r-30 full-width nv-d-none desktop:nv-d-block">Photo: Castañero, Peru</p>
        </div>
         </div>
-        <div class="nv-col-5">
-            <div class="mar-60 mobile:mar-l-n60">
-                <div class="pad-60 border-1 border-light shadow-large small-rounded z-index-5 bg-white">
+        <div class="nv-col-12 desktop:nv-col-5">
+            <div class="desktop:mar-60 desktop:mar-l-n60">
+                <div class="pad-15 mobile:pad-v-60 desktop:pad-60 border-1 border-light shadow-large small-rounded z-index-5 bg-white">
                     <h4 class="text-center mar-t-n30">SIGN UP (It's free)</h4>
                     <form action="">
                         <div class="nv-row">
-                            <div class="nv-col-12">
+                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
                                 <div class="form-group mar-b-30 floating-label">
                                     <input type="text" id="signup-name" placeholder="Enter your name" class="full-width form-control focus small-rounded">
                                     <label for="signup-name">Name</label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="nv-row">
-                            <div class="nv-col-12">
+                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
                                 <div class="form-group mar-b-30 floating-label">
                                     <input type="email" id="signup-email" placeholder="Enter your Email" class="full-width form-control focus small-rounded">
                                     <label for="signup-email">Email</label>
                                 </div>
                             </div>
-                        </div>
-                      
-                        <div class="nv-row">
-                            <div class="nv-col-12">
+                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
                                 <div class="form-group mar-b-30 floating-label">
                                     <select class="form-control focus nv-custom-select small-rounded" id="signup-country">
                                         <option value="">Select Country</option>
@@ -61,28 +61,22 @@
                                     <label for="signup-country">Choose your Country </label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="nv-row">
-                            <div class="nv-col-12">
+                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
                                 <div class="form-group mar-b-30 floating-label">
                                     <input type="password" id="signup-password" placeholder="Enter your password" class="full-width form-control focus small-rounded">
                                     <label for="signup-password">password</label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="nv-row">
-                            <div class="nv-col-12">
+                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
                                 <div class="left-control left-checkbox">
-                                    <input type="checkbox" class="left-control-input" id="leftCheck1">
-                                    <label class="left-control-label" for="leftCheck1">I have read Reflora's <a data-toggle="modal" data-target="#privacyModal" href="#">Privacy policy</a></label>
+                                    <input type="checkbox" class="left-control-input" id="signup-privacy">
+                                    <label class="left-control-label" for="signup-privacy">I have read Reflora's <a data-toggle="modal" data-target="#privacyModal" href="#">Privacy policy</a></label>
                                   </div>
                             </div>
-                        </div>
-                        <div class="nv-row">
-                            <div class="nv-col-12">
+                            <div class="nv-col-12 tablet:nv-col-6 desktop:nv-col-12">
                                 <div class="left-control left-checkbox">
-                                    <input type="checkbox" class="left-control-input" id="leftCheck1">
-                                    <label class="left-control-label" for="leftCheck1">I understand Reflora's <a data-toggle="modal" data-target="#TandCModal" href="#">Terms and conditions</a></label>
+                                    <input type="checkbox" class="left-control-input" id="signup-tc">
+                                    <label class="left-control-label" for="signup-tc">I understand Reflora's <a data-toggle="modal" data-target="#TandCModal" href="#">Terms and conditions</a></label>
                                   </div>
                             </div>
                         </div>

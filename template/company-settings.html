@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./fonts/reflora/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <style>
+        /* card 2 */
+        .banner {
+            background: url("../../template/images/home-page/dashboard-bg-1.png");
+            background-repeat: no-repeat;
+            height: 150px;
+            border-radius: 15px !important;
+            background-size: cover;
+        }
+
+        .banner-text {
+            padding-top: 5rem !important;
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 25px;
+            align-items: flex-end;
+            color: #FFFFFF;
+        }
+
+        .banner-sub-text {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+
+        /* card 2 */
+
+        .cd-input {
+            background: #EFF2FF;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border: 0;
+            display: block;
+            margin-bottom: 15px;
+            padding: 5px 15px;
+            width: 100%;
+        }
+
+        .cd-button {
+            background: #5D5FEF;
+            border-radius: 20px;
+            border: 0;
+            padding: 6px 15px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cd-verticalBar">
+
+        <div class="cd-verticalBar__hamburger">
+
+        </div>
+        <nav class="cd-verticalBar__list">
+            <ul>
+                <li><a class="active" href="#"><span class="nv-i-product"></span><span>Carbon balance</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Projects</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Calculator</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Settings</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>FAQ'S</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Logout</span></a></li>
+            </ul>
+        </nav>
+        <div class="cd-verticalBar__info text-center">
+            <img class="mar-b-30" src="./images/cd-logo.png" alt="Reflora brand logo">
+            <a class="text-white nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
+            <a class="text-white nv-d-block text-smallest mar-b-15" href="#">T & C</a>
+        </div>
+    </header>
+
+    <main class="mar-l-60 pad-l-40">
+        <div class="fluid-wrapper mar-v-40">
+            <div class="nv-row">
+                <div class="nv-col-12 fluid-wrapper banner">
+                    <div class="pad-h-5 banner-text">HELLO APOORVA,</div>
+                    <div class="pad-h-5 banner-sub-text">THIS IS YOUR CARBON BALANCE</div>
+                </div>
+            </div>
+        </div>
+        <div class="fluid-wrapper">
+            <div class="nv-row ">
+                <div class="nv-col-5 nv-offset-1">
+                    <p class="text-primary font-weight-bold">PERSONAL DETAILS</p>
+
+                    <form action="">
+                        <input class="cd-input" type="text" placeholder="First Name">
+                        <input class="cd-input" type="text" placeholder="Last Name">
+                        <input class="cd-input" type="email" placeholder="Email Address">
+                        <input class="cd-input" type="text" placeholder="Phone Number">
+                    </form>
+                </div>
+                <div class="nv-col-5">
+                    <p class="text-primary font-weight-bold">ORGANISATION DETAILS</p>
+
+                    <form action="">
+                        <input class="cd-input" type="text" placeholder="Organisation Name">
+                        <input class="cd-input" type="text" placeholder="Registered Address">
+                        <input class="cd-input" type="text" placeholder="City">
+                        <input class="cd-input" type="text" placeholder="Country">
+                        <input class="cd-input" type="text" placeholder="ZIP Code">
+                        <input class="cd-input" type="text" placeholder="Vat ID">
+                    </form>
+                </div>
+                
+            </div>
+            <div class="nv-d-flex nv-col-3 pad-v-20 full-width mar-h-auto text-center nv-justify-content-center">
+                <button class="cd-button mar-h-auto">SAVE</button>
+                <button class="cd-button mar-h-auto">UPDATE</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./../build/script.js"></script>
+</body>
+
+</html>

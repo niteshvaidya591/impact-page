@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflora</title>
+    <link rel="stylesheet" href="./../build/style.css" />
+    <link rel="stylesheet" href="./fonts/reflora/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <style>
+             /* card 1 */
+      .card{
+        margin: 0 auto;
+        background-color: white;
+      }
+      .card-text {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #100644;
+      }
+        /* card 2 */
+        .banner {
+            background: url("../../template/images/home-page/dashboard-bg-1.png");
+            background-repeat: no-repeat;
+            height: 150px;
+            border-radius: 15px !important;
+            background-size: cover;
+        }
+
+        .banner-text {
+            padding-top: 5rem !important;
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 25px;
+            align-items: flex-end;
+            color: #FFFFFF;
+        }
+
+        .banner-sub-text {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+
+        /* card 2 */
+        /* card 3 */
+        .carbon-card-orange {
+            background: url("../../template/images/home-page/card-orange.svg");
+        }
+
+        .carbon-card-orange-text {
+            color: #FFA654;
+        }
+
+        .carbon-card-green {
+            background: url("../../template/images/home-page/card-green.svg");
+        }
+
+        .carbon-card-green-text {
+            color: #10681B;
+        }
+
+        .carbon-card {
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-color: white;
+            border-radius: 15px !important;
+            width: 326px;
+            height: 177.14px;
+            border: 1px solid #ddd;
+        }
+
+        /* card 3 */
+        #chartdiv, #chartdiv1 {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cd-verticalBar">
+
+        <div class="cd-verticalBar__hamburger">
+
+        </div>
+        <nav class="cd-verticalBar__list">
+            <ul>
+                <li><a class="active" href="#"><span class="nv-i-product"></span><span>Carbon balance</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Projects</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Calculator</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Settings</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>FAQ'S</span></a></li>
+                <li><a href="#"><span class="nv-i-product"></span><span>Logout</span></a></li>
+            </ul>
+        </nav>
+        <div class="cd-verticalBar__info text-center">
+            <img class="mar-b-30" src="./images/cd-logo.png" alt="Reflora brand logo">
+            <a class="text-white nv-d-block text-smallest mar-b-15" href="#">Privacy policy</a>
+            <a class="text-white nv-d-block text-smallest mar-b-15" href="#">T & C</a>
+        </div>
+    </header>
+
+    <main class="mar-l-60 pad-l-40">
+        <div class="fluid-wrapper mar-v-40">
+            <div class="nv-row">
+                <div class="nv-col-12 fluid-wrapper banner">
+                    <div class="pad-h-5 banner-text">HELLO APOORVA,</div>
+                    <div class="pad-h-5 banner-sub-text">THIS IS YOUR CARBON BALANCE</div>
+                </div>
+            </div>
+        </div>
+        <div class="fluid-wrapper">
+            <div class="nv-row nv-justify-content-between nv-align-items-center">
+                <div class="nv-col-4">
+                    <div id="chartdiv"></div>
+                </div>
+                <div class="nv-col-4">
+                    <div id="chartdiv1"></div>
+                </div>
+                <div 
+                    class="tablet:nv-col-3 mobile:nv-col-10 mar-v-30 carbon-card carbon-card-orange shadow-large large-rounded">
+                    <div class=" carbon-card-orange-text pad-t-50 nv-d-flex nv-justify-content-between">
+                        <span class="text-bigger font-weight-bold"> 100% </span><span
+                            class="fs-20 text-white text-center">Carbon <br> negative</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="fluid-wrapper cd-table">
+            <div class="nv-row cd-table__row">
+                <div class="nv-col-10">
+                    <div class="cd-table__thead">
+                        <div class="cd-table__th">
+                            NAME
+                        </div>
+                        <div class="cd-table__th">
+                            YEAR
+                        </div>
+                        <div class="cd-table__th">
+                            EMISSIONS
+                        </div>
+                        <div class="cd-table__th">
+                            OFFSET
+                        </div>
+                        <div class="cd-table__th">
+                            STATUS
+                        </div>
+                        <div class="cd-table__th">
+                            DATE
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-col-2">
+
+                </div>
+            </div>
+            <div class="nv-row cd-table__row">
+                <div class="nv-col-10">
+                    <div class="cd-table__tbody">
+                        <div class="cd-table__th">
+                            <a href="#"  data-toggle="modal" data-target="#carbon">  MERCEDES EVENT</a>
+                          
+                        </div>
+                        <div class="cd-table__th">
+                            2021
+                        </div>
+                        <div class="cd-table__th">
+                            20 TONS CO2E
+                        </div>
+                        <div class="cd-table__th">
+                            20 TONS CO2E
+                        </div>
+                        <div class="cd-table__th">
+                            CARBON NEUTRAL
+                        </div>
+                        <div class="cd-table__th">
+                            16.11.2021
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-col-2">
+                    <div class="nv-d-flex nv-justify-content-between nv-align-items-center">
+                        <div class="cd-table__offset text-white grey">
+                            OFFSET
+                        </div>
+                        <a class="font-weight-bold text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nv-row cd-table__row">
+                <div class="nv-col-10">
+                    <div class="cd-table__tbody">
+                        <div class="cd-table__th">
+                            BMW EVENT
+                        </div>
+                        <div class="cd-table__th">
+                            2021
+                        </div>
+                        <div class="cd-table__th">
+                            20 TONS CO2E
+                        </div>
+                        <div class="cd-table__th">
+                            0 TONS CO2E
+                        </div>
+                        <div class="cd-table__th">
+                            <span class="text-orange">CARBON NEGATIVE</span>
+                        </div>
+                        <div class="cd-table__th">
+                            16.11.2021
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-col-2">
+                    <div class="nv-d-flex nv-justify-content-between nv-align-items-center">
+                        <div class="cd-table__offset bg-secondary text-white">
+                            OFFSET
+                        </div>
+                        <a class="font-weight-bold text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nv-row cd-table__row">
+                <div class="nv-col-10">
+                    <div class="cd-table__tbody">
+                        <div class="cd-table__th">
+                            BMW EVENT
+                        </div>
+                        <div class="cd-table__th">
+                            2021
+                        </div>
+                        <div class="cd-table__th">
+                            20 TONS CO2E
+                        </div>
+                        <div class="cd-table__th">
+                            0 TONS CO2E
+                        </div>
+                        <div class="cd-table__th">
+                            <span class="text-secondary">CARBON POSITIVE</span>
+                        </div>
+                        <div class="cd-table__th">
+                            16.11.2021
+                        </div>
+                    </div>
+                </div>
+                <div class="nv-col-2">
+                    <div class="nv-d-flex nv-justify-content-between nv-align-items-center">
+                        <div class="cd-table__offset grey">
+                            OFFSET
+                        </div>
+                        <a class="font-weight-bold text-smallest mar-b-10" href="#">SEE MORE &gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nv-d-flex nv-justify-content-end mar-v-30 pad-r-60">
+            <a class="text-secondary heading-6 font-weight-bold text-right text-decoration-none" href="#">CALCULATE
+                MORE</a>
+        </div>
+    </main>
+<footer>
+    <div class="nv-modal fade cd-modal" id="carbon" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="nv-modal-dialog nv-modal-lg" role="document">
+            <div class="nv-modal-content">
+                <div class="nv-modal-header nv-justify-content-center mar-h-auto">
+                    <h4 id="dataConfirmLabel" class="nv-modal-title text-center text-secondary">MERCEDES EVENT CLIMACTION ASSETS  </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="nv-modal-header_close  desktop:mar-r-n30"> <span aria-hidden="true" class="nv-modal-header_x">×</span></span>
+                </button>
+                </div>
+                <div class="nv-modal-body">
+                    <div class="fluid-wrapper">
+                        <div class="nv-row">
+                            <div class="nv-col-11 pad-v-10 pad-h-20 card shadow-large large-rounded">
+                                <div class="nv-d-flex nv-justify-content-between mar-b-5 ">
+                                    <div class="pad-5 card-text">DATE: 25.10.2021</div>
+                                    <div class="pad-5 card-text">CLIMAKEY: ORDER NUMBER HERE </div>
+                                </div>
+                                <div class="nv-row bg-navy-blue nv-align-items-center">
+                                    <div class=" tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                      <img class="img-left img-align-left" src="../../template/images/home-page/img-3.png">
+                                    </div>
+                                    <div class="tablet:nv-col-4 mobile:nv-col-12 mar-v-5 text-center">
+                                      <p class="text-small text-primary font-weight-bold">PROJECT: CASTAÑERO, PERU </p>
+                                      <p class="text-small text-primary font-weight-bold">OFFSET: 20 TONS CO2E </p>
+                                    </div>
+                                    <div class="tablet:nv-col-4 mobile:nv-col-12 nv-d-flex nv-justify-content-center nv-align-items-center">
+                                      <img class="img-left img-align-left" src="../../template/images/home-page/Certificate.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nv-row mar-v-30 nv-align-items-center">
+                            <div class="tablet:nv-col-6 border-right-1 border-solid border-primary border-0 mobile:nv-col-12 mar-v-5 text-center">
+                                <p class="text-small text-primary font-weight-bold">PROJECT: CASTAÑERO, PERU </p>
+                                <p class="text-small text-primary font-weight-bold">OFFSET: 20 TONS CO2E </p>
+                              </div>
+                              <div class="tablet:nv-col-6">
+                                <div class="mar-t-0 mar-b-20 text-center">
+                                    <span class="rounded-circle nv-circle nv-circle-70 mar-h-auto bg-orange text-white heading-3 border-1 border-solid border-light shadow-large">
+                                        85%
+                                    </span>
+                                    <p class="text-orange mar-t-15 mar-b-0">CARBON NEGATIVE</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="nv-row text-center">
+                            <div class="nv-col-3">
+                                <a href="#" class="text-decoration-none">
+                                    <img src="./images/company-dashboard/badge.svg" alt="Badge for the project">
+                                    <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">BAdge</span>
+                                </a>
+                            </div>
+                            <div class="nv-col-8">
+                                
+                               <div class="nv-d-flex nv-justify-content-between text-center">
+                                <a  href="#" class="text-decoration-none">
+                                    <img class="img-fluid" width="50" src="./images/company-dashboard/Report.svg" alt="Badge for the project">
+                                    <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">impact <br> report</span>
+                                </a>
+                                <a  href="#" class="text-decoration-none">
+                                    <img class="img-fluid" width="50" src="./images/company-dashboard/Document.svg" alt="Badge for the project">
+                                    <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">Retiration <br> Document</span>
+                                </a>
+                                <a  href="#" class="text-decoration-none">
+                                    <img class="img-fluid" width="50" src="./images/company-dashboard/Certificate.svg" alt="Badge for the project">
+                                    <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">Certificate</span>
+                                </a>
+                                <a  href="#" class="text-decoration-none">
+                                    <img class="img-fluid" width="50" src="./images/company-dashboard/invoice.svg" alt="Badge for the project">
+                                    <span class="text-primary pad-t-20 text-wrap font-weight-bold nv-d-block text-uppercase">Invoice</span>
+                                </a>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="nv-modal-footer">
+                    <div class="nv-d-flex nv-justify-content-center">
+                        <a type="button" href="#" class="pad-v-5 pad-h-20 small-rounded text-decoration-none text-white border-primary border-1 bg-primary mar-r-20">Yes</a>
+                        <button type="button" class="pad-v-5 pad-h-20 small-rounded text-primary border-primary border-1 bg-white" data-dismiss="modal">No</button>
+                    </div>
+                </div> -->
+            </div>
+      </div>
+    </div>
+</footer>
+    <script src="./../build/script.js"></script>
+
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+
+    <!-- Chart code -->
+    <script>
+        am5.ready(function () {
+
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+            
+
+
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
+
+
+            // Create chart
+            // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+            var chart = root.container.children.push(am5percent.PieChart.new(root, {
+                layout: root.verticalLayout,
+                innerRadius: am5.percent(50)
+            }));
+
+
+            // Create series
+            // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+            var series = chart.series.push(am5percent.PieSeries.new(root, {
+                valueField: "value",
+                categoryField: "category",
+                alignLabels: false
+            }));
+
+            series.labels.template.setAll({
+                textType: "circular",
+                centerX: 0,
+                centerY: 0
+            });
+
+
+            // Set data
+            // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+            series.data.setAll([{
+                    value: 10,
+                    category: "One"
+                },
+                {
+                    value: 9,
+                    category: "Two"
+                },
+                {
+                    value: 6,
+                    category: "Three"
+                },
+                {
+                    value: 5,
+                    category: "Four"
+                },
+                {
+                    value: 4,
+                    category: "Five"
+                },
+                {
+                    value: 3,
+                    category: "Six"
+                },
+                {
+                    value: 1,
+                    category: "Seven"
+                },
+            ]);
+
+
+            // Create legend
+            // https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
+            // var legend = chart.children.push(am5.Legend.new(root, {
+            //   centerX: am5.percent(50),
+            //   x: am5.percent(50),
+            //   marginTop: 15,
+            //   marginBottom: 15,
+            // }));
+
+            // legend.data.setAll(series.dataItems);
+
+
+            // Play initial series animation
+            // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+            series.appear(1000, 100);
+
+        }); // end am5.ready()
+    </script>
+    
+<!-- Chart code -->
+<script>
+    am5.ready(function() {
+    
+    // Create root element
+    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+    var root = am5.Root.new("chartdiv1");
+    
+    // Set themes
+    // https://www.amcharts.com/docs/v5/concepts/themes/
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+    
+    // Create chart
+    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+    // start and end angle must be set both for chart and series
+    var chart = root.container.children.push(am5percent.PieChart.new(root, {
+      layout: root.verticalLayout,
+      innerRadius: am5.percent(40)
+    }));
+    
+    // Create series
+    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+    // start and end angle must be set both for chart and series
+    var series0 = chart.series.push(am5percent.PieSeries.new(root, {
+      valueField: "bottles",
+      categoryField: "country",
+      alignLabels: false
+    }));
+    
+    var bgColor = root.interfaceColors.get("background");
+    
+    series0.ticks.template.setAll({ forceHidden: true });
+    series0.labels.template.setAll({ forceHidden: true });
+    series0.slices.template.setAll({
+      stroke: bgColor,
+      strokeWidth: 2,
+      tooltipText:
+        "{category}: {valuePercentTotal.formatNumber('0.00')}% ({value} bottles)"
+    });
+    series0.slices.template.states.create("hover", { scale: 0.95 });
+    
+    var series1 = chart.series.push(am5percent.PieSeries.new(root, {
+      valueField: "litres",
+      categoryField: "country",
+      alignLabels: true
+    }));
+    
+    series1.slices.template.setAll({
+      stroke: bgColor,
+      strokeWidth: 2,
+      tooltipText:
+        "{category}: {valuePercentTotal.formatNumber('0.00')}% ({value} litres)"
+    });
+    
+    var data = [{
+      country: "Lithuania",
+      litres: 501.9,
+      bottles: 1500
+    }, {
+      country: "Czech Republic",
+      litres: 301.9,
+      bottles: 990
+    }, {
+      country: "Ireland",
+      litres: 201.1,
+      bottles: 785
+    }, {
+      country: "Germany",
+      litres: 165.8,
+      bottles: 255
+    }, {
+      country: "Australia",
+      litres: 139.9,
+      bottles: 452
+    }, {
+      country: "Austria",
+      litres: 128.3,
+      bottles: 332
+    }, {
+      country: "UK",
+      litres: 99,
+      bottles: 150
+    }, {
+      country: "Belgium",
+      litres: 60,
+      bottles: 178
+    }, {
+      country: "The Netherlands",
+      litres: 50,
+      bottles: 50
+    }];
+    
+    // Set data
+    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+    series0.data.setAll(data);
+    series1.data.setAll(data);
+    
+    // Play initial series animation
+    // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+    series0.appear(1000, 100);
+    series1.appear(1000, 100);
+    
+    }); // end am5.ready()
+    </script>
+</body>
+
+</html>

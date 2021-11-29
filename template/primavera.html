@@ -252,7 +252,7 @@
                             content: "";
                             width: 100%;
                             height: 100%;
-                            background-color: rgba(0, 0, 0, 0.1);
+                            background-color: #0009;
                         }
 
                         .content__left h1 {
@@ -261,9 +261,10 @@
                             margin-top: -3vw;
                             text-align: center;
                             font-family: oswald;
-                            font-size: 5vw;
+                            font-size: 4.3vw;
                             height: 10vw;
                             opacity: 1;
+                            z-index: 5;
                             color: #fff;
                             width: 100%;
                             letter-spacing: 0.15em;
@@ -295,10 +296,13 @@
                             font-weight: 300;
                             margin: 0;
                             opacity: 0.8;
+                            overflow: hidden;
+                        }
+                        .content__main img{
+                            width: 100%;
                         }
 
                         .content__right .content__main p:last-child {
-                            text-transform: uppercase;
                             letter-spacing: 0.15em;
                             font-size: 0.85em;
                         }
@@ -314,7 +318,7 @@
                         }
 
                         [data-type="puma"] .content__left {
-                            background-image: url("./images//primavera/puma.png");
+                            background-image: url("./images/primavera/puma.png");
                         }
 
                         .spinner--right [data-type="puma"] .content__left {
@@ -346,23 +350,33 @@
                             background-image: none;
 
                         }
+                        
+                        [data-type="tapir"] .content__left {
+                            background-image: url("./images/primavera/tapir.png");
+                            background-position: right;
+                        }
+
+                        .spinner--right [data-type="tapir"] .content__left {
+                            background-image: none;
+
+                        }
                     </style>
                     <div translate="no" class="full-width full-height">
+                        <h2 class="text-white pad-10 nv-pos-absolute z-index-5 text-center mar-h-auto full-width bg-dark mar-t-0">¡Conoce a algunos de los animales de Castañeros (Amazonas)!</h2>
                         <div class="cubic">
                             <div class="cubic__control"></div>
                             <div class="cubic__stage">
                                 <div class="spinner spinner--left">
-                                    <div class="spinner__face js-active" data-bg="#4d323d">
+                                    <div class="spinner__face js-active" data-bg="#114392">
                                         <div class="content" data-type="puma">
                                             <div class="content__left">
                                                 <h1>
-                                                    PUMA<br />
-                                                    <span>El Puma</span>
+                                                    El Puma
                                                 </h1>
                                             </div>
                                             <div class="content__right">
                                                 <div class="content__main">
-                                                    <p> <img src="./images/primavera/puma.svg" alt="Puma illustration">
+                                                    <p> <img src="./images/primavera/SBDT_IlustracionesAnimales_11.svg" alt="Puma illustration">
                                                         “¿Sabías que el puma es lo más parecido a un gato doméstico? Y
                                                         es que el puma no ruge, ¡se comunica mediante gruñidos,
                                                         ronroneos y silbidos! Este increíble felino ostenta el récord
@@ -375,17 +389,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="spinner__face" data-bg="#19304a">
+                                    <div class="spinner__face" data-bg="#0f4393">
                                         <div class="content" data-type="jaguar">
                                             <div class="content__left">
                                                 <h1>
-                                                    JAGUAR<br />
-                                                    <span>El Jaguar</span>
+                                                    El Jaguar
                                                 </h1>
                                             </div>
                                             <div class="content__right">
                                                 <div class="content__main">
-                                                    <p> <img src="./images/primavera/jaguar.svg"
+                                                    <p> <img src="./images/primavera/SBDT_IlustracionesAnimales_10.svg"
                                                             alt="Jaguar illustration">
                                                         “¿Sabías que el jaguar es el tercer felino más grande del mundo,
                                                         sólo por detrás del tigre y el león? Además, al contrario que
@@ -398,18 +411,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="spinner__face" data-bg="#2b2533">
+                                    <div class="spinner__face" data-bg="#0189cd">
                                         <div class="content" data-type="oat">
                                             <div class="content__left">
                                                 <h1>
-                                                    Gieant otter<br />
-                                                    <span>La Nutria Gigante</span>
+                                                    La Nutria Gigante
                                                 </h1>
                                             </div>
                                             <div class="content__right">
                                                 <div class="content__main">
                                                     <p>
-                                                        <img src="./images/primavera/oat.svg" alt="Oatter illustration">
+                                                        <img src="./images/primavera/SBDT_IlustracionesAnimales_12.svg" alt="Oatter illustration">
                                                         “¿Sabías que la nutria gigante es capaz de nadar 100 metros en
                                                         menos de 30 segundos? Este animal es increíblemente familiar y
                                                         sociable; de hecho, ¡produce hasta nueve vocalizaciones
@@ -422,18 +434,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="spinner__face" data-bg="#312f2d">
+                                    <div class="spinner__face" data-bg="#0f4393">
                                         <div class="content" data-type="eatter">
                                             <div class="content__left">
                                                 <h1>
-                                                    Giant Anteater<br />
-                                                    <span>El Oso Hormiguero</span>
+                                                    El Oso Hormiguero
                                                 </h1>
                                             </div>
                                             <div class="content__right">
                                                 <div class="content__main">
                                                     <p>
-                                                        <img src="./images/primavera/eater.svg"
+                                                        <img src="./images/primavera/SBDT_IlustracionesAnimales_13.svg"
                                                             alt="ant eatter illustration">
                                                         “¿Sabías que el oso hormiguero puede comer hasta 40.000 hormigas
                                                         y termitas al día? Y es que tiene una lengua larguísima, de unos
@@ -446,18 +457,31 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="spinner__face" data-bg="#0f4393">
+                                        <div class="content" data-type="tapir">
+                                            <div class="content__left">
+                                                <h1>
+                                                    EL TAPIR 
+                                                </h1>
+                                            </div>
+                                            <div class="content__right">
+                                                <div class="content__main">
+                                                    <p>
+                                                        <img src="./images/primavera/SBDT_IlustracionesAnimales_14.svg"
+                                                            alt="ant eatter illustration">
+                                                            ¿Sabías que el tapir amazónico es el animal salvaje más longevo del continente sudamericano? El tapir es un animal súper curioso: se comunica con los de su especie mediante silbidos, y es capaz de bucear para alimentarse de plantas acuáticas. Además, le encanta revolcarse en el barro: ¡le ayuda a protegerse de las picaduras de los insectos!
+                                                    </p>
+                                                </div>
+                                                <h3 class="content__index">05</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!--  Poor man's preloader -->
-                        <!-- <div style="height: 0; width: 0; overflow: hidden;">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/peru.jpg" />
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/canada.jpg" />
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/china.jpg" />
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/usa.jpg" />
-                            <img src="./images/primavera/puma.png" />
-                        </div> -->
+                    
 
 
 
@@ -630,6 +654,8 @@
             <!-- 4 page starts -->
             <article class="splide__slide">
                 <section class="text-center pad-0 primavera-page__4">
+                    <h2 class="text-white pad-10 nv-pos-absolute z-index-5 text-center mar-h-auto full-width bg-dark mar-t-0" style="
+                    background: #00945e;">#Ecolosofía: ¡Descubre qué más hacemos!</h2>
                     <style>
                         .primavera-page__4 {
                             background-image: url(./images/primavera/SBDT_IlustracionesAnimales_05.svg);
@@ -746,6 +772,7 @@
             <!-- 5 page starts -->
             <!-- 6 page starts -->
             <article class="splide__slide">
+                <h2 class="text-secondary nv-pos-absolute text-center mar-h-auto full-width"> ¡Tú también puedes colaborar!</h2>
                 <section
                     class="primavera-page__6 vh-100 desktop:nv-d-flex desktop:nv-justify-content-center desktop:nv-align-items-center bg-light">
                     <div class="carousel vh-100">
@@ -958,6 +985,9 @@
                         </div>
                     </div>
                 </section>
+                <p class="text-center text-small nv-pos-absolute mar-t-n60 mar-h-auto nv-col-10">
+                    Agua Mineral San Benedetto S.A.U. no es la propietaria de este dominio y no recoge, almacena ni trata ningún dato de carácter personal que se pueda proporcionar en dicho dominio. 
+                </p>
             </article>
 
             <!-- 6 page starts -->
